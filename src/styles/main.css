@@ -44,13 +44,14 @@
 #main-content > .hero-order { order: 0; }
 #main-content > .marquee-order { order: 1; }
 #main-content > #about { order: 2; }
-#main-content > #baking { order: 3; }
-#main-content > #art { order: 4; }
-#main-content > #tarot { order: 5; }
-#main-content > #yoga { order: 6; }
+#main-content > #books { order: 3; }
+#main-content > #baking { order: 4; }
+#main-content > #art { order: 5; }
+#main-content > #tarot { order: 6; }
 #main-content > #crafts { order: 7; }
-#main-content > #topics { order: 8; }
-#main-content > footer { order: 9; }
+#main-content > #yoga { order: 8; }
+#main-content > #topics { order: 9; }
+#main-content > footer { order: 10; }
 
 .about-section-bg {
   background-color: #e85d75;
@@ -61,6 +62,17 @@
 .about-panel-bg {
   background-color: rgba(250, 247, 240, 0.9);
   backdrop-filter: blur(2px);
+}
+
+.books-section {
+  background-color: #f2eadb;
+  background-image: radial-gradient(circle at 12% 20%, rgba(138, 106, 69, 0.16) 0 2px, transparent 3px), radial-gradient(circle at 82% 72%, rgba(232, 93, 117, 0.14) 0 3px, transparent 4px), linear-gradient(90deg, rgba(138, 106, 69, 0.08) 1px, transparent 1px), linear-gradient(rgba(138, 106, 69, 0.08) 1px, transparent 1px);
+  background-size: 52px 52px, 76px 76px, 28px 28px, 28px 28px;
+}
+
+.books-anecdote {
+  background-color: rgba(255, 252, 245, 0.78);
+  box-shadow: inset 4px 0 0 #8a6a45;
 }
 
 @layer base {

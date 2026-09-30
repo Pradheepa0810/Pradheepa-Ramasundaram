@@ -1,36 +1,24 @@
 # Pradheepa Ramasundaram — Personal Website
 
-An eclectic, colorful, single-page personal website celebrating creative and spiritual practices (**yoga, tarot, artisan sourdough baking, botanical painting, crochet, and embroidery**).
+An eclectic, colorful, single-page personal website celebrating creative and spiritual practices in this order: **books, baking, painting, tarot, crochet and embroidery, and yoga**.
 
-Inspired by [Sanjog Bora's Framer portfolio](https://sanjogbora.framer.website/) — featuring high-energy color blocking, tactile micro-interactions, live interactive tools, dynamic ticker marquee bands, and playful typography.
+## 🎨 Site Images
 
----
+The project includes handcrafted placeholder artwork used throughout the page:
 
-## 🎨 UI/UX & Interactive Design Highlights
+| Practice | Preview |
+| --- | --- |
+| Books / reading mood | ![Reading and creative mood](public/images/og-image.svg) |
+| Baking | ![Artisan baking illustration](public/images/baking-placeholder.svg) |
+| Painting | ![Painting illustration](public/images/art-placeholder.svg) |
+| Tarot | ![Tarot illustration](public/images/tarot-placeholder.svg) |
+| Crochet | ![Crochet illustration](public/images/crochet-placeholder.svg) |
+| Embroidery | ![Embroidery illustration](public/images/embroidery-placeholder.svg) |
+| Yoga | ![Yoga illustration](public/images/yoga-placeholder.svg) |
 
-1. **Expressive Aesthetics & Distinct Section Identifies**:
-   - **Playful Color Story**: Cobalt Blue, Coral, Tangerine, Olive, Sunshine Yellow, and Lavender on warm Cream.
-   - **Google Fonts**: Expressive serif **Fraunces** for headings paired with crisp, modern **Plus Jakarta Sans** for body copy.
-   - **Hero Signature Shadow**: A single bold retro drop shadow (`shadow-retro-xl`) on the hero portrait card, with calm, distinct visual treatments across other sections.
-2. **Interactive 3D Tarot Deck & Flipper (Theatrical Signature Centerpiece)**:
-   - Deep midnight ambiance with spotlight glow. Tap the 3D card or click **"Draw A New Archetype Card"** to flip the card and cycle through archetypes (*The Star*, *The Magician*, *The Empress*, *The High Priestess*, *Strength*, *The Sun*) with personal reflections.
-3. **Mindful Box Breathing Pacer (Yoga)**:
-   - A live expanding/contracting breath pacer circle with a start/pause box breathing cycle (Inhale 4s &bull; Hold 4s &bull; Exhale 4s &bull; Rest 4s).
-4. **Live Sourdough Formula Calculator (Baking)**:
-   - Interactive sliders for flour weight (300g - 1000g) and hydration (65% - 85%) that auto-calculates water, starter (20%), and salt (2%) in real-time.
-5. **Interactive Yarn & Paint Color Story Shuffler**:
-   - Click **"Shuffle Palette"** to generate new 5-color harmonic craft swatches with one-click copy of HEX codes to the clipboard.
-6. **"A few other sparks & topics I tinker with" Tag Cloud**:
-   - Curated ideas and rituals with interactive category filter tabs (*All*, *Mind & Spirit*, *Fiber & Art*, *Bread & Bakes*).
-7. **Dynamic Continuous Marquee Ribbons**:
-   - Smooth infinite-scrolling ticker tape ribbons separating sections with bold uppercase typography.
-8. **Micro-Interactions**:
-   - One-click copy email button with animated floating toast notification.
-   - Top reading scroll progress bar.
-   - Responsive mobile drawer navigation with smooth backdrop blur.
+Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images in `public/images/` when ready.
 
 ---
-
 ## 📂 Project Structure
 
 ```text
@@ -103,3 +91,6 @@ npm run build
    - Choose the `main` branch and `/ (root)` folder.
    - Click **Save**.
 3. Your site will be live at `https://<your-username>.github.io/<repo-name>/` in 1–2 minutes!
+
+
+
