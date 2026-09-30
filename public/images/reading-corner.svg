@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="cushion" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4d9a8"/><stop offset=".55" stop-color="#d9a477"/><stop offset="1" stop-color="#a9674f"/></linearGradient>
+    <linearGradient id="pot" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e29a62"/><stop offset="1" stop-color="#a94f36"/></linearGradient>
+    <linearGradient id="book" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff0c9"/><stop offset=".45" stop-color="#e4b873"/><stop offset="1" stop-color="#9e5d3d"/></linearGradient>
+    <radialGradient id="sun" cx="0" cy="0" r="1"><stop stop-color="#fff1b2" stop-opacity=".7"/><stop offset="1" stop-color="#fff1b2" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="4" dy="5" stdDeviation="0" flood-color="#1E1A17"/></filter>
+  </defs>
+  <rect width="700" height="500" rx="28" fill="#FAF3E4"/>
+
+  <!-- greenhouse roof and sunlight -->
+  <path d="M0 0h430l-112 170H0z" fill="#aec5bd" stroke="#1E1A17" stroke-width="4"/>
+  <path d="M0 0h430M107 0L38 170M214 0l-69 170M321 0l-70 170M0 55h394M0 110h358" stroke="#26333a" stroke-width="7"/>
+  <circle cx="42" cy="38" r="150" fill="url(#sun)"/>
+  <path d="M0 0c70 10 90 35 138 0M180 0c55 34 82 30 130 0M330 0c45 22 65 18 100 0" stroke="#41614d" stroke-width="18" opacity=".45"/>
+
+  <!-- perspective wood floor -->
+  <path d="M0 290h700v210H0z" fill="#d98a4a" stroke="#1E1A17" stroke-width="4"/>
+  <path d="M0 330h700M0 380h700M0 438h700M70 290L255 500M170 290l125 210M300 290l45 210M430 290l-32 210M555 290l-122 210M665 290L485 500" stroke="#a95735" stroke-width="3" opacity=".75"/>
+
+  <!-- left bookshelf -->
+  <g>
+    <rect x="18" y="74" width="180" height="300" rx="5" fill="#212e3d" stroke="#1E1A17" stroke-width="4"/>
+    <path d="M18 128h180M18 184h180M18 240h180M18 296h180M18 352h180" stroke="#8a5a34" stroke-width="9"/>
+    <g stroke="#1E1A17" stroke-width="2">
+      <path d="M32 93h18v31H32zM54 87h15v37H54zM74 97h20v27H74zM99 84h14v40H99zM118 92h22v32h-22zM145 89h16v35h-16zM166 96h20v28h-20z" fill="#3c7a5e"/>
+      <path d="M30 145h16v35H30zM50 138h24v42H50zM80 150h15v30H80zM100 140h21v40h-21zM126 146h15v34h-15zM146 136h25v44h-25zM176 150h13v30h-13z" fill="#e0574a"/>
+      <path d="M30 201h22v35H30zM58 194h14v42H58zM76 202h20v34H76zM101 192h18v44h-18zM124 205h24v31h-24zM153 196h14v40h-14zM172 203h17v33h-17z" fill="#2e5fa3"/>
+      <path d="M31 257h15v35H31zM50 250h20v42H50zM76 263h17v29H76zM98 249h22v43H98zM126 255h15v37h-15zM146 246h21v46h-21zM172 260h17v32h-17z" fill="#f4c430"/>
+      <path d="M30 313h22v35H30zM58 305h14v43H58zM77 316h24v32H77zM106 302h16v46h-16zM128 312h21v36h-21zM154 306h15v42h-15zM174 320h15v28h-15z" fill="#6c4e9c"/>
+    </g>
+    <!-- shelf plants -->
+    <path d="M35 112q-26 30-9 68M36 124q30 12 42 0M38 145q-30 5-40 27M38 166q23 10 35 4" stroke="#496e4c" stroke-width="5" fill="none"/>
+    <path d="M132 230q-16-32-6-44M132 230q18-32 9-48M132 230q-1-38 2-54" stroke="#496e4c" stroke-width="6"/>
+    <path d="M122 226h24l-3 14h-18z" fill="url(#pot)" stroke="#1E1A17" stroke-width="3"/>
+    <circle cx="174" cy="275" r="12" fill="#496e4c" stroke="#1E1A17" stroke-width="3"/><path d="M160 293h28l-4 14h-20z" fill="#d98a4a" stroke="#1E1A17" stroke-width="3"/>
+    <!-- ladder -->
+    <g transform="translate(0 80) rotate(-9 20 250)" stroke="#8a5a34" stroke-width="7" stroke-linecap="round"><path d="M10 0v270M52 0v270M10 45h42M10 90h42M10 135h42M10 180h42M10 225h42"/></g>
+  </g>
+
+  <!-- right window -->
+  <g>
+    <rect x="514" y="48" width="168" height="220" fill="#abc8c0" stroke="#1E1A17" stroke-width="5"/>
+    <path d="M570 48v220M626 48v220M514 92h168M514 136h168M514 180h168M514 224h168" stroke="#26333a" stroke-width="5"/>
+    <path d="M545 246q-38-50-5-86M546 246q34-45 8-83M596 244q-24-54 1-97M596 244q31-52 11-87M644 244q-10-50 21-87" stroke="#496e4c" stroke-width="6"/>
+    <path d="M530 244h40v25h-40zM578 244h39v25h-39zM628 244h40v25h-40z" fill="url(#pot)" stroke="#1E1A17" stroke-width="3"/>
+    <circle cx="552" cy="218" r="15" fill="#496e4c" stroke="#1E1A17" stroke-width="3"/><circle cx="650" cy="207" r="14" fill="#e0574a" stroke="#1E1A17" stroke-width="3"/>
+  </g>
+
+  <!-- reading chair -->
+  <g filter="url(#shadow)">
+    <path d="M258 260q8-52 60-52h78q50 0 58 52v117H258z" fill="#5fa88f" stroke="#1E1A17" stroke-width="4"/>
+    <path d="M245 278q-30 0-30 38v70h48v-91M468 278q30 0 30 38v70h-48v-91" fill="#3e7863" stroke="#1E1A17" stroke-width="4"/>
+    <path d="M277 270h135v110H277z" fill="#c47d67" stroke="#1E1A17" stroke-width="3"/>
+    <path d="M295 275h82v64h-82z" fill="#e8b7a8" stroke="#1E1A17" stroke-width="3" transform="rotate(8 336 307)"/>
+    <path d="M380 220h56v53h-56z" fill="#d8b05f" stroke="#1E1A17" stroke-width="3" transform="rotate(-5 408 246)"/>
+    <path d="M290 378v55M423 378v55" stroke="#8a5a34" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- side table and cactus -->
+  <g stroke="#1E1A17" stroke-width="4">
+    <ellipse cx="495" cy="342" rx="62" ry="15" fill="#c58b55"/><path d="M440 342v83q55 24 110 0v-83" fill="#b47443"/><path d="M452 350v65M470 352v68M490 351v69M510 351v68M530 349v66"/>
+    <ellipse cx="495" cy="342" rx="62" ry="15" fill="#d99a5e"/>
+    <path d="M482 320q0-72 26-72t26 72z" fill="#5c8a5a"/><path d="M508 256v59M493 276h-6m21 19h7m-20-26h-7" stroke-width="3"/>
+    <path d="M474 320h68l-7 28h-54z" fill="url(#pot)"/>
+  </g>
+
+  <!-- rug and foreground books -->
+  <path d="M185 400q165-65 340 0v75q-165 48-340 0z" fill="#3f8f8a" stroke="#1E1A17" stroke-width="4"/>
+  <path d="M205 417q145-52 300 0v42q-145 35-300 0z" fill="none" stroke="#f2e6d0" stroke-width="8"/>
+  <g stroke="#6e5035" stroke-width="3" fill="#c2452f"><path d="M258 440q25-18 50 0m-25-22v48"/><path d="M380 448q22-18 44 0m-22-24v48"/><path d="M480 432q18-14 36 0m-18-20v40"/></g>
+  <g stroke="#1E1A17" stroke-width="3"><path d="M275 460h65v27h-65z" fill="url(#book)"/><path d="M288 448h58v24h-58z" fill="#2e5fa3"/><path d="M305 438h52v20h-52z" fill="#e0574a"/></g>
+
+</svg>

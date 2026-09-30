@@ -36,7 +36,13 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │   └── scripts/
 │       └── main.js             # Interactive widgets, 3D flipper, calculator, toast
 ├── public/
-│   └── images/                 # Custom SVG placeholder illustrations
+│   ├── audio/                  # Ambient Read With Me MP3 tracks
+│   │   ├── fireplace.mp3
+│   │   ├── rain.mp3
+│   │   ├── clock-tick.mp3
+│   │   ├── cat-purr.mp3
+│   │   └── page-turns.mp3
+│   └── images/                 # Illustrations and personal image placeholders
 │       ├── hero-portrait-placeholder.svg
 │       ├── yoga-placeholder.svg
 │       ├── tarot-placeholder.svg
@@ -44,6 +50,7 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │       ├── baking-placeholder.svg
 │       ├── art-placeholder.svg
 │       ├── chess-placeholder.svg
+│       ├── reading-corner.svg
 │       ├── crochet-placeholder.svg
 │       ├── embroidery-placeholder.svg
 │       └── og-image.svg
@@ -51,6 +58,7 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
    └── styles.css              # Compiled production stylesheet
 ```
 
+Ambient reading sounds are stored in `public/audio/` as `.mp3` files: fireplace, rain, clock tick, cat purr, and page turns.
 ---
 
 ## 🛠️ Local Development & Build
@@ -60,15 +68,13 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 npm install
 ```
 
-### 2. Start Tailwind Watch Mode
+### 2. Start the local preview server
 ```bash
 npm run dev
 ```
+Then open `http://localhost:5173/`. Do not double-click `index.html`; serving the project over HTTP is required for reliable audio, fetch, and asset loading.
 
-### 3. Open in Browser
-Open `index.html` directly in your browser or use the VS Code "Live Server" extension.
-
-### 4. Build for Production
+### 3. Build for Production
 To create the minified production stylesheet:
 ```bash
 npm run build
@@ -79,7 +85,7 @@ npm run build
 ## 📸 Customizing Photos & Text
 
 1. **Replace Placeholders**:
-   Search for `<!-- TODO: replace with your own photo -->` in `index.html`. Swap out the `.svg` placeholder paths in `src=""` with your own `.jpg`, `.png`, or `.webp` photos located in `public/images/`.
+   Search for `<!-- TODO: replace with your own photo -->` in `index.html`. Swap out the placeholder paths in `src=""` with your own `.jpg`, `.png`, or `.webp` photos located in `public/images/`.
 2. **Replace Stories & Anecdotes**:
    Search for `<!-- TODO: replace with your real story -->` in `index.html` to swap in your personal memories.
 3. **Social Links**:

@@ -243,7 +243,7 @@
               <div class="relative bg-paper rounded-3xl border-3 border-espresso p-4 overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                 <figure class="relative rounded-2xl overflow-hidden border-2 border-espresso bg-tangerine-light aspect-[4/5] flex items-center justify-center">
                   <!-- TODO: replace with your own hero/portrait photo -->
-                  <img src="./public/images/hero-portrait-placeholder.svg" alt="Portrait illustration placeholder of Pradheepa Ramasundaram" class="w-full h-full object-cover">
+                  <img src="./public/images/hero-portrait-placeholder.jpg" alt="Portrait of Pradheepa Ramasundaram" class="w-full h-full object-cover">
                   
                   <!-- Floating Badge Overlay -->
                   <div class="absolute top-3 right-3 bg-sunshine border border-espresso px-3 py-1 rounded-full text-[11px] font-bold uppercase tilt-right">
@@ -535,7 +535,7 @@
             <div class="w-full max-w-md bg-paper border border-tangerine/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all asymmetric-gallery-card" data-hover-label="Open the oven door">
               <figure class="relative rounded-2xl overflow-hidden border border-tangerine/20 aspect-[4/3] bg-cream">
                 <!-- TODO: replace with your own baking photo -->
-                <img src="./public/images/baking-placeholder.svg" alt="Artisan bread loaf illustration placeholder" class="w-full h-full object-cover">
+                <img src="./public/images/baking-placeholder.jpg" alt="Artisan bread loaf" class="w-full h-full object-cover">
               </figure>
               <div class="pt-3 px-1 flex items-center justify-between text-xs font-medium text-espresso/70">
                 <span>Weekend bakes</span>
@@ -610,7 +610,7 @@
             <div class="w-full max-w-md bg-paper border border-coral/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all asymmetric-gallery-card" data-hover-label="Look closer">
               <figure class="relative rounded-2xl overflow-hidden border border-coral/20 aspect-[4/3] bg-cream">
                 <!-- TODO: replace with your own art/painting photo -->
-                <img src="./public/images/art-placeholder.svg" alt="Artist painting palette illustration placeholder" class="w-full h-full object-cover">
+                <img src="./public/images/art-placeholder.jpg" alt="Painting and art practice" class="w-full h-full object-cover">
               </figure>
               <div class="pt-3 px-1 flex items-center justify-between text-xs font-medium text-espresso/70">
                 <span>Color studies</span>
@@ -773,10 +773,11 @@
     <!-- ========================================================================= -->
     <section id="books" class="books-section py-16 md:py-24 border-b border-[#8A6A45]/25 relative reveal">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto space-y-6">
-          <div class="flex items-center gap-2">
-            <span class="text-xs font-semibold text-[#6E5035] bg-[#E8DCC8] px-3 py-1 rounded-full border border-[#8A6A45]/30">Books</span>
-          </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 max-w-3xl space-y-6">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-[#6E5035] bg-[#E8DCC8] px-3 py-1 rounded-full border border-[#8A6A45]/30">Books</span>
+            </div>
 
           <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-espresso tracking-tight">
             Proof I Can Sit Still for More Than Ten Minutes
@@ -796,6 +797,55 @@
             <p class="text-sm sm:text-base text-espresso/85 leading-relaxed italic">
               "I once finished a book in one sitting because I could not stand not knowing how it ended, then stayed up far too late doing the exact same thing again a week later with a different book."
             </p>
+          </div>
+        </div>
+
+          <div class="lg:col-span-5 flex flex-col gap-4 justify-center reveal delay-200">
+            <figure class="reading-corner reading-corner-motion overflow-hidden rounded-3xl border border-[#8A6A45]/30 shadow-sm">
+              <img src="./public/images/reading-corner.svg" alt="Illustrated cozy reading nook with a sofa, throw, lamp, indoor plants, books, and a rain window" class="w-full h-full object-cover">
+              <span class="reading-rain reading-rain-one" aria-hidden="true"></span>
+              <span class="reading-rain reading-rain-two" aria-hidden="true"></span>
+              <span class="reading-steam reading-steam-one" aria-hidden="true"></span>
+              <span class="reading-steam reading-steam-two" aria-hidden="true"></span>
+              <span class="reading-lamp-pulse" aria-hidden="true"></span>
+            </figure>
+            <div class="ambient-mixer bg-paper border border-cobalt/30 rounded-3xl p-6 shadow-sm reveal" data-ambient-player>
+              <div class="flex items-center justify-between mb-4 gap-3">
+                <h3 class="font-display text-xl font-bold text-espresso">Read With Me</h3>
+                <button id="ambient-master-toggle" type="button" class="rounded-full px-4 py-2 text-sm font-semibold bg-cobalt text-white hover:bg-cobalt-dark transition-colors" aria-pressed="false">
+                  ▶ Play cozy ambience
+                </button>
+              </div>
+              <span class="ambient-status block text-xs text-espresso/60 mb-3">Choose a little room noise.</span>
+              <p class="text-sm text-espresso/70 mb-4">Mix a little rain, fireside crackle, and a ticking clock while you read along.</p>
+              <div class="space-y-3" id="ambient-tracks">
+                <div class="ambient-track flex items-center gap-3" data-track="fireplace">
+                  <button class="ambient-track-toggle w-9 h-9 flex items-center justify-center rounded-full border border-cobalt/40 text-espresso hover:bg-cobalt/10 transition-colors opacity-50" aria-pressed="false" aria-label="Toggle fireplace sound">🔥</button>
+                  <span class="text-sm font-medium text-espresso w-24">Fireplace</span>
+                  <input type="range" min="0" max="100" value="70" class="ambient-track-volume flex-1 accent-cobalt" aria-label="Fireplace volume">
+                </div>
+                <div class="ambient-track flex items-center gap-3" data-track="rain">
+                  <button class="ambient-track-toggle w-9 h-9 flex items-center justify-center rounded-full border border-cobalt/40 text-espresso hover:bg-cobalt/10 transition-colors opacity-100" aria-pressed="true" aria-label="Toggle rain sound">🌧️</button>
+                  <span class="text-sm font-medium text-espresso w-24">Rain</span>
+                  <input type="range" min="0" max="100" value="60" class="ambient-track-volume flex-1 accent-cobalt" aria-label="Rain volume">
+                </div>
+                <div class="ambient-track flex items-center gap-3" data-track="clock-tick">
+                  <button class="ambient-track-toggle w-9 h-9 flex items-center justify-center rounded-full border border-cobalt/40 text-espresso hover:bg-cobalt/10 transition-colors opacity-100" aria-pressed="true" aria-label="Toggle clock tick sound">🕰️</button>
+                  <span class="text-sm font-medium text-espresso w-24">Clock</span>
+                  <input type="range" min="0" max="100" value="40" class="ambient-track-volume flex-1 accent-cobalt" aria-label="Clock tick volume">
+                </div>
+                <div class="ambient-track flex items-center gap-3 is-disabled" data-track="cat-purr">
+                  <button class="ambient-track-toggle w-9 h-9 flex items-center justify-center rounded-full border border-cobalt/40 text-espresso hover:bg-cobalt/10 transition-colors opacity-50" aria-pressed="false" aria-label="Toggle cat purr sound">🐈</button>
+                  <span class="text-sm font-medium text-espresso w-24">Cat purr</span>
+                  <input type="range" min="0" max="100" value="50" class="ambient-track-volume flex-1 accent-cobalt" aria-label="Cat purr volume">
+                </div>
+                <div class="ambient-track flex items-center gap-3 is-disabled" data-track="page-turns">
+                  <button class="ambient-track-toggle w-9 h-9 flex items-center justify-center rounded-full border border-cobalt/40 text-espresso hover:bg-cobalt/10 transition-colors opacity-50" aria-pressed="false" aria-label="Toggle page turns sound">📖</button>
+                  <span class="text-sm font-medium text-espresso w-24">Page turns</span>
+                  <input type="range" min="0" max="100" value="35" class="ambient-track-volume flex-1 accent-cobalt" aria-label="Page turns volume">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

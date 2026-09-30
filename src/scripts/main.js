@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCard3DTilt();
   initCursorFollower();
   initScrollLinkedMovement();
+  initAmbientReader();
   initToastNotification();
 });
 
@@ -509,7 +510,116 @@ function initScrollLinkedMovement() {
 }
 
 /**
- * 14. Toast Notification System
+ * 14. Read With Me ambient sound mixer
+ */
+function initAmbientReader() {
+  const player = document.querySelector('[data-ambient-player]');
+  const masterToggle = document.getElementById('ambient-master-toggle');
+  const status = player ? player.querySelector('.ambient-status') : null;
+  const tracks = [...document.querySelectorAll('.ambient-track')];
+  if (!player || !masterToggle || tracks.length === 0) return;
+
+  const audioSources = {
+    fireplace: './public/audio/fireplace.mp3',
+    rain: './public/audio/rain.mp3',
+    'clock-tick': './public/audio/clock-tick.mp3',
+    'cat-purr': './public/audio/cat-purr.mp3',
+    'page-turns': './public/audio/page-turns.mp3'
+  };
+  const savedState = JSON.parse(localStorage.getItem('ambientMixerState') || '{}');
+  const trackState = new Map();
+  let masterPlaying = false;
+
+  tracks.forEach(track => {
+    const name = track.dataset.track;
+    const toggle = track.querySelector('.ambient-track-toggle');
+    const slider = track.querySelector('.ambient-track-volume');
+    const audio = new Audio(audioSources[name]);
+    audio.loop = true;
+    audio.preload = 'none';
+    audio.className = 'ambient-audio';
+    audio.setAttribute('aria-hidden', 'true');
+    audio.addEventListener('error', () => {
+      status.textContent = `Could not load ${name.replace('-', ' ')} audio.`;
+    });
+    player.appendChild(audio);
+    const saved = savedState[name] || {};
+    const enabled = typeof saved.enabled === 'boolean' ? saved.enabled : ['rain', 'clock-tick'].includes(name);
+    const volume = typeof saved.volume === 'number' ? saved.volume : Number(slider.value) / 100;
+    audio.volume = volume;
+    slider.value = String(Math.round(volume * 100));
+    trackState.set(name, { audio, enabled, toggle, slider, track });
+
+    function render() {
+      toggle.setAttribute('aria-pressed', String(enabledState().enabled));
+      toggle.classList.toggle('opacity-100', enabledState().enabled);
+      toggle.classList.toggle('opacity-50', !enabledState().enabled);
+      track.classList.toggle('is-disabled', !enabledState().enabled);
+    }
+
+    function enabledState() {
+      return trackState.get(name);
+    }
+
+    track._renderAmbientState = render;
+    render();
+
+    toggle.addEventListener('click', () => {
+      const state = trackState.get(name);
+      state.enabled = !state.enabled;
+      if (masterPlaying && state.enabled) state.audio.play().catch(() => {});
+      if (masterPlaying && !state.enabled) state.audio.pause();
+      render();
+      saveState();
+    });
+
+    slider.addEventListener('input', () => {
+      const state = trackState.get(name);
+      state.audio.volume = Number(slider.value) / 100;
+      saveState();
+    });
+  });
+
+  function saveState() {
+    const state = {};
+    trackState.forEach((entry, name) => { state[name] = { enabled: entry.enabled, volume: entry.audio.volume }; });
+    localStorage.setItem('ambientMixerState', JSON.stringify(state));
+  }
+
+  function playEnabledTracks() {
+    trackState.forEach(entry => { if (entry.enabled) entry.audio.play().catch(() => {}); });
+  }
+
+  function pauseTracks() {
+    trackState.forEach(entry => entry.audio.pause());
+  }
+
+  function renderMaster() {
+    masterToggle.setAttribute('aria-pressed', String(masterPlaying));
+    masterToggle.textContent = masterPlaying ? '⏸ Pause ambience' : '▶ Play cozy ambience';
+  }
+
+  masterToggle.addEventListener('click', () => {
+    masterPlaying = !masterPlaying;
+    if (masterPlaying) playEnabledTracks(); else pauseTracks();
+    renderMaster();
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    if (!entries[0].isIntersecting && masterPlaying) pauseTracks();
+    if (entries[0].isIntersecting && masterPlaying) playEnabledTracks();
+  }, { threshold: 0.05 });
+  observer.observe(player);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) pauseTracks();
+    else if (masterPlaying) playEnabledTracks();
+  });
+  renderMaster();
+}
+
+/**
+ * 15. Toast Notification System
  */
 let toastTimeout;
 function showToast(message) {
