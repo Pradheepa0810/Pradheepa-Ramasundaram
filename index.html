@@ -61,6 +61,7 @@
         <a href="#baking" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Baking</a>
         <a href="#art" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Painting</a>
         <a href="#tarot" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Tarot</a>
+        <a href="#chess" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Chess</a>
         <a href="#crafts" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Crochet &amp; Embroidery</a>
         <a href="#yoga" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Yoga</a>
         <a href="#topics" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Sparks</a>
@@ -105,6 +106,7 @@
       <a href="#baking" class="px-4 py-2.5 rounded-xl font-semibold text-tangerine-dark bg-tangerine-light border border-tangerine/30 hover:bg-tangerine hover:text-cream transition-all">Baking</a>
       <a href="#art" class="px-4 py-2.5 rounded-xl font-semibold text-coral-dark bg-coral-light border border-coral/30 hover:bg-coral hover:text-cream transition-all">Painting</a>
       <a href="#tarot" class="px-4 py-2.5 rounded-xl font-semibold text-cobalt-dark bg-cobalt-light border border-cobalt/30 hover:bg-cobalt hover:text-cream transition-all">Tarot &amp; Archetypes</a>
+      <a href="#chess" class="px-4 py-2.5 rounded-xl font-semibold text-[#6E5035] bg-[#E8DCC8] border border-[#8A6A45]/30 hover:bg-[#8A6A45] hover:text-cream transition-all">Chess</a>
       <a href="#crafts" class="px-4 py-2.5 rounded-xl font-semibold text-espresso bg-lavender border border-espresso/15 hover:bg-espresso hover:text-cream transition-all">Crochet &amp; Embroidery</a>
       <a href="#yoga" class="px-4 py-2.5 rounded-xl font-semibold text-olive-dark bg-olive-light border border-olive/30 hover:bg-olive hover:text-cream transition-all">Yoga</a>
       <a href="#topics" class="px-4 py-2.5 rounded-xl font-semibold text-espresso bg-sunshine/60 border border-espresso/15 hover:bg-espresso hover:text-cream transition-all">Sparks &amp; Topics</a>
@@ -141,11 +143,15 @@
     <!-- ========================================================================= -->
     <!-- HERO SECTION                                                              -->
     <!-- ========================================================================= -->
-    <section class="hero-order relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden border-b border-espresso/15 bg-cream">
+    <section class="hero-order hero-collage relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden border-b border-espresso/15 bg-cream">
       
       <!-- Background Ambient Glows -->
       <div class="absolute top-8 left-10 w-32 h-32 rounded-full bg-sunshine/25 blur-2xl pointer-events-none"></div>
       <div class="absolute bottom-10 right-12 w-48 h-48 rounded-full bg-coral-light/50 blur-3xl pointer-events-none"></div>
+      <div class="hero-collage-shape hero-collage-shape-one" data-scroll-shift="0.08" aria-hidden="true"></div>
+      <div class="hero-collage-shape hero-collage-shape-two" data-scroll-shift="-0.05" aria-hidden="true">✦</div>
+      <div class="hero-collage-note hero-collage-note-one" data-scroll-shift="0.04">made slowly</div>
+      <div class="hero-collage-note hero-collage-note-two" data-scroll-shift="-0.06">more of me lives here</div>
 
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -228,7 +234,7 @@
 
           <!-- Right Content: EXACT ONE HERO PORTRAIT CARD WITH RETRO DROP SHADOW -->
           <div class="lg:col-span-5 flex justify-center lg:justify-end">
-            <div class="relative w-full max-w-sm tilt-card">
+            <div class="relative w-full max-w-sm tilt-card hero-portrait-collage" data-hover-label="Meet the maker">
               
               <!-- Decorative background backing card -->
               <div class="absolute inset-0 bg-coral rounded-3xl border-3 border-espresso shadow-retro-xl transform rotate-3"></div>
@@ -282,6 +288,12 @@
         <span>✦ MADE BECAUSE I WANTED TO</span>
       </div>
     </div>
+    <div class="made-by-hand-strip" aria-hidden="true">
+      <div class="made-by-hand-track">
+        <span>made by hand</span><span>made because I wanted to</span><span>made by hand</span><span>made because I wanted to</span>
+      </div>
+    </div>
+    <div class="thread-divider" data-scroll-shift="0.12" aria-hidden="true"><span></span></div>
 
     <!-- ========================================================================= -->
     <!-- ABOUT SECTION (Patience, craft & working by hand)                        -->
@@ -311,7 +323,7 @@
     <!-- ========================================================================= -->
     <!-- YOGA SECTION (Olive Calm + Breath Pacer + First-Person Anecdote)           -->
     <!-- ========================================================================= -->
-    <section id="yoga" class="py-16 md:py-24 border-b border-espresso/15 bg-olive-light/50 relative reveal">
+    <section id="yoga" class="yoga-section py-16 md:py-24 border-b border-espresso/15 bg-olive-light/50 relative reveal">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -333,7 +345,7 @@
             </p>
 
             <a href="https://www.youtube.com/watch?v=1xRX1MuoImw" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-olive-dark underline decoration-olive/40 underline-offset-4 hover:text-olive-dark hover:decoration-olive transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">
-              Learn the basics: Surya Namaskar &rarr;
+              Yoga tutorial: Surya Namaskar for beginners &rarr;
             </a>
 
             <!-- Mindful Breath Pacer Widget -->
@@ -387,7 +399,7 @@
     <!-- ========================================================================= -->
     <!-- TAROT SECTION (THEATRICAL & QUIET - Signature Interactive Centerpiece)     -->
     <!-- ========================================================================= -->
-    <section id="tarot" class="py-20 md:py-28 border-b border-indigo-950 bg-[#0B1120] text-cream relative overflow-hidden reveal">
+    <section id="tarot" class="tarot-section py-20 md:py-28 border-b border-indigo-950 bg-[#0B1120] text-cream relative overflow-hidden reveal">
       
       <!-- Celestial Spotlight Radial Glow -->
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/40 via-[#0B1120] to-[#0B1120] pointer-events-none"></div>
@@ -402,39 +414,16 @@
           <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center reveal delay-100">
             <div class="tarot-deck-stage w-full max-w-sm">
               <div class="tarot-deck-stack" aria-hidden="true">
-                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-one"></div>
-                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-two"></div>
-                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-three"></div>
+                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-one"><img src="./public/images/tarot-card-reference.svg" alt=""></div>
+                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-two"><img src="./public/images/tarot-card-reference.svg" alt=""></div>
+                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-three"><img src="./public/images/tarot-card-reference.svg" alt=""></div>
+                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-four"><img src="./public/images/tarot-card-reference.svg" alt=""></div>
+                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-five"><img src="./public/images/tarot-card-reference.svg" alt=""></div>
               </div>
 
               <div class="tarot-draw-area">
-                <div id="tarot-card-inner" class="tarot-auto-card relative w-full h-[390px] transform-style-3d tarot-glow rounded-3xl transition-transform duration-700" aria-live="polite">
-                  <div class="tarot-card-back-face absolute inset-0 backface-hidden bg-[#162038] border-2 border-sunshine/70 rounded-3xl p-5 flex flex-col justify-between shadow-2xl">
-                    <div class="flex items-center justify-between">
-                      <span class="bg-coral text-cream px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Drawing a card</span>
-                      <span class="text-sunshine text-base">🌙</span>
-                    </div>
-                    <figure class="relative rounded-2xl overflow-hidden border border-sunshine/30 aspect-[3/4] bg-[#0A0F1D]">
-                      <img src="./public/images/tarot-placeholder.svg" alt="Tarot card back illustration placeholder" class="w-full h-full object-cover">
-                    </figure>
-                    <p class="text-xs text-center text-indigo-200/70 font-medium">A card is finding its way to you</p>
-                  </div>
-
-                  <div class="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-b from-[#123499] to-[#0D1527] border-2 border-sunshine/70 rounded-3xl p-5 flex flex-col justify-between shadow-2xl">
-                    <div class="flex items-center justify-between">
-                      <span class="bg-sunshine text-espresso px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Your card</span>
-                      <span class="text-sunshine text-base">✨</span>
-                    </div>
-                    <div class="flex-1 my-3 rounded-2xl border border-sunshine/40 bg-black/30 flex flex-col items-center justify-center p-4 text-center">
-                      <span id="tarot-card-icon" class="text-5xl mb-2">🔮</span>
-                      <h4 id="tarot-card-title" class="font-display font-bold text-2xl text-sunshine tracking-wider">THE STAR</h4>
-                      <p id="tarot-card-archetype" class="text-xs text-indigo-200 mt-1 font-medium">Major Arcana XVII: Hope &amp; Inspiration</p>
-                      <div class="mt-4 px-3 py-1 bg-white/10 rounded-full border border-sunshine/30">
-                        <span id="tarot-card-keyword" class="text-[11px] font-semibold text-sunshine">Renewal &amp; Clarity</span>
-                      </div>
-                    </div>
-                    <p id="tarot-card-message" class="text-xs text-center text-indigo-200/90 italic px-2">"Trust the quiet intuition guiding your path. Open your creative floodgates."</p>
-                  </div>
+                <div id="tarot-card-inner" class="tarot-auto-card relative w-full h-[390px] tarot-glow rounded-3xl transition-transform duration-700 cursor-pointer" role="button" tabindex="0" aria-label="Shuffle the tarot deck" aria-live="polite">
+                  <img src="./public/images/tarot-card-reference.svg" alt="Rider Waite inspired tarot card back with a looping infinity motif and symbolic suits" class="tarot-feature-card">
                 </div>
               </div>
             </div>
@@ -469,7 +458,7 @@
     <!-- ========================================================================= -->
     <!-- BAKING SECTION (Warm Dough Treatment + Formula Calculator)                -->
     <!-- ========================================================================= -->
-    <section id="baking" class="py-16 md:py-24 border-b border-tangerine/20 bg-[#FAF4EB] relative reveal">
+    <section id="baking" class="baking-section py-16 md:py-24 border-b border-tangerine/20 bg-[#FAF4EB] relative reveal">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -543,7 +532,7 @@
 
           <!-- Right Image Card -->
           <div class="lg:col-span-5 flex justify-center reveal delay-200">
-            <div class="w-full max-w-md bg-paper border border-tangerine/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all">
+            <div class="w-full max-w-md bg-paper border border-tangerine/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all asymmetric-gallery-card" data-hover-label="Open the oven door">
               <figure class="relative rounded-2xl overflow-hidden border border-tangerine/20 aspect-[4/3] bg-cream">
                 <!-- TODO: replace with your own baking photo -->
                 <img src="./public/images/baking-placeholder.svg" alt="Artisan bread loaf illustration placeholder" class="w-full h-full object-cover">
@@ -563,7 +552,7 @@
     <!-- ========================================================================= -->
     <!-- ART & PAINTING SECTION (Acrylic, Watercolour & Linocut)                  -->
     <!-- ========================================================================= -->
-    <section id="art" class="py-16 md:py-24 border-b border-coral/20 bg-coral-light/35 relative reveal">
+    <section id="art" class="art-section py-16 md:py-24 border-b border-coral/20 bg-coral-light/35 relative reveal">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -605,13 +594,20 @@
                 </svg>
                 <span>View Art Portfolio &amp; Process on Instagram (@thekalaodyssey) &rarr;</span>
               </a>
+              <a href="https://pradheepar.wixsite.com/thekalaodyssey?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacX8E4iOFLZeVaj0NqIfWcm90Wts7VH1_U-AOm1Hu4j5-pEnuPbgjjwJUvCPQ_aem_08qRB7bvDAhTKRUtrOv98g" target="_blank" rel="noopener noreferrer" class="ml-2 inline-flex items-center gap-2 text-coral-dark text-xs font-semibold underline decoration-coral/40 underline-offset-4 hover:text-coral-dark hover:decoration-coral transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">
+                Visit The Kala Odyssey on Wix &rarr;
+              </a>
             </div>
+
+            <p class="text-sm text-espresso/75 leading-relaxed border-l-2 border-coral/40 pl-4">
+              I also offer art classes and creative workshops for kids and adults.
+            </p>
 
           </div>
 
           <!-- Right Image Card -->
           <div class="lg:col-span-5 flex justify-center reveal delay-200">
-            <div class="w-full max-w-md bg-paper border border-coral/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all">
+            <div class="w-full max-w-md bg-paper border border-coral/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all asymmetric-gallery-card" data-hover-label="Look closer">
               <figure class="relative rounded-2xl overflow-hidden border border-coral/20 aspect-[4/3] bg-cream">
                 <!-- TODO: replace with your own art/painting photo -->
                 <img src="./public/images/art-placeholder.svg" alt="Artist painting palette illustration placeholder" class="w-full h-full object-cover">
@@ -629,9 +625,46 @@
     </section>
 
     <!-- ========================================================================= -->
+    <!-- CHESS SECTION (Board, Patience & Practice)                                 -->
+    <!-- ========================================================================= -->
+    <section id="chess" class="chess-section py-16 md:py-24 border-b border-[#8A6A45]/25 relative reveal">
+      <span class="chess-piece chess-piece-queen" aria-hidden="true">♛</span>
+      <span class="chess-piece chess-piece-knight" aria-hidden="true">♞</span>
+      <span class="chess-piece chess-piece-rook" aria-hidden="true">♜</span>
+      <span class="chess-piece chess-piece-bishop" aria-hidden="true">♝</span>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="chess-copy max-w-3xl mx-auto space-y-7 text-center">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-[#6E5035] bg-[#E8DCC8] px-3 py-1 rounded-full border border-[#8A6A45]/30">The board I keep coming back to</span>
+            </div>
+
+          <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-espresso tracking-tight text-balance">
+            Every Game Teaches Me Something I Immediately Forget
+          </h2>
+
+          <p class="text-base sm:text-lg text-espresso/80 leading-relaxed max-w-2xl mx-auto">
+            Chess is the one hobby where losing badly still feels like time well spent. I like that it forces my brain into a kind of stillness none of my other practices quite manage, no shortcuts, no muscle memory to fall back on, just me and the board and the slow realization that I moved my knight to the wrong square four moves ago. I'm not particularly good at it. I'm addicted to getting slightly less bad at it.
+          </p>
+
+          <!-- TODO: replace with real Chess.com or Lichess profile URL -->
+          <a href="#PLACEHOLDER_CHESS_URL" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-[#6E5035] underline decoration-[#8A6A45]/50 underline-offset-4 hover:text-[#4D3825] hover:decoration-[#4D3825] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8A6A45]">
+            Follow my games on Chess.com &rarr;
+          </a>
+
+          <!-- TODO: replace with your real story -->
+          <div class="max-w-2xl mx-auto p-5 sm:p-6 rounded-2xl border border-[#8A6A45]/25 bg-white/85 shadow-sm space-y-2 text-left">
+            <span class="text-xs font-bold text-[#6E5035] uppercase tracking-wider block">A memorable blunder</span>
+            <p class="text-sm sm:text-base text-espresso/85 leading-relaxed italic">
+              "I once spent forty minutes on a single move, talked myself into what felt like a brilliant sacrifice, played it with far too much confidence, and lost the game two moves later. I still think about that sacrifice more fondly than I have any right to."
+            </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
     <!-- FIBER ARTS: CROCHET & EMBROIDERY (Distinct Stitch Border Divider)         -->
     <!-- ========================================================================= -->
-    <section id="crafts" class="py-16 md:py-24 border-b border-espresso/15 bg-paper relative reveal">
+    <section id="crafts" class="crafts-section py-16 md:py-24 border-b border-espresso/15 bg-paper relative reveal">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div class="text-center max-w-2xl mx-auto space-y-3">
@@ -753,8 +786,7 @@
             I read to leave wherever I currently am for a while. Fiction mostly, whatever pulls me in fastest, though I go through phases: a mystery binge, a memoir stretch, one summer where I read nothing but retellings of Greek myths. My Goodreads is a mess of five-star ratings I gave in the heat of the moment and to-read shelves I will never actually get through, and I love it exactly as it is.
           </p>
 
-          <!-- TODO: replace with your real Goodreads profile URL -->
-          <a href="#PLACEHOLDER_GOODREADS_URL" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-[#6E5035] underline decoration-[#8A6A45]/50 underline-offset-4 hover:text-[#4D3825] hover:decoration-[#4D3825] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8A6A45]">
+          <a href="https://www.goodreads.com/user/show/92926736-wasabidumpling" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-[#6E5035] underline decoration-[#8A6A45]/50 underline-offset-4 hover:text-[#4D3825] hover:decoration-[#4D3825] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8A6A45]">
             Find me on Goodreads &rarr;
           </a>
 
@@ -772,8 +804,13 @@
     <!-- ========================================================================= -->
     <!-- SPARKS & TOPICS (Exploration Notebook & Tag Cloud)                       -->
     <!-- ========================================================================= -->
-    <section id="topics" class="py-16 md:py-24 border-b border-espresso/15 bg-cream relative reveal">
+    <section id="topics" class="topics-section py-16 md:py-24 border-b border-espresso/15 bg-cream relative reveal">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+        <div class="hold-on-note" data-scroll-shift="-0.04">
+          <span>Hold on, there is more about me.</span>
+          <small>And I am still making it.</small>
+        </div>
         
         <div class="text-center space-y-3">
           <h2 class="font-display font-bold text-3xl sm:text-4xl text-espresso">
@@ -806,11 +843,13 @@
         <!-- Filterable Tag Cloud -->
         <div class="flex flex-wrap justify-center gap-2.5 pt-2">
           <span data-category="spiritual" class="spark-pill inline-flex items-center gap-1.5 bg-olive-light text-olive-dark border border-olive/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🧘 Box breathing before stressful meetings</span>
-          <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">📓 Junk journalling</span>
+          <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">📓 Junk journal</span>
           <span data-category="culinary" class="spark-pill inline-flex items-center gap-1.5 bg-tangerine-light text-tangerine-dark border border-tangerine/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🍎 Cake recipes, apple tarts</span>
           <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-coral-light text-coral-dark border border-coral/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🎨 Matching my paint to my mood</span>
           <span data-category="culinary" class="spark-pill inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">☕ Coffee recipes</span>
           <span data-category="culinary" class="spark-pill inline-flex items-center gap-1.5 bg-tangerine-light text-tangerine-dark border border-tangerine/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">☕ Coffee made slower than it needs to be</span>
+          <span data-category="culinary" class="spark-pill inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🍹 Mocktail making</span>
+          <span data-category="culinary" class="spark-pill inline-flex items-center gap-1.5 bg-tangerine-light text-tangerine-dark border border-tangerine/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🍝 Eating Italian</span>
           <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-lavender text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🖨️ A lino block I keep almost finishing</span>
           <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-sunshine/50 text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">✨ Gold foil painting</span>
           <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-coral-light text-coral-dark border border-coral/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">💎 Gem art</span>
@@ -821,6 +860,8 @@
           <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-lavender text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🧥 Fashion and interior mood boards I'll never actually build</span>
           <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-sunshine/50 text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">💻 Vibecoding</span>
           <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-coral-light text-coral-dark border border-coral/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🎲 Board games</span>
+          <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-lavender text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🪽 Origami</span>
+          <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-sunshine/50 text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🔷 Shape stamping</span>
         </div>
 
       </div>

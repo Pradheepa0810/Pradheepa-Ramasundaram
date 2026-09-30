@@ -48,10 +48,11 @@
 #main-content > #baking { order: 4; }
 #main-content > #art { order: 5; }
 #main-content > #tarot { order: 6; }
-#main-content > #crafts { order: 7; }
-#main-content > #yoga { order: 8; }
-#main-content > #topics { order: 9; }
-#main-content > footer { order: 10; }
+#main-content > #chess { order: 7; }
+#main-content > #crafts { order: 8; }
+#main-content > #yoga { order: 9; }
+#main-content > #topics { order: 10; }
+#main-content > footer { order: 11; }
 
 .about-section-bg {
   background-color: #e85d75;
@@ -73,6 +74,333 @@
 .books-anecdote {
   background-color: rgba(255, 252, 245, 0.78);
   box-shadow: inset 4px 0 0 #8a6a45;
+}
+
+.hero-collage {
+  isolation: isolate;
+}
+
+.hero-collage-shape,
+.hero-collage-note {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero-collage-shape-one {
+  width: 150px;
+  height: 190px;
+  right: 1%;
+  top: 18%;
+  background: #1e4ed8;
+  border: 3px solid var(--color-espresso);
+  border-radius: 54% 46% 58% 42%;
+  transform: rotate(14deg);
+}
+
+.hero-collage-shape-two {
+  left: 45%;
+  bottom: 8%;
+  color: var(--color-coral);
+  font-family: 'Fraunces', serif;
+  font-size: 5rem;
+  transform: rotate(-12deg);
+}
+
+.hero-collage-note {
+  z-index: 2;
+  padding: 0.45rem 0.75rem;
+  border: 2px solid var(--color-espresso);
+  background: var(--color-sunshine);
+  color: var(--color-espresso);
+  font: 700 0.68rem 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-collage-note-one {
+  right: 3%;
+  top: 10%;
+  transform: rotate(7deg);
+}
+
+.hero-collage-note-two {
+  left: 46%;
+  bottom: 18%;
+  background: var(--color-coral);
+  color: var(--color-cream);
+  transform: rotate(-5deg);
+}
+
+.hero-portrait-collage {
+  z-index: 1;
+}
+
+.made-by-hand-strip {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(30, 26, 23, 0.18);
+  background: var(--color-coral);
+  color: var(--color-cream);
+  padding: 0.75rem 0;
+  white-space: nowrap;
+}
+
+.made-by-hand-track {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  animation: marquee-left 22s linear infinite;
+  font: 700 0.8rem 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.thread-divider {
+  position: relative;
+  z-index: 2;
+  height: 34px;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.thread-divider span {
+  position: absolute;
+  left: -5%;
+  top: 12px;
+  width: 110%;
+  height: 12px;
+  border-top: 3px dashed var(--color-coral);
+  border-radius: 50%;
+  transform: rotate(-2deg);
+}
+
+.baking-section {
+  background-color: #faf4eb;
+  background-image: radial-gradient(ellipse 60% 55% at 88% 10%, rgba(242, 100, 25, 0.22), transparent 70%), radial-gradient(circle at 20% 20%, rgba(242, 100, 25, 0.08) 0 2px, transparent 3px), radial-gradient(circle at 80% 70%, rgba(138, 106, 69, 0.08) 0 3px, transparent 4px), repeating-radial-gradient(circle at 50% 118%, rgba(184, 67, 7, 0.06) 0 34px, transparent 34px 68px);
+  background-size: auto, 42px 42px, 68px 68px, auto;
+}
+
+.art-section {
+  background-color: #fdf0ee;
+  background-image: radial-gradient(ellipse 50% 42% at 8% 12%, rgba(232, 93, 117, 0.24), transparent 70%), radial-gradient(ellipse 46% 38% at 88% 22%, rgba(246, 174, 45, 0.22), transparent 70%), radial-gradient(ellipse 55% 48% at 28% 88%, rgba(30, 78, 216, 0.15), transparent 70%), radial-gradient(ellipse 42% 36% at 92% 92%, rgba(73, 110, 76, 0.16), transparent 70%), linear-gradient(115deg, rgba(232, 93, 117, 0.1), transparent 35%, rgba(246, 174, 45, 0.12) 70%, transparent);
+}
+
+.crafts-section {
+  background-color: #f8f2e9;
+  background-image: repeating-linear-gradient(45deg, rgba(73, 110, 76, 0.08) 0 2px, transparent 2px 14px), repeating-linear-gradient(-45deg, rgba(138, 106, 69, 0.07) 0 2px, transparent 2px 14px), radial-gradient(circle, rgba(30, 26, 23, 0.06) 0 1px, transparent 1.5px);
+  background-size: 28px 28px, 28px 28px, 14px 14px;
+}
+
+.chess-section {
+  background-color: #c79b68;
+  background-image: linear-gradient(45deg, #151515 25%, transparent 25% 75%, #151515 75%), linear-gradient(45deg, #151515 25%, transparent 25% 75%, #151515 75%);
+  background-size: 25% 25%;
+  background-position: 0 0, 12.5% 12.5%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.chess-copy {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1.25rem;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.16);
+  backdrop-filter: blur(3px);
+}
+
+.chess-piece {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  font-family: Georgia, serif;
+  line-height: 1;
+  will-change: transform;
+  animation: chessPieceFloat 8s ease-in-out infinite;
+  display: inline-block;
+  padding: 0.18em 0.16em 0.26em;
+  border-radius: 44% 44% 28% 28%;
+  transform-origin: 50% 92%;
+  -webkit-text-stroke: 1px rgba(30, 26, 23, 0.72);
+}
+
+.chess-piece-queen {
+  top: 8%;
+  left: 7%;
+  color: #ead1a8;
+  font-size: clamp(5rem, 12vw, 9rem);
+  background: linear-gradient(110deg, #76502f 0%, #f0d4a2 28%, #fff0c9 48%, #b77b40 72%, #4c301d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 0 #4c301d, 0 10px 0 rgba(80, 48, 25, 0.5), 0 18px 22px rgba(0, 0, 0, 0.58), 0 0 16px rgba(255, 224, 155, 0.8);
+  transform: rotate(-8deg);
+}
+
+.chess-piece-knight {
+  top: 14%;
+  right: 7%;
+  color: #161616;
+  font-size: clamp(5rem, 12vw, 9rem);
+  background: linear-gradient(110deg, #050505 0%, #777777 28%, #eeeeee 48%, #333333 70%, #020202 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 0 #050505, 0 10px 0 rgba(0, 0, 0, 0.58), 0 18px 22px rgba(0, 0, 0, 0.68), 0 0 16px rgba(255, 255, 255, 0.65);
+  transform: rotate(9deg);
+  animation-delay: -2s;
+}
+
+.chess-piece-rook {
+  bottom: 9%;
+  left: 11%;
+  color: #ead1a8;
+  font-size: clamp(4rem, 9vw, 7rem);
+  background: linear-gradient(110deg, #76502f 0%, #f0d4a2 28%, #fff0c9 48%, #b77b40 72%, #4c301d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 0 #4c301d, 0 10px 0 rgba(80, 48, 25, 0.5), 0 18px 22px rgba(0, 0, 0, 0.58), 0 0 16px rgba(255, 224, 155, 0.8);
+  transform: rotate(6deg);
+  animation-delay: -4s;
+}
+
+.chess-piece-bishop {
+  bottom: 7%;
+  right: 12%;
+  color: #161616;
+  font-size: clamp(4rem, 9vw, 7rem);
+  background: linear-gradient(110deg, #050505 0%, #777777 28%, #eeeeee 48%, #333333 70%, #020202 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 0 #050505, 0 10px 0 rgba(0, 0, 0, 0.58), 0 18px 22px rgba(0, 0, 0, 0.68), 0 0 16px rgba(255, 255, 255, 0.65);
+  transform: rotate(-6deg);
+  animation-delay: -6s;
+}
+
+.chess-piece::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 12%;
+  top: 6%;
+  width: 58%;
+  height: 42%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
+  filter: blur(2px);
+  transform: rotate(-18deg);
+  opacity: 0.75;
+}
+
+.chess-piece::after {
+  content: '';
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -0.04em;
+  height: 0.16em;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.88) 0 42%, rgba(0, 0, 0, 0) 74%);
+  box-shadow: 0 0.1em 0.08em rgba(255, 255, 255, 0.28) inset;
+  filter: blur(2px);
+  transform: translateY(0.2em) scaleX(1.12);
+}
+
+@keyframes chessPieceFloat {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -16px; }
+}
+
+.yoga-section {
+  background-color: #eef3e9;
+  background-image: radial-gradient(ellipse 140% 65% at 50% 120%, rgba(73, 110, 76, 0.2), transparent 70%), repeating-linear-gradient(100deg, rgba(73, 110, 76, 0.06) 0 2px, transparent 2px 26px), repeating-linear-gradient(80deg, rgba(73, 110, 76, 0.05) 0 2px, transparent 2px 30px);
+}
+
+.tarot-section {
+  background-image: radial-gradient(circle at 15% 22%, rgba(246, 174, 45, 0.4) 0 1.5px, transparent 2px), radial-gradient(circle at 68% 14%, rgba(221, 214, 254, 0.45) 0 1px, transparent 2px), radial-gradient(circle at 40% 68%, rgba(246, 174, 45, 0.3) 0 1px, transparent 2px), radial-gradient(circle at 86% 58%, rgba(221, 214, 254, 0.35) 0 1px, transparent 2px), radial-gradient(circle at 24% 84%, rgba(246, 174, 45, 0.25) 0 1px, transparent 2px), radial-gradient(circle at 92% 88%, rgba(221, 214, 254, 0.3) 0 1px, transparent 2px), radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.topics-section {
+  background-image: radial-gradient(circle, rgba(30, 26, 23, 0.14) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+.hold-on-note {
+  position: relative;
+  margin: 3rem auto 0;
+  max-width: 44rem;
+  padding: 2rem 1rem 0;
+  border-top: 1px solid rgba(250, 247, 240, 0.25);
+  text-align: center;
+  will-change: transform;
+}
+
+.hold-on-note span {
+  display: block;
+  font: 600 clamp(1.8rem, 4vw, 3.4rem)/1.05 'Fraunces', serif;
+  color: var(--color-sunshine);
+}
+
+.hold-on-note small {
+  display: block;
+  margin-top: 0.75rem;
+  color: rgba(250, 247, 240, 0.65);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+[data-scroll-shift] {
+  translate: 0 var(--scroll-shift-y, 0);
+}
+
+.asymmetric-gallery-card:nth-child(odd) {
+  transform: rotate(-1.5deg) translateY(0.75rem);
+}
+
+.asymmetric-gallery-card:nth-child(even) {
+  transform: rotate(1.5deg) translateY(-0.5rem);
+}
+
+.cursor-follow-label {
+  position: fixed;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--color-espresso);
+  border-radius: 999px;
+  background: var(--color-sunshine);
+  color: var(--color-espresso);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+}
+
+.cursor-follow-label.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .hero-collage-shape-one { right: -15%; top: 23%; opacity: 0.65; }
+  .hero-collage-note-two { left: 4%; bottom: 11%; }
+  .hero-collage-note-one { right: 4%; top: 5%; }
+  .chess-copy { padding: 1.5rem 1rem; }
+  .chess-piece-queen { left: -4%; top: 4%; opacity: 0.8; }
+  .chess-piece-knight { right: -4%; top: 8%; opacity: 0.8; }
+  .chess-piece-rook { left: 0; bottom: 4%; opacity: 0.75; }
+  .chess-piece-bishop { right: 0; bottom: 4%; opacity: 0.75; }
 }
 
 @layer base {
@@ -196,67 +524,211 @@
 /* Automatic tarot deck draw */
 .tarot-deck-stage {
   position: relative;
-  min-height: 430px;
-  width: min(100%, 260px);
+  min-height: 470px;
+  width: min(100%, 560px);
 }
 
 .tarot-deck-stack {
   position: absolute;
-  inset: 12px 0 auto;
-  height: 370px;
+  inset: 42px 0 auto;
+  height: 340px;
   pointer-events: none;
+  transition: transform 0.35s ease;
 }
 
 .tarot-deck-card {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  top: 0;
+  left: 50%;
+  width: 220px;
+  height: 330px;
   border: 2px solid rgba(246, 174, 45, 0.65);
   border-radius: 1.5rem;
-  background-color: #162038;
-  background-image: linear-gradient(45deg, transparent 43%, rgba(246, 174, 45, 0.55) 44% 48%, transparent 49% 100%), linear-gradient(-45deg, transparent 43%, rgba(232, 93, 117, 0.5) 44% 48%, transparent 49% 100%), radial-gradient(circle, rgba(221, 214, 254, 0.42) 0 2px, transparent 3px);
-  background-size: 32px 32px, 32px 32px, 24px 24px;
-  background-position: center;
+  overflow: hidden;
   box-shadow: 0 22px 40px rgba(0, 0, 0, 0.25);
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.tarot-deck-card img,
+.tarot-feature-card {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
 }
 
 .tarot-deck-card-one {
-  transform: rotate(-5deg) translate(-8px, 10px);
+  transform: translateX(-50%) rotate(-24deg) translate(-130px, 30px);
+  animation-name: tarotShuffleOne;
 }
 
 .tarot-deck-card-two {
-  transform: rotate(3deg) translate(8px, 6px);
+  transform: translateX(-50%) rotate(-12deg) translate(-72px, 10px);
+  animation-name: tarotShuffleTwo;
+  animation-delay: -0.15s;
 }
 
 .tarot-deck-card-three {
-  transform: rotate(-1deg) translate(0, 2px);
+  transform: translateX(-50%) rotate(0deg) translate(0, 0);
+  animation-name: tarotShuffleThree;
+  animation-delay: -0.3s;
+}
+
+.tarot-deck-card-four {
+  transform: translateX(-50%) rotate(12deg) translate(72px, 10px);
+  animation-name: tarotShuffleFour;
+  animation-delay: -0.45s;
+}
+
+.tarot-deck-card-five {
+  transform: translateX(-50%) rotate(24deg) translate(130px, 30px);
+  animation-name: tarotShuffleFive;
+  animation-delay: -0.6s;
 }
 
 .tarot-draw-area {
   position: relative;
   z-index: 1;
   width: 260px;
-}
-
-.tarot-card-back-face {
-  background-image: linear-gradient(45deg, transparent 43%, rgba(246, 174, 45, 0.5) 44% 48%, transparent 49% 100%), linear-gradient(-45deg, transparent 43%, rgba(232, 93, 117, 0.45) 44% 48%, transparent 49% 100%), radial-gradient(circle, rgba(221, 214, 254, 0.4) 0 2px, transparent 3px);
-  background-size: 32px 32px, 32px 32px, 24px 24px;
+  height: 390px;
+  margin: 0 auto;
 }
 
 .tarot-auto-card {
-  transform: translateY(0) rotateY(180deg);
-}
-
-.tarot-auto-card.rotate-y-180 {
-  transform: translateY(0) rotateY(180deg);
+  position: relative;
+  transform: translateY(0) rotate(0deg);
+  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.32);
 }
 
 .tarot-auto-card.tarot-card-drawing {
-  transform: translateY(-34px) rotateY(0deg);
+  animation: tarotDeckShuffle 850ms ease-in-out;
 }
 
-.tarot-auto-card.tarot-card-drawing.rotate-y-180 {
-  transform: translateY(-34px) rotateY(180deg);
+.tarot-auto-card.tarot-card-shuffled {
+  animation: tarotDeckShuffle 700ms ease-in-out;
+}
+
+/* Real "bridge shuffle": deck splits into two piles that arc up, flutter
+   with a paper-bend squish, cross back through the middle, and snap
+   together with a small overshoot before settling. Each card gets its
+   own mirrored arc plus a slight stagger so the motion cascades instead
+   of moving as one rigid block. */
+.tarot-deck-shuffling .tarot-deck-card-one {
+  animation: tarotRiffleOne 1.8s cubic-bezier(0.45, 0, 0.4, 1) both;
+}
+
+.tarot-deck-shuffling .tarot-deck-card-two {
+  animation: tarotRiffleTwo 1.8s cubic-bezier(0.45, 0, 0.4, 1) 80ms both;
+}
+
+.tarot-deck-shuffling .tarot-deck-card-three {
+  animation: tarotRiffleThree 1.8s cubic-bezier(0.45, 0, 0.4, 1) 140ms both;
+}
+
+.tarot-deck-shuffling .tarot-deck-card-four {
+  animation: tarotRiffleFour 1.8s cubic-bezier(0.45, 0, 0.4, 1) 80ms both;
+}
+
+.tarot-deck-shuffling .tarot-deck-card-five {
+  animation: tarotRiffleFive 1.8s cubic-bezier(0.45, 0, 0.4, 1) both;
+}
+
+@keyframes tarotDeckShuffle {
+  0% { transform: translateY(0) translateX(0) rotate(0deg) scale(1); }
+  20% { transform: translateY(-26px) translateX(-14px) rotate(-6deg) scale(1.03); }
+  45% { transform: translateY(6px) translateX(10px) rotate(5deg) scale(0.99); }
+  70% { transform: translateY(-12px) translateX(-6px) rotate(-3deg) scale(1.01); }
+  100% { transform: translateY(0) translateX(0) rotate(0deg) scale(1); }
+}
+
+@keyframes tarotRiffleOne {
+  0%, 100% { transform: translateX(-50%) rotate(-24deg) translate(-130px, 30px) scaleY(1); }
+  18% { transform: translateX(-50%) rotate(-48deg) translate(-240px, -44px) scaleY(1.06); }
+  38% { transform: translateX(-50%) rotate(-36deg) translate(-170px, -86px) scaleY(1.1); }
+  56% { transform: translateX(-50%) rotate(-18deg) translate(-50px, 24px) scaleY(0.95); }
+  78% { transform: translateX(-50%) rotate(-29deg) translate(-142px, 16px) scaleY(1.03); }
+}
+
+@keyframes tarotRiffleTwo {
+  0%, 100% { transform: translateX(-50%) rotate(-12deg) translate(-72px, 10px) scaleY(1); }
+  18% { transform: translateX(-50%) rotate(-30deg) translate(-150px, -34px) scaleY(1.04); }
+  38% { transform: translateX(-50%) rotate(-22deg) translate(-108px, -66px) scaleY(1.08); }
+  56% { transform: translateX(-50%) rotate(-4deg) translate(-22px, 22px) scaleY(0.96); }
+  78% { transform: translateX(-50%) rotate(-16deg) translate(-82px, 12px) scaleY(1.02); }
+}
+
+@keyframes tarotRiffleThree {
+  0%, 100% { transform: translateX(-50%) rotate(0deg) translate(0, 0) scaleY(1); }
+  18% { transform: translateX(-50%) rotate(-8deg) translate(-22px, -28px) scaleY(1.04); }
+  38% { transform: translateX(-50%) rotate(9deg) translate(22px, -58px) scaleY(1.08); }
+  56% { transform: translateX(-50%) rotate(-5deg) translate(-12px, 18px) scaleY(0.96); }
+  78% { transform: translateX(-50%) rotate(4deg) translate(8px, -6px) scaleY(1.02); }
+}
+
+@keyframes tarotRiffleFour {
+  0%, 100% { transform: translateX(-50%) rotate(12deg) translate(72px, 10px) scaleY(1); }
+  18% { transform: translateX(-50%) rotate(30deg) translate(150px, -34px) scaleY(1.04); }
+  38% { transform: translateX(-50%) rotate(22deg) translate(108px, -66px) scaleY(1.08); }
+  56% { transform: translateX(-50%) rotate(4deg) translate(22px, 22px) scaleY(0.96); }
+  78% { transform: translateX(-50%) rotate(16deg) translate(82px, 12px) scaleY(1.02); }
+}
+
+@keyframes tarotRiffleFive {
+  0%, 100% { transform: translateX(-50%) rotate(24deg) translate(130px, 30px) scaleY(1); }
+  18% { transform: translateX(-50%) rotate(48deg) translate(240px, -44px) scaleY(1.06); }
+  38% { transform: translateX(-50%) rotate(36deg) translate(170px, -86px) scaleY(1.1); }
+  56% { transform: translateX(-50%) rotate(18deg) translate(50px, 24px) scaleY(0.95); }
+  78% { transform: translateX(-50%) rotate(29deg) translate(142px, 16px) scaleY(1.03); }
+}
+
+@keyframes tarotShuffleOne {
+  0%, 100% { transform: translateX(-50%) rotate(-24deg) translate(-130px, 30px); }
+  45% { transform: translateX(-50%) rotate(-31deg) translate(-172px, -8px); }
+  55% { transform: translateX(-50%) rotate(-18deg) translate(-92px, 48px); }
+}
+
+@keyframes tarotShuffleTwo {
+  0%, 100% { transform: translateX(-50%) rotate(-12deg) translate(-72px, 10px); }
+  45% { transform: translateX(-50%) rotate(-18deg) translate(-112px, -26px); }
+  55% { transform: translateX(-50%) rotate(-7deg) translate(-38px, 36px); }
+}
+
+@keyframes tarotShuffleThree {
+  0%, 100% { transform: translateX(-50%) rotate(0deg) translate(0, 0); }
+  45% { transform: translateX(-50%) rotate(5deg) translate(12px, -34px); }
+  55% { transform: translateX(-50%) rotate(-4deg) translate(-10px, 24px); }
+}
+
+@keyframes tarotShuffleFour {
+  0%, 100% { transform: translateX(-50%) rotate(12deg) translate(72px, 10px); }
+  45% { transform: translateX(-50%) rotate(19deg) translate(114px, -26px); }
+  55% { transform: translateX(-50%) rotate(7deg) translate(38px, 36px); }
+}
+
+@keyframes tarotShuffleFive {
+  0%, 100% { transform: translateX(-50%) rotate(24deg) translate(130px, 30px); }
+  45% { transform: translateX(-50%) rotate(32deg) translate(174px, -8px); }
+  55% { transform: translateX(-50%) rotate(18deg) translate(92px, 48px); }
+}
+
+@media (max-width: 767px) {
+  .tarot-deck-stage {
+    width: 100%;
+    min-height: 420px;
+  }
+
+  .tarot-deck-card {
+    width: 170px;
+    height: 255px;
+  }
+
+  .tarot-deck-card-one { transform: translateX(-50%) rotate(-18deg) translate(-70px, 28px); }
+  .tarot-deck-card-two { transform: translateX(-50%) rotate(-9deg) translate(-38px, 10px); }
+  .tarot-deck-card-four { transform: translateX(-50%) rotate(9deg) translate(38px, 10px); }
+  .tarot-deck-card-five { transform: translateX(-50%) rotate(18deg) translate(70px, 28px); }
 }
 
 /* Breathing meditation animation */

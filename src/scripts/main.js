@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initYarnPaletteGenerator();
   initTagFilter();
   initCard3DTilt();
+  initCursorFollower();
+  initScrollLinkedMovement();
   initToastNotification();
 });
 
@@ -185,90 +187,29 @@ function initSmoothScroll() {
  */
 function initTarotCardWidget() {
   const tarotCardInner = document.getElementById('tarot-card-inner');
-  const cardTitle = document.getElementById('tarot-card-title');
-  const cardArchetype = document.getElementById('tarot-card-archetype');
-  const cardMessage = document.getElementById('tarot-card-message');
-  const cardKeyword = document.getElementById('tarot-card-keyword');
-  const cardIcon = document.getElementById('tarot-card-icon');
+  const tarotDeckStage = tarotCardInner ? tarotCardInner.closest('.tarot-deck-stage') : null;
 
   if (!tarotCardInner) return;
 
-  const tarotCards = [
-    {
-      title: "THE STAR",
-      archetype: "Major Arcana XVII: Hope & Inspiration",
-      keyword: "Renewal & Clarity",
-      message: "Trust the quiet intuition guiding your path. Open your creative floodgates.",
-      icon: "✨"
-    },
-    {
-      title: "THE MAGICIAN",
-      archetype: "Major Arcana I: Creation & Skill",
-      keyword: "Resourcefulness",
-      message: "You have all the tools, hands, and vision needed to bring ideas into reality.",
-      icon: "⚡"
-    },
-    {
-      title: "THE EMPRESS",
-      archetype: "Major Arcana III: Abundance & Senses",
-      keyword: "Tactile Nourishment",
-      message: "Connect with sensory joys: the smell of bread, the texture of yarn, and rich pigment.",
-      icon: "🌿"
-    },
-    {
-      title: "THE HIGH PRIESTESS",
-      archetype: "Major Arcana II: Intuitive Wisdom",
-      keyword: "Subconscious Flow",
-      message: "Step away from over-analyzing. Listen to what rises in the space between breaths.",
-      icon: "🔮"
-    },
-    {
-      title: "STRENGTH",
-      archetype: "Major Arcana VIII: Gentle Resilience",
-      keyword: "Grace & Patience",
-      message: "Mastery is gentle persistence — whether in a yoga posture or an intricate stitch.",
-      icon: "🦁"
-    },
-    {
-      title: "THE SUN",
-      archetype: "Major Arcana XIX: Vitality & Joy",
-      keyword: "Unfiltered Joy",
-      message: "Radiate your authentic creative spirit without self-doubt. Play freely today.",
-      icon: "☀️"
-    }
-  ];
-
-  let currentIndex = 0;
-
   function drawCard() {
-    let nextIndex;
-    do {
-      nextIndex = Math.floor(Math.random() * tarotCards.length);
-    } while (nextIndex === currentIndex && tarotCards.length > 1);
-
-    currentIndex = nextIndex;
-    const card = tarotCards[currentIndex];
-
-    // Lift one card from the deck, then flip it to reveal the random archetype.
-    tarotCardInner.classList.remove('rotate-y-180');
+    if (tarotDeckStage) tarotDeckStage.classList.add('tarot-deck-shuffling');
     tarotCardInner.classList.add('tarot-card-drawing');
-
-    setTimeout(() => {
-      if (cardTitle) cardTitle.textContent = card.title;
-      if (cardArchetype) cardArchetype.textContent = card.archetype;
-      if (cardKeyword) cardKeyword.textContent = card.keyword;
-      if (cardMessage) cardMessage.textContent = card.message;
-      if (cardIcon) cardIcon.textContent = card.icon;
-      tarotCardInner.classList.add('rotate-y-180');
-    }, 180);
-
     setTimeout(() => {
       tarotCardInner.classList.remove('tarot-card-drawing');
-    }, 900);
+      tarotCardInner.classList.add('tarot-card-shuffled');
+      setTimeout(() => tarotCardInner.classList.remove('tarot-card-shuffled'), 700);
+    }, 1100);
+    setTimeout(() => tarotDeckStage?.classList.remove('tarot-deck-shuffling'), 2050);
   }
 
-  drawCard();
-  window.setInterval(drawCard, 5200);
+  tarotCardInner.addEventListener('click', drawCard);
+  tarotCardInner.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      drawCard();
+    }
+  });
+  window.setInterval(drawCard, 10000);
 }
 
 /**
@@ -509,7 +450,66 @@ function initCard3DTilt() {
 }
 
 /**
- * 12. Toast Notification System
+ * 12. Contextual Cursor Label for Image-led Cards
+ */
+function initCursorFollower() {
+  if (window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll('[data-hover-label]');
+  if (targets.length === 0) return;
+
+  const label = document.createElement('div');
+  label.className = 'cursor-follow-label';
+  label.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(label);
+
+  targets.forEach(target => {
+    target.addEventListener('mouseenter', () => {
+      label.textContent = target.getAttribute('data-hover-label');
+      label.classList.add('is-visible');
+    });
+
+    target.addEventListener('mousemove', event => {
+      label.style.left = `${event.clientX + 18}px`;
+      label.style.top = `${event.clientY + 18}px`;
+    });
+
+    target.addEventListener('mouseleave', () => {
+      label.classList.remove('is-visible');
+    });
+  });
+}
+
+/**
+ * 13. Gentle Scroll-linked Decorative Movement
+ */
+function initScrollLinkedMovement() {
+  const elements = document.querySelectorAll('[data-scroll-shift]');
+  if (elements.length === 0 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let ticking = false;
+  const update = () => {
+    const viewportCenter = window.innerHeight / 2;
+    elements.forEach(element => {
+      const speed = Number(element.getAttribute('data-scroll-shift')) || 0;
+      const distance = (element.getBoundingClientRect().top - viewportCenter) * speed;
+      element.style.setProperty('--scroll-shift-y', `${distance.toFixed(1)}px`);
+    });
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
+}
+
+/**
+ * 14. Toast Notification System
  */
 let toastTimeout;
 function showToast(message) {

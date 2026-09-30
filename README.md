@@ -1,6 +1,8 @@
 # Pradheepa Ramasundaram — Personal Website
 
-An eclectic, colorful, single-page personal website celebrating creative and spiritual practices in this order: **books, baking, painting, tarot, crochet and embroidery, and yoga**.
+An eclectic, colorful, single-page personal website celebrating creative and spiritual practices in this order: **books, baking, painting, tarot, chess, crochet and embroidery, and yoga**.
+
+The site also includes an art portfolio and workshop offering through [The Kala Odyssey](https://pradheepar.wixsite.com/thekalaodyssey), a Goodreads profile, and a filterable Sparks section for smaller interests such as vibecoding, board games, mocktail making, origami, junk journaling, and shape stamping.
 
 ## 🎨 Site Images
 
@@ -12,6 +14,7 @@ The project includes handcrafted placeholder artwork used throughout the page:
 | Baking | ![Artisan baking illustration](public/images/baking-placeholder.svg) |
 | Painting | ![Painting illustration](public/images/art-placeholder.svg) |
 | Tarot | ![Tarot illustration](public/images/tarot-placeholder.svg) |
+| Chess | ![Chess illustration](public/images/chess-placeholder.svg) |
 | Crochet | ![Crochet illustration](public/images/crochet-placeholder.svg) |
 | Embroidery | ![Embroidery illustration](public/images/embroidery-placeholder.svg) |
 | Yoga | ![Yoga illustration](public/images/yoga-placeholder.svg) |
@@ -37,13 +40,15 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │       ├── hero-portrait-placeholder.svg
 │       ├── yoga-placeholder.svg
 │       ├── tarot-placeholder.svg
+│       ├── tarot-card-reference.svg
 │       ├── baking-placeholder.svg
 │       ├── art-placeholder.svg
+│       ├── chess-placeholder.svg
 │       ├── crochet-placeholder.svg
 │       ├── embroidery-placeholder.svg
 │       └── og-image.svg
 └── dist/
-    └── styles.css              # Compiled production stylesheet
+   └── styles.css              # Compiled production stylesheet
 ```
 
 ---
