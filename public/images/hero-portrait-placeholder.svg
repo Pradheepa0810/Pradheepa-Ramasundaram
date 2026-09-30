@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" fill="none">
+  <rect width="600" height="700" fill="#FEEDE4" rx="24"/>
+  <!-- Decorative background geometric accents -->
+  <circle cx="480" cy="140" r="100" fill="#F6AE2D" fill-opacity="0.6"/>
+  <circle cx="120" cy="560" r="140" fill="#DDD6FE" fill-opacity="0.8"/>
+  <path d="M50 80 Q 200 20, 350 110 T 550 80" stroke="#1E4ED8" stroke-width="4" stroke-linecap="round" fill="none"/>
+  
+  <!-- Stylized portrait / avatar backdrop -->
+  <g transform="translate(150, 160)">
+    <rect x="0" y="0" width="300" height="340" rx="150" fill="#E85D75" stroke="#1E1A17" stroke-width="4"/>
+    <circle cx="150" cy="140" r="90" fill="#FAF7F0" stroke="#1E1A17" stroke-width="4"/>
+    
+    <!-- Abstract face / sunbeam smile & glasses -->
+    <path d="M110 135 C110 120, 140 120, 140 135" stroke="#1E1A17" stroke-width="4" stroke-linecap="round"/>
+    <path d="M160 135 C160 120, 190 120, 190 135" stroke="#1E1A17" stroke-width="4" stroke-linecap="round"/>
+    <path d="M130 165 Q 150 185, 170 165" stroke="#1E1A17" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="105" cy="155" r="10" fill="#F26419" fill-opacity="0.5"/>
+    <circle cx="195" cy="155" r="10" fill="#F26419" fill-opacity="0.5"/>
+    
+    <!-- Sparkles -->
+    <path d="M260 60 L270 40 L280 60 L300 70 L280 80 L270 100 L260 80 L240 70 Z" fill="#F6AE2D"/>
+    <path d="M30 250 L38 235 L46 250 L61 258 L46 266 L38 281 L30 266 L15 258 Z" fill="#1E4ED8"/>
+  </g>
+  
+  <!-- Placeholder banner overlay -->
+  <g transform="translate(80, 560)">
+    <rect width="440" height="80" rx="16" fill="#FFFFFF" stroke="#1E1A17" stroke-width="3" filter="drop-shadow(4px 4px 0px #1E1A17)"/>
+    <text x="220" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="16" fill="#1E1A17" text-anchor="middle">PHOTO PLACEHOLDER</text>
+    <text x="220" y="60" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="13" fill="#6B7280" text-anchor="middle">Replace with your portrait / hero photo</text>
+  </g>
+</svg>

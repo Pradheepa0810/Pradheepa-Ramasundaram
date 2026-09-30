@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%" fill="none">
+  <rect width="700" height="500" fill="#EDF4EE" rx="28"/>
+  <circle cx="560" cy="110" r="80" fill="#F6AE2D" fill-opacity="0.7"/>
+  <circle cx="120" cy="380" r="100" fill="#496E4C" fill-opacity="0.15"/>
+  
+  <!-- Stylized Yoga Figure & Botanical Flora -->
+  <g transform="translate(230, 80)">
+    <!-- Aura halo -->
+    <ellipse cx="120" cy="170" rx="140" ry="140" stroke="#496E4C" stroke-width="2" stroke-dasharray="6 6"/>
+    <!-- Head -->
+    <circle cx="120" cy="90" r="32" fill="#FAF7F0" stroke="#1E1A17" stroke-width="4"/>
+    <!-- Body in Lotus / Grounding Pose -->
+    <path d="M120 122 C90 140, 70 190, 70 230 L170 230 C170 190, 150 140, 120 122 Z" fill="#496E4C" stroke="#1E1A17" stroke-width="4"/>
+    <!-- Folded legs -->
+    <path d="M40 230 C40 210, 80 200, 120 220 C160 200, 200 210, 200 230 C200 250, 40 250, 40 230 Z" fill="#2F4B32" stroke="#1E1A17" stroke-width="4"/>
+    <!-- Arms raised or prayer -->
+    <path d="M85 150 C80 180, 100 185, 120 170 C140 185, 160 180, 155 150" stroke="#1E1A17" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Calming leaf flourish -->
+    <path d="M-50 250 Q-20 170, 30 190 Q0 240, -50 250 Z" fill="#496E4C" fill-opacity="0.4"/>
+    <path d="M290 250 Q260 170, 210 190 Q240 240, 290 250 Z" fill="#496E4C" fill-opacity="0.4"/>
+  </g>
+
+  <!-- Placeholder Pill Banner -->
+  <g transform="translate(160, 400)">
+    <rect width="380" height="64" rx="14" fill="#FFFFFF" stroke="#1E1A17" stroke-width="3" filter="drop-shadow(4px 4px 0px #1E1A17)"/>
+    <text x="190" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#1E1A17" text-anchor="middle">YOGA PHOTO PLACEHOLDER</text>
+    <text x="190" y="49" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="12" fill="#6B7280" text-anchor="middle">Suggested: Mat setup, favorite posture, or studio space</text>
+  </g>
+</svg>

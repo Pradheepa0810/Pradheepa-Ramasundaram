@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradheepa Ramasundaram</title>
+  <meta name="description" content="The corner of the internet where I keep my paintbrushes and palette, my yoga mat, my tarot deck, my sourdough starter, and my sewing basket.">
+  <meta name="author" content="Pradheepa Ramasundaram">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pradheeparamasundaram.com/">
+  <meta property="og:title" content="Pradheepa Ramasundaram">
+  <meta property="og:description" content="The corner of the internet where I keep my paintbrushes and palette, my yoga mat, my tarot deck, my sourdough starter, and my sewing basket.">
+  <meta property="og:image" content="./public/images/og-image.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pradheepa Ramasundaram">
+  <meta name="twitter:description" content="The corner of the internet where I keep my paintbrushes and palette, my yoga mat, my tarot deck, my sourdough starter, and my sewing basket.">
+  <meta name="twitter:image" content="./public/images/og-image.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS & Custom Design Tokens -->
+  <link rel="stylesheet" href="./dist/styles.css">
+</head>
+<body class="bg-cream text-espresso min-h-screen selection:bg-sunshine selection:text-espresso antialiased relative">
+
+  <!-- ========================================================================= -->
+  <!-- TOP SCROLL PROGRESS BAR                                                   -->
+  <!-- ========================================================================= -->
+  <div id="scroll-progress" class="fixed top-0 left-0 right-0 h-1 bg-coral z-50 transform scale-x-0 origin-left" aria-hidden="true"></div>
+
+  <!-- ========================================================================= -->
+  <!-- HEADER & NAVIGATION                                                      -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-espresso/15 transition-all duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand / Logo -->
+      <a href="#" class="group flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso rounded-lg p-1" aria-label="Home">
+        <span class="w-8 h-8 rounded-full bg-coral border border-espresso/30 flex items-center justify-center text-cream font-bold text-base group-hover:scale-105 transition-transform">
+          ✦
+        </span>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg sm:text-xl tracking-tight leading-none text-espresso">
+            Pradheepa Ramasundaram
+          </span>
+          <span class="text-[11px] font-medium text-espresso/60">A slow romance with my own life</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-1 bg-paper/85 border border-espresso/15 px-3 py-1.5 rounded-full shadow-sm" aria-label="Main Navigation">
+        <a href="#about" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">About</a>
+        <a href="#baking" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Baking</a>
+        <a href="#art" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Art</a>
+        <a href="#tarot" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Tarot</a>
+        <a href="#yoga" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Yoga</a>
+        <a href="#crafts" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Threads</a>
+        <a href="#topics" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Sparks</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <div class="flex items-center gap-2.5">
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" type="button" class="md:hidden w-10 h-10 bg-paper border border-espresso/20 rounded-xl flex items-center justify-center text-espresso hover:bg-sunshine/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <line x1="3" x2="21" y1="6" y2="6"/>
+            <line x1="3" x2="21" y1="12" y2="12"/>
+            <line x1="3" x2="21" y1="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div id="mobile-nav-backdrop" class="fixed inset-0 bg-espresso/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav-drawer" class="fixed top-0 right-0 w-72 max-w-[85vw] h-full bg-cream border-l-2 border-espresso/20 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col p-6 shadow-xl md:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="flex items-center justify-between pb-4 border-b border-espresso/15">
+      <div>
+        <span class="font-display font-bold text-lg text-espresso block">Pradheepa</span>
+          <span class="text-[11px] font-medium text-espresso/60">A slow romance with my own life</span>
+      </div>
+      <button id="mobile-menu-close" type="button" class="w-9 h-9 bg-paper border border-espresso/20 rounded-lg flex items-center justify-center text-espresso focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso" aria-label="Close Navigation Menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <line x1="18" x2="6" y1="6" y2="18"/>
+          <line x1="6" x2="18" y1="6" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-2 mt-5" aria-label="Mobile Drawer Links">
+      <a href="#about" class="px-4 py-2.5 rounded-xl font-semibold text-espresso bg-paper border border-espresso/15 hover:bg-sunshine/40 transition-all">About</a>
+      <a href="#baking" class="px-4 py-2.5 rounded-xl font-semibold text-tangerine-dark bg-tangerine-light border border-tangerine/30 hover:bg-tangerine hover:text-cream transition-all">Artisan Baking</a>
+      <a href="#art" class="px-4 py-2.5 rounded-xl font-semibold text-coral-dark bg-coral-light border border-coral/30 hover:bg-coral hover:text-cream transition-all">Painting &amp; Art</a>
+      <a href="#tarot" class="px-4 py-2.5 rounded-xl font-semibold text-cobalt-dark bg-cobalt-light border border-cobalt/30 hover:bg-cobalt hover:text-cream transition-all">Tarot &amp; Archetypes</a>
+      <a href="#yoga" class="px-4 py-2.5 rounded-xl font-semibold text-olive-dark bg-olive-light border border-olive/30 hover:bg-olive hover:text-cream transition-all">Yoga Practice</a>
+      <a href="#crafts" class="px-4 py-2.5 rounded-xl font-semibold text-espresso bg-lavender border border-espresso/15 hover:bg-espresso hover:text-cream transition-all">Threads</a>
+      <a href="#topics" class="px-4 py-2.5 rounded-xl font-semibold text-espresso bg-sunshine/60 border border-espresso/15 hover:bg-espresso hover:text-cream transition-all">Sparks &amp; Topics</a>
+    </nav>
+
+    <div class="mt-auto pt-6 border-t border-espresso/15 flex flex-col gap-3">
+      <span class="text-xs font-semibold text-espresso/60">Connect &amp; Follow</span>
+      <a href="https://www.instagram.com/p.r.a.d.h.e.e.p.a/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-coral text-cream border border-coral-dark py-2.5 rounded-xl font-semibold hover:bg-coral-dark transition-all">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+        </svg>
+        <span>Personal Instagram</span>
+      </a>
+      <a href="https://www.instagram.com/thekalaodyssey/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-tangerine text-cream border border-tangerine-dark py-2.5 rounded-xl font-semibold hover:bg-tangerine-dark transition-all">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+        </svg>
+        <span>Art: @thekalaodyssey</span>
+      </a>
+      <a href="https://in.pinterest.com/pradheepa0810/_boards/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-paper text-espresso border border-espresso/20 py-2.5 rounded-xl font-semibold hover:bg-sunshine/40 transition-all">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.171-2.911 1.024 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+        </svg>
+        <span>Pinterest Boards</span>
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ========================================================================= -->
+    <!-- HERO SECTION                                                              -->
+    <!-- ========================================================================= -->
+    <section class="hero-order relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden border-b border-espresso/15 bg-cream">
+      
+      <!-- Background Ambient Glows -->
+      <div class="absolute top-8 left-10 w-32 h-32 rounded-full bg-sunshine/25 blur-2xl pointer-events-none"></div>
+      <div class="absolute bottom-10 right-12 w-48 h-48 rounded-full bg-coral-light/50 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Content: Hero Copy & Linktree Pills -->
+          <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+            
+            <!-- Grounded Top Label -->
+            <div class="inline-flex items-center gap-2 bg-paper border border-espresso/20 px-3.5 py-1 rounded-full text-xs font-medium text-espresso/70">
+              <span class="w-2 h-2 rounded-full bg-coral"></span>
+              <span>A love letter to my hobbies, and the diary that documents them</span>
+            </div>
+
+            <!-- Natural Rhythmic Headline (Clean typography, no AI-formula styling) -->
+            <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] leading-[1.18] tracking-tight text-espresso font-normal text-balance">
+              This is where I keep the parts of my week that never make it onto a resume.
+            </h1>
+
+            <!-- Intro Subtitle -->
+            <p class="text-base sm:text-lg text-espresso/75 font-normal leading-relaxed max-w-xl">
+              The technique behind a painting I almost didn't finish. The bread that didn't rise the first four times. The tarot spread I still think about a year later.
+            </p>
+
+            <!-- Quick Access Jump Pills -->
+            <div class="w-full pt-1">
+              <span class="block text-xs font-semibold text-espresso/60 mb-2.5">Jump into a practice:</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="#yoga" class="inline-flex items-center gap-1.5 bg-paper text-olive-dark border border-olive/30 px-3 py-1.5 rounded-full text-xs font-semibold hover:bg-olive hover:text-cream transition-all">
+                  <span>🧘</span> Yoga Flow
+                </a>
+                <a href="#tarot" class="inline-flex items-center gap-1.5 bg-paper text-cobalt-dark border border-cobalt/30 px-3 py-1.5 rounded-full text-xs font-semibold hover:bg-cobalt hover:text-cream transition-all">
+                  <span>🔮</span> Tarot Cards
+                </a>
+                <a href="#baking" class="inline-flex items-center gap-1.5 bg-paper text-tangerine-dark border border-tangerine/30 px-3 py-1.5 rounded-full text-xs font-semibold hover:bg-tangerine hover:text-cream transition-all">
+                  <span>🍞</span> Artisan Baking
+                </a>
+                <a href="#art" class="inline-flex items-center gap-1.5 bg-paper text-coral-dark border border-coral/30 px-3 py-1.5 rounded-full text-xs font-semibold hover:bg-coral hover:text-cream transition-all">
+                  <span>🎨</span> Painting &amp; Art
+                </a>
+                <a href="#crafts" class="inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/20 px-3 py-1.5 rounded-full text-xs font-semibold hover:bg-espresso hover:text-cream transition-all">
+                  <span>🧶</span> Crochet &amp; Embroidery
+                </a>
+              </div>
+            </div>
+
+            <!-- Social Row with email copy -->
+            <div class="flex items-center gap-2.5 pt-2">
+              <a href="https://www.instagram.com/p.r.a.d.h.e.e.p.a/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-paper border border-espresso/20 hover:bg-sunshine/40 hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso" title="Personal Instagram (@p.r.a.d.h.e.e.p.a)" aria-label="Visit Personal Instagram Profile">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/thekalaodyssey/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-paper border border-espresso/20 hover:bg-coral-light/60 hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso" title="Art Instagram (@thekalaodyssey)" aria-label="Visit Art Instagram Profile">
+                <svg class="w-4 h-4 text-coral-dark" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 1 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="https://in.pinterest.com/pradheepa0810/_boards/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-paper border border-espresso/20 hover:bg-sunshine/40 hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso" title="Pinterest Inspiration Boards" aria-label="Visit Pinterest Board">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.171-2.911 1.024 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                </svg>
+              </a>
+              <button type="button" data-copy-trigger="pradheepa.ramasundaram@gmail.com" class="p-2.5 rounded-xl bg-paper border border-espresso/20 hover:bg-tangerine-light/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso" title="Copy Contact Email" aria-label="Copy Contact Email">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </button>
+              <span class="text-xs text-espresso/60 italic ml-2">Open to bread talk, art techniques, card pulls, and yarn recommendations, always.</span>
+            </div>
+
+          </div>
+
+          <!-- Right Content: EXACT ONE HERO PORTRAIT CARD WITH RETRO DROP SHADOW -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="relative w-full max-w-sm tilt-card">
+              
+              <!-- Decorative background backing card -->
+              <div class="absolute inset-0 bg-coral rounded-3xl border-3 border-espresso shadow-retro-xl transform rotate-3"></div>
+              
+              <!-- Foreground portrait card (Single Signature Bold Shadow Element) -->
+              <div class="relative bg-paper rounded-3xl border-3 border-espresso p-4 overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <figure class="relative rounded-2xl overflow-hidden border-2 border-espresso bg-tangerine-light aspect-[4/5] flex items-center justify-center">
+                  <!-- TODO: replace with your own hero/portrait photo -->
+                  <img src="./public/images/hero-portrait-placeholder.svg" alt="Portrait illustration placeholder of Pradheepa Ramasundaram" class="w-full h-full object-cover">
+                  
+                  <!-- Floating Badge Overlay -->
+                  <div class="absolute top-3 right-3 bg-sunshine border border-espresso px-3 py-1 rounded-full text-[11px] font-bold uppercase tilt-right">
+                    Made by hand
+                  </div>
+                </figure>
+                
+                <div class="pt-4 pb-1 px-1 flex items-center justify-between">
+                  <div>
+                    <h3 class="font-display font-bold text-lg text-espresso">Pradheepa Ramasundaram</h3>
+                    <p class="text-xs font-medium text-espresso/65">Practitioner &amp; Maker</p>
+                  </div>
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-olive-light border border-olive/30 text-olive text-sm font-bold">
+                    🌿
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- DYNAMIC MARQUEE TICKER TAPE RIBBON                                        -->
+    <!-- ========================================================================= -->
+    <div class="marquee-order w-full overflow-hidden border-b border-espresso/15 bg-sunshine/85 py-2.5 select-none">
+      <div class="animate-marquee-left flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-espresso">
+        <span>✦ A LIFE WORTH ROMANTICIZING</span>
+        <span>✦ PROOF THERE IS MORE TO ME</span>
+        <span>✦ SOMETHING I MADE WITH MY OWN TWO HANDS</span>
+        <span>✦ THIS COUNTS TOO</span>
+        <span>✦ MORE OF ME LIVES HERE</span>
+        <span>✦ MADE BECAUSE I WANTED TO</span>
+        <span>✦ A LIFE WORTH ROMANTICIZING</span>
+        <span>✦ PROOF THERE IS MORE TO ME</span>
+        <span>✦ SOMETHING I MADE WITH MY OWN TWO HANDS</span>
+        <span>✦ THIS COUNTS TOO</span>
+        <span>✦ MORE OF ME LIVES HERE</span>
+        <span>✦ MADE BECAUSE I WANTED TO</span>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- ABOUT SECTION (Patience, craft & working by hand)                        -->
+    <!-- ========================================================================= -->
+    <section id="about" class="about-section-bg py-16 md:py-20 border-b border-coral/30 relative reveal">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="about-panel-bg border border-coral/30 rounded-3xl p-8 sm:p-12 shadow-sm space-y-6">
+          
+          <div class="space-y-2">
+            <h2 class="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-espresso tracking-tight">
+              I Started This Because I Kept Forgetting Who I Am Outside of Work
+            </h2>
+          </div>
+          
+          <div class="space-y-4 text-base sm:text-lg text-espresso/80 leading-relaxed font-normal">
+            <p>
+              My days are full of color and texture: pigment bleeding into wet paper, a row of double crochets multiplying under my hook, a needle catching the light mid stitch. A spread of tarot cards fanned out before I've decided what I'm actually asking them. A loaf of dough breathing under a towel on the counter. My body folded into a stretch that finally stops arguing with me. Making something with my hands is how I remember I am allowed to exist outside of being useful, that I get to have a life that belongs only to me, seams and stitches and unfinished paintings included. This is proof, mostly to myself, that there is more to me than what fits inside a job description.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- YOGA SECTION (Olive Calm + Breath Pacer + First-Person Anecdote)           -->
+    <!-- ========================================================================= -->
+    <section id="yoga" class="py-16 md:py-24 border-b border-espresso/15 bg-olive-light/50 relative reveal">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-7 space-y-6 reveal delay-100">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-olive-dark bg-olive-light px-3 py-1 rounded-full border border-olive/30">
+                Yoga
+              </span>
+            </div>
+
+            <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-espresso tracking-tight">
+              My body and me
+            </h2>
+
+            <p class="text-base sm:text-lg text-espresso/80 leading-relaxed">
+              I started practicing because someone told me it would fix my posture, and stayed because it turned out to fix something else entirely. A yoga class once held me in one stretch long enough that I stopped performing calm and actually felt it. Some days I move fast because my body is loud and needs to be tired out. Some days I move slow because my mind will not stop talking and the only way through is to give it somewhere quieter to sit.
+            </p>
+
+            <a href="https://www.youtube.com/watch?v=1xRX1MuoImw" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-olive-dark underline decoration-olive/40 underline-offset-4 hover:text-olive-dark hover:decoration-olive transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">
+              Learn the basics: Surya Namaskar &rarr;
+            </a>
+
+            <!-- Mindful Breath Pacer Widget -->
+            <div class="bg-paper border border-olive/30 rounded-2xl p-5 shadow-sm space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-olive-dark flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-olive animate-ping"></span>
+                  Mindful Breath Pacer
+                </span>
+                <span id="breathe-timer" class="text-xs font-bold bg-olive-light text-olive-dark px-2.5 py-0.5 rounded-full border border-olive/30">4-4-4</span>
+              </div>
+
+              <div class="flex items-center gap-5">
+                <div class="relative w-16 h-16 flex items-center justify-center">
+                  <div id="breathe-circle" class="w-14 h-14 rounded-full bg-olive-light border-2 border-olive flex items-center justify-center transition-transform duration-1000 ease-in-out">
+                    <span class="text-lg">🌬️</span>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <p id="breathe-label" class="font-display font-semibold text-base text-espresso">Ready to ground</p>
+                  <p class="text-xs text-espresso/65">A 60-second box breathing pause to center yourself.</p>
+                </div>
+              </div>
+
+              <button id="breathe-toggle-btn" type="button" class="w-full bg-olive text-cream font-semibold text-xs uppercase tracking-wider py-2.5 rounded-xl hover:bg-olive-dark transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">
+                <span>▶ Start Box Breathing</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Image Card -->
+          <div class="lg:col-span-5 flex justify-center reveal delay-200">
+            <div class="w-full max-w-md bg-paper border border-olive/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all">
+              <figure class="relative rounded-2xl overflow-hidden border border-olive/20 aspect-[4/3] bg-olive-light">
+                <!-- TODO: replace with your own yoga photo -->
+                <img src="./public/images/yoga-placeholder.svg" alt="Yoga practice illustration placeholder with figure in mindful posture" class="w-full h-full object-cover">
+              </figure>
+              <div class="pt-3 px-1 flex items-center justify-between text-xs font-medium text-espresso/70">
+                <span>Daily grounding</span>
+                <span class="text-olive-dark font-semibold">Vinyasa &amp; Yin</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAROT SECTION (THEATRICAL & QUIET - Signature Interactive Centerpiece)     -->
+    <!-- ========================================================================= -->
+    <section id="tarot" class="py-20 md:py-28 border-b border-indigo-950 bg-[#0B1120] text-cream relative overflow-hidden reveal">
+      
+      <!-- Celestial Spotlight Radial Glow -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/40 via-[#0B1120] to-[#0B1120] pointer-events-none"></div>
+      <div class="absolute top-12 right-12 text-sunshine/40 text-4xl select-none pointer-events-none animate-float">✦</div>
+      <div class="absolute bottom-10 left-10 text-indigo-400/30 text-3xl select-none pointer-events-none animate-float-delayed">★</div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left automatic Tarot deck showcase -->
+          <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center reveal delay-100">
+            <div class="tarot-deck-stage w-full max-w-sm">
+              <div class="tarot-deck-stack" aria-hidden="true">
+                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-one"></div>
+                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-two"></div>
+                <div class="tarot-deck-card tarot-deck-card-back tarot-deck-card-three"></div>
+              </div>
+
+              <div class="tarot-draw-area">
+                <div id="tarot-card-inner" class="tarot-auto-card relative w-full h-[390px] transform-style-3d tarot-glow rounded-3xl transition-transform duration-700" aria-live="polite">
+                  <div class="tarot-card-back-face absolute inset-0 backface-hidden bg-[#162038] border-2 border-sunshine/70 rounded-3xl p-5 flex flex-col justify-between shadow-2xl">
+                    <div class="flex items-center justify-between">
+                      <span class="bg-coral text-cream px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Drawing a card</span>
+                      <span class="text-sunshine text-base">🌙</span>
+                    </div>
+                    <figure class="relative rounded-2xl overflow-hidden border border-sunshine/30 aspect-[3/4] bg-[#0A0F1D]">
+                      <img src="./public/images/tarot-placeholder.svg" alt="Tarot card back illustration placeholder" class="w-full h-full object-cover">
+                    </figure>
+                    <p class="text-xs text-center text-indigo-200/70 font-medium">A card is finding its way to you</p>
+                  </div>
+
+                  <div class="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-b from-[#123499] to-[#0D1527] border-2 border-sunshine/70 rounded-3xl p-5 flex flex-col justify-between shadow-2xl">
+                    <div class="flex items-center justify-between">
+                      <span class="bg-sunshine text-espresso px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Your card</span>
+                      <span class="text-sunshine text-base">✨</span>
+                    </div>
+                    <div class="flex-1 my-3 rounded-2xl border border-sunshine/40 bg-black/30 flex flex-col items-center justify-center p-4 text-center">
+                      <span id="tarot-card-icon" class="text-5xl mb-2">🔮</span>
+                      <h4 id="tarot-card-title" class="font-display font-bold text-2xl text-sunshine tracking-wider">THE STAR</h4>
+                      <p id="tarot-card-archetype" class="text-xs text-indigo-200 mt-1 font-medium">Major Arcana XVII: Hope &amp; Inspiration</p>
+                      <div class="mt-4 px-3 py-1 bg-white/10 rounded-full border border-sunshine/30">
+                        <span id="tarot-card-keyword" class="text-[11px] font-semibold text-sunshine">Renewal &amp; Clarity</span>
+                      </div>
+                    </div>
+                    <p id="tarot-card-message" class="text-xs text-center text-indigo-200/90 italic px-2">"Trust the quiet intuition guiding your path. Open your creative floodgates."</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content: Narrative & Anecdote -->
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6 reveal delay-200">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-sunshine bg-white/5 px-3 py-1 rounded-full border border-sunshine/30">
+                Tarot
+              </span>
+            </div>
+
+            <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-cream tracking-tight">
+              Whispers from the universe
+            </h2>
+
+            <p class="text-base sm:text-lg text-indigo-100/80 leading-relaxed font-normal">
+              Tarot found me in a year when I was making decisions I could not fully explain to anyone, including myself. That said, I do not read cards to know what happens next. I read them because laying out a spread forces me to sit with a question long enough to finally hear my own answer underneath all the noise. My first deck, Rider Waite, is falling apart at the corners now. I love it more for that.
+            </p>
+
+            <a href="https://github.com/Pradheepa0810/TarotQuest" target="_blank" rel="noopener" class="inline-flex text-sm font-semibold text-sunshine underline decoration-sunshine/40 underline-offset-4 hover:text-sunshine hover:decoration-sunshine transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunshine">
+              Learn tarot with me: TarotQuest &rarr;
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- BAKING SECTION (Warm Dough Treatment + Formula Calculator)                -->
+    <!-- ========================================================================= -->
+    <section id="baking" class="py-16 md:py-24 border-b border-tangerine/20 bg-[#FAF4EB] relative reveal">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Text Details -->
+          <div class="lg:col-span-7 space-y-6 reveal delay-100">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-tangerine-dark bg-tangerine-light px-3 py-1 rounded-full border border-tangerine/30">
+                Flour, water, and enough time
+              </span>
+            </div>
+
+            <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-espresso tracking-tight">
+              Bread Taught Me a Patience I Didn't Have Before
+            </h2>
+
+            <p class="text-base sm:text-lg text-espresso/80 leading-relaxed">
+              My starter has survived two house moves and one heatwave that nearly took us both out. Feeding it, folding the dough, waiting for a rise that refuses to be rushed, all of it has taught me a patience I did not have before, one I still do not have anywhere else in my life.
+            </p>
+
+            <!-- Anecdote Block -->
+            <!-- TODO: replace with your real story -->
+            <div class="p-4 sm:p-5 bg-paper rounded-2xl border border-tangerine/30 shadow-sm space-y-2">
+              <span class="text-xs font-bold text-tangerine-dark uppercase tracking-wider block">From the oven</span>
+              <p class="text-sm sm:text-base text-espresso/85 leading-relaxed italic">
+                "My first three loaves came out looking like pale bricks, dense enough to prop open a door. The day I finally pulled out a boule with a proper blistered crust and an open crumb, I took a photo of the cut slice before I ate any of it. That photo is still my phone background."
+              </p>
+            </div>
+
+            <!-- Sourdough Formula Calculator Widget -->
+            <div class="bg-paper border border-tangerine/30 rounded-2xl p-5 shadow-sm space-y-4">
+              <div class="flex items-center justify-between text-xs font-semibold text-tangerine-dark">
+                <span>Baker’s Formula Helper</span>
+                <span id="sourdough-total" class="font-bold text-espresso">885g total dough</span>
+              </div>
+
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-xs font-medium text-espresso/80 mb-1">
+                    <label for="sourdough-flour">Flour Weight:</label>
+                    <span id="sourdough-flour-val" class="font-bold text-tangerine-dark">500g</span>
+                  </div>
+                  <input id="sourdough-flour" type="range" min="300" max="1000" step="50" value="500" class="w-full accent-tangerine cursor-pointer">
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs font-medium text-espresso/80 mb-1">
+                    <label for="sourdough-hydration">Hydration:</label>
+                    <span id="sourdough-hydration-val" class="font-bold text-tangerine-dark">75%</span>
+                  </div>
+                  <input id="sourdough-hydration" type="range" min="65" max="85" step="1" value="75" class="w-full accent-tangerine cursor-pointer">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2 pt-2 text-center border-t border-espresso/10">
+                <div class="bg-tangerine-light/50 p-2 rounded-xl border border-tangerine/20">
+                  <span class="block text-[11px] text-espresso/60 font-medium">Water</span>
+                  <span id="sourdough-water" class="font-bold text-sm text-tangerine-dark">375g</span>
+                </div>
+                <div class="bg-tangerine-light/50 p-2 rounded-xl border border-tangerine/20">
+                  <span class="block text-[11px] text-espresso/60 font-medium">Levain (20%)</span>
+                  <span id="sourdough-starter" class="font-bold text-sm text-tangerine-dark">100g</span>
+                </div>
+                <div class="bg-tangerine-light/50 p-2 rounded-xl border border-tangerine/20">
+                  <span class="block text-[11px] text-espresso/60 font-medium">Salt (2%)</span>
+                  <span id="sourdough-salt" class="font-bold text-sm text-tangerine-dark">10g</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Image Card -->
+          <div class="lg:col-span-5 flex justify-center reveal delay-200">
+            <div class="w-full max-w-md bg-paper border border-tangerine/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all">
+              <figure class="relative rounded-2xl overflow-hidden border border-tangerine/20 aspect-[4/3] bg-cream">
+                <!-- TODO: replace with your own baking photo -->
+                <img src="./public/images/baking-placeholder.svg" alt="Artisan bread loaf illustration placeholder" class="w-full h-full object-cover">
+              </figure>
+              <div class="pt-3 px-1 flex items-center justify-between text-xs font-medium text-espresso/70">
+                <span>Weekend bakes</span>
+                <span class="text-tangerine-dark font-semibold">Boules &amp; Focaccia</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- ART & PAINTING SECTION (Acrylic, Watercolour & Linocut)                  -->
+    <!-- ========================================================================= -->
+    <section id="art" class="py-16 md:py-24 border-b border-coral/20 bg-coral-light/35 relative reveal">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-7 space-y-6 reveal delay-100">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-coral-dark bg-coral-light px-3 py-1 rounded-full border border-coral/30">
+                All the ways I make a picture
+              </span>
+            </div>
+
+            <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-espresso tracking-tight">
+              Give Me Any Medium and I'll Find a Way In
+            </h2>
+
+            <p class="text-base sm:text-lg text-espresso/80 leading-relaxed">
+              I don't really care what the medium is, I just want color or ink in my hands somehow. Oil pastels, acrylic paint, watercolour, whatever's closest on a given day gets used. Lately I've been circling two new things I haven't fully committed to yet: gold foil painting and linocut printing, both still very much in the fumbling around stage.
+            </p>
+
+            <div class="space-y-3">
+              <!-- TODO: replace with your real story -->
+              <p class="p-4 sm:p-5 bg-paper rounded-2xl border border-coral/30 shadow-sm text-sm sm:text-base text-espresso/85 leading-relaxed italic">
+                "I painted my way through one gray February by mixing olive green with every warm color I owned, coral, rust, a strange dusty pink I still can't replicate, whatever medium happened to be closest at the time. None of those paintings were good. All of them got me through a month that felt like it was never going to end."
+              </p>
+              <!-- TODO: replace with your real story -->
+              <p class="p-4 sm:p-5 bg-paper rounded-2xl border border-coral/30 shadow-sm text-sm sm:text-base text-espresso/85 leading-relaxed italic">
+                "My first linocut print came out so lopsided I gave it to a friend as a joke, and she framed it anyway. That print still embarrasses me a little, and I haven't worked up the nerve to ask for it back."
+              </p>
+            </div>
+
+            <!-- Art Instagram Profile Link -->
+            <div class="pt-1">
+              <a href="https://www.instagram.com/thekalaodyssey/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-coral text-cream border border-coral-dark px-4 py-2 rounded-xl text-xs font-semibold hover:bg-coral-dark hover:shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+                <span>View Art Portfolio &amp; Process on Instagram (@thekalaodyssey) &rarr;</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Image Card -->
+          <div class="lg:col-span-5 flex justify-center reveal delay-200">
+            <div class="w-full max-w-md bg-paper border border-coral/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all">
+              <figure class="relative rounded-2xl overflow-hidden border border-coral/20 aspect-[4/3] bg-cream">
+                <!-- TODO: replace with your own art/painting photo -->
+                <img src="./public/images/art-placeholder.svg" alt="Artist painting palette illustration placeholder" class="w-full h-full object-cover">
+              </figure>
+              <div class="pt-3 px-1 flex items-center justify-between text-xs font-medium text-espresso/70">
+                <span>Color studies</span>
+                <span class="text-coral-dark font-semibold">Gouache &amp; Canvas</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- FIBER ARTS: CROCHET & EMBROIDERY (Distinct Stitch Border Divider)         -->
+    <!-- ========================================================================= -->
+    <section id="crafts" class="py-16 md:py-24 border-b border-espresso/15 bg-paper relative reveal">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+          <div class="flex items-center justify-center gap-2">
+            <span class="text-xs font-semibold text-espresso/70 bg-cream px-3 py-1 rounded-full border border-espresso/15">
+              Just getting started
+            </span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-espresso">
+            Fiber Arts: Crochet &amp; Embroidery
+          </h2>
+          <p class="text-espresso/70 text-sm sm:text-base">
+            Slow, deliberate stitches that turn thread into cozy textures and detailed botanical tapestries.
+          </p>
+
+          <!-- Interactive Color Story Generator for Fiber Crafts -->
+          <div class="mt-6 p-4 bg-cream border border-espresso/20 rounded-2xl shadow-sm text-left w-full max-w-lg mx-auto">
+            <div class="flex items-center justify-between mb-2">
+              <div>
+                <span class="text-[11px] font-semibold text-espresso/60 block">Yarn &amp; Thread Color Story</span>
+                <span id="yarn-theme-name" class="font-display font-bold text-sm text-espresso">Wildflower Meadows</span>
+              </div>
+              <button id="shuffle-yarn-btn" type="button" class="bg-sunshine text-espresso px-3 py-1 rounded-lg text-xs font-semibold hover:bg-sunshine/80 transition-all">
+                🎲 Shuffle Palette
+              </button>
+            </div>
+            <div id="yarn-swatches" class="flex gap-2"></div>
+            <span class="text-[10px] text-espresso/50 italic block mt-1.5 text-right">Click any swatch to copy HEX code</span>
+          </div>
+        </div>
+
+        <!-- Stitch Pattern Line Divider (SVG Chain/Running Stitch) -->
+        <div class="w-full flex items-center justify-center py-2" aria-hidden="true">
+          <svg class="w-full max-w-md h-4 text-espresso/30" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" viewBox="0 0 400 16">
+            <line x1="0" y1="8" x2="400" y2="8"/>
+          </svg>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          
+          <!-- CROCHET (Stitch-Border Styling) -->
+          <div id="crochet" class="bg-cream rounded-3xl p-6 sm:p-8 border-2 border-dashed border-espresso/25 space-y-5 tilt-card hover-lift transition-all reveal delay-100">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-xs font-semibold text-espresso/60 block">Just getting started</span>
+                <h3 class="font-display font-bold text-2xl text-espresso">I Haven't Finished a Single Thing Yet</h3>
+              </div>
+              <span class="text-2xl">🧶</span>
+            </div>
+
+            <p class="text-espresso/80 text-sm leading-relaxed">
+              I picked up a hook a few months ago after watching one too many crochet videos and deciding it looked like something my hands could do. It is teaching me humility fast. I have started and ripped out more granny squares than I can count, still get single and double crochet mixed up under pressure, and have yet to finish a single project all the way to the end. I'm keeping at it anyway, mostly because I like it even when it's going badly.
+            </p>
+
+            <!-- Anecdote Block -->
+            <!-- TODO: replace with your real story -->
+            <div class="p-4 bg-paper rounded-xl border border-espresso/15 shadow-sm space-y-1.5">
+              <span class="text-[11px] font-bold text-espresso/60 uppercase tracking-wider block">A first attempt</span>
+              <p class="text-xs sm:text-sm text-espresso/85 leading-relaxed italic">
+                "My first attempt at a granny square came out looking more like a triangle. I still have it in a drawer somewhere, refusing to throw it away."
+              </p>
+            </div>
+
+            <figure class="rounded-2xl overflow-hidden border border-espresso/15 aspect-[4/3] bg-paper">
+              <!-- TODO: replace with a beginner crochet swatch photo, not a finished blanket -->
+              <img src="./public/images/crochet-placeholder.svg" alt="Granny square and yarn ball crochet illustration placeholder" class="w-full h-full object-cover">
+            </figure>
+          </div>
+
+          <!-- EMBROIDERY (Stitch-Border Styling) -->
+          <div id="embroidery" class="bg-cream rounded-3xl p-6 sm:p-8 border-2 border-dashed border-espresso/25 space-y-5 tilt-card hover-lift transition-all reveal delay-200">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-xs font-semibold text-espresso/60 block">Stitching gifts, one hoop at a time</span>
+                <h3 class="font-display font-bold text-2xl text-espresso">Something I Make to Give Away</h3>
+              </div>
+              <span class="text-2xl">🪡</span>
+            </div>
+
+            <p class="text-espresso/80 text-sm leading-relaxed">
+              Embroidery is the one craft where I actually follow a pattern instead of making it up as I go. I like sitting with a guided design, working through it stitch by stitch, and watching something recognizable slowly show up in the hoop. Most of what I make doesn't stay with me for long. I finish a piece and it becomes someone else's, wrapped up and handed over before I've even fully admired it myself.
+            </p>
+
+            <!-- Anecdote Block -->
+            <!-- TODO: replace with your real story -->
+            <div class="p-4 bg-paper rounded-xl border border-espresso/15 shadow-sm space-y-1.5">
+              <span class="text-[11px] font-bold text-espresso/60 uppercase tracking-wider block">A favorite gift</span>
+              <p class="text-xs sm:text-sm text-espresso/85 leading-relaxed italic">
+                "I embroidered a small hoop of wildflowers for a friend's birthday last year, followed the pattern almost exactly, and she cried a little when she opened it. That reaction is the whole reason I keep doing this."
+              </p>
+            </div>
+
+            <figure class="rounded-2xl overflow-hidden border border-espresso/15 aspect-[4/3] bg-paper">
+              <!-- TODO: replace with your own embroidery photo -->
+              <img src="./public/images/embroidery-placeholder.svg" alt="Wooden embroidery hoop illustration placeholder" class="w-full h-full object-cover">
+            </figure>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SPARKS & TOPICS (Exploration Notebook & Tag Cloud)                       -->
+    <!-- ========================================================================= -->
+    <section id="topics" class="py-16 md:py-24 border-b border-espresso/15 bg-cream relative reveal">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        
+        <div class="text-center space-y-3">
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-espresso">
+            Smaller Things I Am Currently Obsessed With
+          </h2>
+          <p class="text-espresso/70 text-sm sm:text-base max-w-xl mx-auto">
+            A running list of the smaller rabbit holes I fall into between the bigger practices above. Some of these stick around for years. Some last exactly one stretch of a season.
+          </p>
+
+          <!-- Category Filter Bar -->
+          <div class="flex flex-wrap justify-center gap-2 pt-3">
+            <button type="button" data-filter="all" class="spark-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-espresso text-cream transition-all">
+              All Sparks
+            </button>
+            <button type="button" data-filter="spiritual" class="spark-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-paper text-espresso border border-espresso/15 hover:bg-espresso/5 transition-all">
+              🧘 Mind &amp; Spirit
+            </button>
+            <button type="button" data-filter="crafts" class="spark-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-paper text-espresso border border-espresso/15 hover:bg-espresso/5 transition-all">
+              🧶 Fiber &amp; Art
+            </button>
+            <button type="button" data-filter="culinary" class="spark-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-paper text-espresso border border-espresso/15 hover:bg-espresso/5 transition-all">
+              🍞 Bread &amp; Bakes
+            </button>
+            <button type="button" data-filter="aesthetic" class="spark-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-paper text-espresso border border-espresso/15 hover:bg-espresso/5 transition-all">
+              ✦ Aesthetic &amp; Everyday
+            </button>
+          </div>
+        </div>
+
+        <!-- Filterable Tag Cloud -->
+        <div class="flex flex-wrap justify-center gap-2.5 pt-2">
+          <span data-category="spiritual" class="spark-pill inline-flex items-center gap-1.5 bg-olive-light text-olive-dark border border-olive/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🧘 Box breathing before stressful meetings</span>
+          <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">📓 Junk journalling</span>
+          <span data-category="culinary" class="spark-pill inline-flex items-center gap-1.5 bg-tangerine-light text-tangerine-dark border border-tangerine/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🍎 Cake recipes, apple tarts</span>
+          <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-coral-light text-coral-dark border border-coral/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🎨 Matching my paint to my mood</span>
+          <span data-category="culinary" class="spark-pill inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">☕ Coffee recipes</span>
+          <span data-category="culinary" class="spark-pill inline-flex items-center gap-1.5 bg-tangerine-light text-tangerine-dark border border-tangerine/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">☕ Coffee made slower than it needs to be</span>
+          <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-lavender text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🖨️ A lino block I keep almost finishing</span>
+          <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-sunshine/50 text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">✨ Gold foil painting</span>
+          <span data-category="crafts" class="spark-pill inline-flex items-center gap-1.5 bg-coral-light text-coral-dark border border-coral/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">💎 Gem art</span>
+          <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🗒️ Cute stationery I'm too scared to actually use</span>
+          <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-sunshine/50 text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🎁 Wrapping gifts more carefully than the gift deserves</span>
+          <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-paper text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">📷 Photography of whatever's in front of me</span>
+          <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-coral-light text-coral-dark border border-coral/30 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🪑 Rearranging a room until it finally feels right</span>
+          <span data-category="aesthetic" class="spark-pill inline-flex items-center gap-1.5 bg-lavender text-espresso border border-espresso/15 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium hover:scale-105 transition-all cursor-default shadow-sm">🧥 Fashion and interior mood boards I'll never actually build</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SOCIAL / CONTACT & FOOTER                                                 -->
+    <!-- ========================================================================= -->
+    <footer id="contact" class="bg-espresso text-cream py-16 sm:py-20 border-t border-espresso relative overflow-hidden">
+      
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center pb-12 border-b border-cream/15">
+          
+          <div class="md:col-span-7 space-y-3">
+            <span class="text-sunshine font-semibold text-xs uppercase tracking-widest block">Say hello</span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl text-cream tracking-tight">
+              Tell Me What You're Making
+            </h2>
+            <p class="text-cream/70 text-sm sm:text-base max-w-lg">
+              If you have a hydration percentage you swear by, a deck recommendation, a favorite Surya Namaskar sequence, a watercolour technique I should try, or a yarn color you think I need, I want to hear about it. This whole site exists because I like talking about these things almost as much as I like doing them.
+            </p>
+          </div>
+
+          <!-- Social Link Cards -->
+          <div class="md:col-span-5 flex flex-col sm:flex-row md:flex-col gap-3">
+            <!-- Personal Instagram -->
+            <a href="https://www.instagram.com/p.r.a.d.h.e.e.p.a/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-white/5 border border-cream/20 hover:border-sunshine hover:bg-white/10 px-5 py-3.5 rounded-2xl transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunshine" aria-label="Personal Instagram">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-coral flex items-center justify-center text-cream">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                </span>
+                <div class="text-left">
+                  <span class="block text-sm font-semibold text-cream group-hover:text-sunshine">Personal Instagram</span>
+                  <span class="block text-xs text-cream/60">@p.r.a.d.h.e.e.p.a</span>
+                </div>
+              </div>
+              <span class="text-cream/40 group-hover:text-sunshine group-hover:translate-x-1 transition-all">&rarr;</span>
+            </a>
+
+            <!-- Art Instagram -->
+            <a href="https://www.instagram.com/thekalaodyssey/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-white/5 border border-cream/20 hover:border-coral hover:bg-white/10 px-5 py-3.5 rounded-2xl transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral" aria-label="Art Instagram">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-tangerine flex items-center justify-center text-cream">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                </span>
+                <div class="text-left">
+                  <span class="block text-sm font-semibold text-cream group-hover:text-coral-light">Art Instagram</span>
+                  <span class="block text-xs text-cream/60">@thekalaodyssey</span>
+                </div>
+              </div>
+              <span class="text-cream/40 group-hover:text-coral-light group-hover:translate-x-1 transition-all">&rarr;</span>
+            </a>
+
+            <!-- Pinterest / Inspiration Boards -->
+            <a href="https://in.pinterest.com/pradheepa0810/_boards/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-white/5 border border-cream/20 hover:border-sunshine hover:bg-white/10 px-5 py-3.5 rounded-2xl transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunshine" aria-label="Pinterest Boards">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-sunshine flex items-center justify-center text-espresso">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.171-2.911 1.024 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                  </svg>
+                </span>
+                <div class="text-left">
+                  <span class="block text-sm font-semibold text-cream group-hover:text-sunshine">Pinterest</span>
+                  <span class="block text-xs text-cream/60">@pradheepa0810 &middot; Boards</span>
+                </div>
+              </div>
+              <span class="text-cream/40 group-hover:text-sunshine group-hover:translate-x-1 transition-all">&rarr;</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Footnote & Copyright -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/60">
+          <div>
+            &copy; 2026 Pradheepa Ramasundaram. Made slowly, with flour on the keyboard more often than I'd like to admit.
+          </div>
+          <div>
+            <a href="#main-content" class="hover:text-sunshine transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-sunshine">Back to top ↑</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <!-- Interactive Client Script -->
+  <script src="./src/scripts/main.js"></script>
+</body>
+</html>

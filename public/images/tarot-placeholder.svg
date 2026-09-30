@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%" fill="none">
+  <rect width="600" height="750" fill="#EBF1FF" rx="28"/>
+  <circle cx="100" cy="120" r="70" fill="#1E4ED8" fill-opacity="0.15"/>
+  <circle cx="500" cy="620" r="110" fill="#F6AE2D" fill-opacity="0.25"/>
+
+  <!-- Tarot Card Frame -->
+  <g transform="translate(140, 70)">
+    <rect width="320" height="520" rx="24" fill="#1E4ED8" stroke="#1E1A17" stroke-width="4" filter="drop-shadow(8px 8px 0px #1E1A17)"/>
+    <rect x="16" y="16" width="288" height="488" rx="18" fill="#123499" stroke="#F6AE2D" stroke-width="2"/>
+    
+    <!-- Ornate Inner Elements -->
+    <!-- Crescent Moon -->
+    <path d="M160 120 C180 120, 205 135, 205 160 C205 190, 175 210, 145 200 C175 190, 185 160, 160 145 C150 140, 145 130, 160 120 Z" fill="#F6AE2D"/>
+    
+    <!-- Mystical Eye / Sunburst -->
+    <g transform="translate(160, 260)">
+      <!-- Rays -->
+      <path d="M0 -70 L0 -50 M0 70 L0 50 M-70 0 L-50 0 M70 0 L50 0" stroke="#F6AE2D" stroke-width="3" stroke-linecap="round"/>
+      <path d="M-50 -50 L-35 -35 M50 50 L35 35 M-50 50 L-35 35 M50 -50 L35 -35" stroke="#F6AE2D" stroke-width="3" stroke-linecap="round"/>
+      <!-- Eye -->
+      <path d="M-60 0 Q0 -40, 60 0 Q0 40, -60 0 Z" fill="#FAF7F0" stroke="#1E1A17" stroke-width="3"/>
+      <circle cx="0" cy="0" r="18" fill="#E85D75"/>
+      <circle cx="0" cy="0" r="8" fill="#1E1A17"/>
+      <circle cx="3" cy="-3" r="3" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Star Constellations -->
+    <path d="M60 380 L65 370 L70 380 L80 385 L70 390 L65 400 L60 390 L50 385 Z" fill="#F6AE2D"/>
+    <path d="M250 390 L254 382 L258 390 L266 394 L258 398 L254 406 L250 398 L242 394 Z" fill="#F6AE2D"/>
+    <path d="M160 410 L163 403 L166 410 L173 413 L166 416 L163 423 L160 416 L153 413 Z" fill="#F6AE2D"/>
+
+    <!-- Roman Numeral / Title Bar -->
+    <rect x="40" y="440" width="240" height="36" rx="8" fill="#FAF7F0" stroke="#1E1A17" stroke-width="2"/>
+    <text x="160" y="464" font-family="'Fraunces', Georgia, serif" font-weight="700" font-size="16" fill="#1E1A17" text-anchor="middle" letter-spacing="2">THE INTUITION</text>
+  </g>
+
+  <!-- Placeholder Banner -->
+  <g transform="translate(110, 630)">
+    <rect width="380" height="64" rx="14" fill="#FFFFFF" stroke="#1E1A17" stroke-width="3" filter="drop-shadow(4px 4px 0px #1E1A17)"/>
+    <text x="190" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#1E1A17" text-anchor="middle">TAROT PHOTO PLACEHOLDER</text>
+    <text x="190" y="49" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="12" fill="#6B7280" text-anchor="middle">Suggested: Favorite deck, daily card pull, or reading altar</text>
+  </g>
+</svg>

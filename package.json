@@ -1,0 +1,20 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Eclectic, colorful personal site celebrating creative and spiritual practices.",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/styles/main.css -o ./dist/styles.css --watch",
+    "build": "tailwindcss -i ./src/styles/main.css -o ./dist/styles.css --minify"
+  },
+  "keywords": [
+    "personal-website",
+    "portfolio",
+    "tailwind",
+    "creative"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

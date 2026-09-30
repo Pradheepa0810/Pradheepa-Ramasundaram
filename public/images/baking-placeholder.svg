@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%" fill="none">
+  <rect width="700" height="500" fill="#FEEDE4" rx="28"/>
+  <circle cx="580" cy="120" r="90" fill="#F26419" fill-opacity="0.2"/>
+  <circle cx="120" cy="380" r="110" fill="#F6AE2D" fill-opacity="0.3"/>
+
+  <!-- Baking Elements & Artisan Loaf -->
+  <g transform="translate(180, 80)">
+    <!-- Artisan Sourdough / Boule -->
+    <path d="M70 210 C70 110, 270 110, 270 210 C270 235, 70 235, 70 210 Z" fill="#F26419" stroke="#1E1A17" stroke-width="4"/>
+    <!-- Bread scoring cuts -->
+    <path d="M110 170 Q170 140, 230 170" stroke="#FAF7F0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M130 195 Q170 175, 210 195" stroke="#FAF7F0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M120 145 Q170 125, 220 145" stroke="#FAF7F0" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Cutting Board / Slate -->
+    <rect x="30" y="225" width="280" height="24" rx="10" fill="#FAF7F0" stroke="#1E1A17" stroke-width="4"/>
+    
+    <!-- Whisk & Rolling Pin Details -->
+    <g transform="translate(290, 70) rotate(25)">
+      <!-- Whisk handle -->
+      <rect x="18" y="0" width="8" height="60" rx="4" fill="#1E4ED8" stroke="#1E1A17" stroke-width="3"/>
+      <!-- Whisk wires -->
+      <path d="M10 60 C-5 100, 49 100, 34 60 Z" stroke="#1E1A17" stroke-width="3" fill="none"/>
+      <path d="M16 60 C5 95, 39 95, 28 60 Z" stroke="#1E1A17" stroke-width="3" fill="none"/>
+    </g>
+
+    <g transform="translate(20, 80) rotate(-30)">
+      <!-- Wheat stem -->
+      <path d="M20 120 L20 20" stroke="#F6AE2D" stroke-width="3"/>
+      <ellipse cx="14" cy="35" rx="6" ry="12" fill="#F6AE2D" stroke="#1E1A17" stroke-width="2" transform="rotate(-30 14 35)"/>
+      <ellipse cx="26" cy="35" rx="6" ry="12" fill="#F6AE2D" stroke="#1E1A17" stroke-width="2" transform="rotate(30 26 35)"/>
+      <ellipse cx="14" cy="65" rx="6" ry="12" fill="#F6AE2D" stroke="#1E1A17" stroke-width="2" transform="rotate(-30 14 65)"/>
+      <ellipse cx="26" cy="65" rx="6" ry="12" fill="#F6AE2D" stroke="#1E1A17" stroke-width="2" transform="rotate(30 26 65)"/>
+    </g>
+  </g>
+
+  <!-- Placeholder Banner -->
+  <g transform="translate(160, 400)">
+    <rect width="380" height="64" rx="14" fill="#FFFFFF" stroke="#1E1A17" stroke-width="3" filter="drop-shadow(4px 4px 0px #1E1A17)"/>
+    <text x="190" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#1E1A17" text-anchor="middle">BAKING PHOTO PLACEHOLDER</text>
+    <text x="190" y="49" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="12" fill="#6B7280" text-anchor="middle">Suggested: Golden sourdough, fresh pastries, or weekend bake</text>
+  </g>
+</svg>
