@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCard3DTilt();
   initCursorFollower();
   initScrollLinkedMovement();
+  initPhotoCycle();
   initAmbientReader();
   initToastNotification();
 });
@@ -652,5 +653,59 @@ function initToastNotification() {
         });
       }
     });
+  });
+}
+
+/**
+ * Photo-booth-style portrait cycle for the Hold On collage.
+ */
+function initPhotoCycle() {
+  const cycles = document.querySelectorAll('.photo-cycle');
+  if (cycles.length === 0) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  cycles.forEach(cycle => {
+    const images = Array.from(cycle.querySelectorAll('.photo-cycle-img'));
+    if (images.length === 0) return;
+
+    let currentIndex = 0;
+    images.forEach((image, index) => {
+      image.classList.toggle('is-active', index === currentIndex);
+    });
+
+    if (prefersReducedMotion || images.length === 1) return;
+
+    const requestedInterval = Number.parseInt(cycle.dataset.interval ?? '', 10);
+    const interval = Number.isFinite(requestedInterval)
+      ? Math.min(600, Math.max(400, requestedInterval))
+      : 500;
+    let intervalId = null;
+
+    const pauseCycle = () => {
+      if (intervalId === null) return;
+      window.clearInterval(intervalId);
+      intervalId = null;
+    };
+
+    const resumeCycle = () => {
+      if (intervalId !== null || document.hidden) return;
+
+      intervalId = window.setInterval(() => {
+        images[currentIndex].classList.remove('is-active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('is-active');
+      }, interval);
+    };
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        pauseCycle();
+      } else {
+        resumeCycle();
+      }
+    });
+
+    resumeCycle();
   });
 }

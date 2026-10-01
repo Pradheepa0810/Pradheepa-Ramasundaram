@@ -1,23 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 540" role="img" aria-labelledby="title desc">
-  <title id="title">Rider Waite inspired tarot card back</title>
-  <desc id="desc">Muted blue-grey tarot card with a looping gold infinity motif, pentacles, cups, swords, and wands.</desc>
-  <rect width="360" height="540" rx="28" fill="#879b99"/>
-  <rect x="18" y="18" width="324" height="504" rx="22" fill="none" stroke="#263936" stroke-width="7"/>
-  <path d="M180 70 C92 70 80 168 151 245 C222 322 214 420 180 466 C146 420 138 322 209 245 C280 168 268 70 180 70Z" fill="none" stroke="#d9c56d" stroke-width="18"/>
-  <path d="M180 70 C92 70 80 168 151 245 C222 322 214 420 180 466 C146 420 138 322 209 245 C280 168 268 70 180 70Z" fill="none" stroke="#263936" stroke-width="5"/>
-  <g fill="#ead37b" stroke="#263936" stroke-width="5">
-    <circle cx="180" cy="108" r="42"/><circle cx="180" cy="432" r="42"/>
-    <path d="M180 76l10 25 27 2-21 17 7 27-23-15-23 15 7-27-21-17 27-2z" fill="#879b99"/>
-    <path d="M180 400l10 25 27 2-21 17 7 27-23-15-23 15 7-27-21-17 27-2z" fill="#879b99"/>
+  <title id="title">Celestial tarot card back</title>
+  <desc id="desc">An original dark-plum tarot card design in antique gold, with an ornate frame, sun, watchful eye, stars, and crescent moon.</desc>
+
+  <rect width="360" height="540" rx="24" fill="#1b1216"/>
+  <rect x="18" y="18" width="324" height="504" rx="17" fill="none" stroke="#f5bd78" stroke-width="2.5"/>
+  <path d="M48 35H312Q312 67 342 67V473Q312 473 312 505H48Q48 473 18 473V67Q48 67 48 35Z" fill="none" stroke="#f5bd78" stroke-width="2"/>
+  <path d="M60 48H300Q300 82 330 82V458Q300 458 300 492H60Q60 458 30 458V82Q60 82 60 48Z" fill="none" stroke="#f5bd78" stroke-width="1.5" opacity=".8"/>
+
+  <g fill="none" stroke="#f5bd78" stroke-width="1.5" opacity=".9">
+    <path d="M74 82L130 190M286 82L230 190M70 458L128 368M290 458L232 368"/>
+    <path d="M130 48L160 184M230 48L200 184M130 492L160 368M230 492L200 368"/>
+    <path d="M30 170Q73 125 122 140Q68 165 30 218M330 170Q287 125 238 140Q292 165 330 218"/>
+    <path d="M30 370Q73 415 122 400Q68 375 30 322M330 370Q287 415 238 400Q292 375 330 322"/>
   </g>
-  <g stroke="#263936" stroke-width="6" stroke-linecap="round">
-    <path d="M64 72v204M64 72l-12 14m12-14l12 14M64 276l-8-18m8 18l8-18"/>
-    <path d="M296 264V70m0 0l-12 14m12-14l12 14M296 264l-8-18m8 18l8-18"/>
-    <path d="M78 402V292m0 0l-9 13m9-13l9 13M78 402l-7-14m7 14l7-14" stroke="#c27d4b"/>
-    <path d="M282 448V338m0 0l-9 13m9-13l9 13M282 448l-7-14m7 14l7-14"/>
+
+  <g fill="#f5bd78">
+    <path d="M36 32l3 9 9 3-9 3-3 9-3-9-9-3 9-3zM324 32l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/>
+    <path d="M36 484l3 9 9 3-9 3-3 9-3-9-9-3 9-3zM324 484l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/>
+    <circle cx="180" cy="43" r="1.8"/><circle cx="92" cy="100" r="1.5"/><circle cx="268" cy="100" r="1.5"/>
+    <circle cx="54" cy="278" r="2.5"/><circle cx="306" cy="278" r="2.5"/>
+    <circle cx="82" cy="438" r="1.5"/><circle cx="278" cy="438" r="1.5"/><circle cx="180" cy="497" r="1.8"/>
   </g>
-  <g fill="#e7c760" stroke="#263936" stroke-width="4">
-    <path d="M100 255h42l-8 12-5 45 13 12H88l13-12-5-45z"/>
-    <path d="M218 255h42l-8 12-5 45 13 12h-54l13-12-5-45z"/>
+
+  <g fill="none" stroke="#f5bd78" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="180" cy="122" r="16"/>
+    <path d="M180 90v10M180 144v10M148 122h10M202 122h10M157 99l7 7M196 138l7 7M203 99l-7 7M164 138l-7 7"/>
+    <circle cx="180" cy="278" r="88"/>
+    <circle cx="180" cy="278" r="64" opacity=".75"/>
+    <path d="M116 278Q180 210 244 278Q180 346 116 278Z"/>
+    <circle cx="180" cy="278" r="27"/>
+    <circle cx="180" cy="278" r="8" fill="#f5bd78"/>
+    <path d="M196 430a23 23 0 1 1-20-37 27 27 0 1 0 20 37Z"/>
+  </g>
+
+  <g fill="#f5bd78">
+    <circle cx="94" cy="156" r="1.4"/><circle cx="266" cy="156" r="1.4"/>
+    <circle cx="112" cy="214" r="1.2"/><circle cx="248" cy="214" r="1.2"/>
+    <circle cx="102" cy="342" r="1.4"/><circle cx="258" cy="342" r="1.4"/>
+    <circle cx="132" cy="390" r="1.1"/><circle cx="228" cy="390" r="1.1"/>
   </g>
 </svg>

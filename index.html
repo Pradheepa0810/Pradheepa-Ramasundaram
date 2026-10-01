@@ -55,7 +55,7 @@
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="hidden md:flex items-center gap-1 bg-paper/85 border border-espresso/15 px-3 py-1.5 rounded-full shadow-sm" aria-label="Main Navigation">
+      <nav class="hidden xl:flex items-center gap-1 bg-paper/85 border border-espresso/15 px-3 py-1.5 rounded-full shadow-sm" aria-label="Main Navigation">
         <a href="#about" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">About</a>
         <a href="#books" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Books</a>
         <a href="#baking" class="desktop-nav-link text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full text-espresso/80 hover:text-espresso hover:bg-espresso/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso">Baking</a>
@@ -70,7 +70,7 @@
       <!-- Mobile Hamburger -->
       <div class="flex items-center gap-2.5">
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-toggle" type="button" class="md:hidden w-10 h-10 bg-paper border border-espresso/20 rounded-xl flex items-center justify-center text-espresso hover:bg-sunshine/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+        <button id="mobile-menu-toggle" type="button" class="xl:hidden w-10 h-10 bg-paper border border-espresso/20 rounded-xl flex items-center justify-center text-espresso hover:bg-sunshine/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-espresso" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
             <line x1="3" x2="21" y1="6" y2="6"/>
             <line x1="3" x2="21" y1="12" y2="12"/>
@@ -83,10 +83,10 @@
   </header>
 
   <!-- Mobile Drawer Backdrop -->
-  <div id="mobile-nav-backdrop" class="fixed inset-0 bg-espresso/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+  <div id="mobile-nav-backdrop" class="fixed inset-0 bg-espresso/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden"></div>
 
   <!-- Mobile Navigation Drawer -->
-  <div id="mobile-nav-drawer" class="fixed top-0 right-0 w-72 max-w-[85vw] h-full bg-cream border-l-2 border-espresso/20 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col p-6 shadow-xl md:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+  <div id="mobile-nav-drawer" class="fixed top-0 right-0 w-72 max-w-[85vw] h-full bg-cream border-l-2 border-espresso/20 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col p-6 shadow-xl xl:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="flex items-center justify-between pb-4 border-b border-espresso/15">
       <div>
         <span class="font-display font-bold text-lg text-espresso block">Pradheepa</span>
@@ -162,7 +162,7 @@
             <!-- Grounded Top Label -->
             <div class="inline-flex items-center gap-2 bg-paper border border-espresso/20 px-3.5 py-1 rounded-full text-xs font-medium text-espresso/70">
               <span class="w-2 h-2 rounded-full bg-coral"></span>
-              <span>A love letter to my hobbies, and the diary that documents them</span>
+              <span>A love letter to my hobbies, and a digital diary to document my side quests</span>
             </div>
 
             <!-- Natural Rhythmic Headline (Clean typography, no AI-formula styling) -->
@@ -423,7 +423,7 @@
 
               <div class="tarot-draw-area">
                 <div id="tarot-card-inner" class="tarot-auto-card relative w-full h-[390px] tarot-glow rounded-3xl transition-transform duration-700 cursor-pointer" role="button" tabindex="0" aria-label="Shuffle the tarot deck" aria-live="polite">
-                  <img src="./public/images/tarot-card-reference.svg" alt="Rider Waite inspired tarot card back with a looping infinity motif and symbolic suits" class="tarot-feature-card">
+                  <img src="./public/images/tarot-card-reference.svg" alt="Dark plum tarot card back with antique-gold sun, watchful eye, stars, and crescent moon" class="tarot-feature-card">
                 </div>
               </div>
             </div>
@@ -533,9 +533,8 @@
           <!-- Right Image Card -->
           <div class="lg:col-span-5 flex justify-center reveal delay-200">
             <div class="w-full max-w-md bg-paper border border-tangerine/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all asymmetric-gallery-card" data-hover-label="Open the oven door">
-              <figure class="relative rounded-2xl overflow-hidden border border-tangerine/20 aspect-[4/3] bg-cream">
-                <!-- TODO: replace with your own baking photo -->
-                <img src="./public/images/baking-placeholder.jpg" alt="Artisan bread loaf" class="w-full h-full object-cover">
+              <figure class="photo-natural-frame relative rounded-2xl overflow-hidden border border-tangerine/20 bg-cream">
+                <img src="./public/images/baking-placeholder.jpg" alt="Pradheepa decorating a homemade cake" class="w-full h-auto object-contain">
               </figure>
               <div class="pt-3 px-1 flex items-center justify-between text-xs font-medium text-espresso/70">
                 <span>Weekend bakes</span>
@@ -608,9 +607,8 @@
           <!-- Right Image Card -->
           <div class="lg:col-span-5 flex justify-center reveal delay-200">
             <div class="w-full max-w-md bg-paper border border-coral/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all asymmetric-gallery-card" data-hover-label="Look closer">
-              <figure class="relative rounded-2xl overflow-hidden border border-coral/20 aspect-[4/3] bg-cream">
-                <!-- TODO: replace with your own art/painting photo -->
-                <img src="./public/images/art-placeholder.jpg" alt="Painting and art practice" class="w-full h-full object-cover">
+              <figure class="photo-natural-frame relative rounded-2xl overflow-hidden border border-coral/20 bg-cream">
+                <img src="./public/images/art-placeholder.jpg" alt="Pradheepa painting a colorful outdoor mural" class="w-full h-auto object-contain">
               </figure>
               <div class="pt-3 px-1 flex items-center justify-between text-xs font-medium text-espresso/70">
                 <span>Color studies</span>
@@ -852,16 +850,46 @@
     </section>
 
     <!-- ========================================================================= -->
+    <!-- HOLD ON POSTER (A little more of me)                                     -->
+    <!-- ========================================================================= -->
+    <section id="hold-on" class="hold-on-section relative overflow-hidden reveal" aria-labelledby="hold-on-heading">
+      <div class="hold-on-poster">
+        <div class="hold-on-backdrop" aria-hidden="true"></div>
+        <figure class="hold-on-photo-card">
+          <div class="photo-cycle" data-interval="500" aria-hidden="false" role="img" aria-label="A rotating series of photos of Pradheepa Ramasundaram">
+            <img src="./public/images/hero-portrait-placeholder.jpg" class="photo-cycle-img is-active" alt="" fetchpriority="high">
+            <img src="./public/images/art-placeholder.jpg" class="photo-cycle-img" alt="" loading="lazy">
+            <img src="./public/images/baking-placeholder.jpg" class="photo-cycle-img" alt="" loading="lazy">
+          </div>
+        </figure>
+        <figure class="hold-on-photo-tile hold-on-tile-art">
+          <img src="./public/images/art-placeholder.jpg" alt="Pradheepa painting a colorful mural" loading="lazy">
+          <figcaption>color, everywhere</figcaption>
+        </figure>
+        <figure class="hold-on-photo-tile hold-on-tile-baking">
+          <img src="./public/images/baking-placeholder.jpg" alt="Pradheepa decorating a homemade cake" loading="lazy">
+          <figcaption>something sweet</figcaption>
+        </figure>
+        <h2 id="hold-on-heading" class="hold-on-giant-type" aria-label="Hold on, there is more about me">
+          <span aria-hidden="true">HOLD</span>
+          <span aria-hidden="true">ON</span>
+        </h2>
+        <span class="hold-on-sticker hold-on-sticker-one" aria-hidden="true">✦ MADE BY HAND</span>
+        <span class="hold-on-sticker hold-on-sticker-two" aria-hidden="true">SIDE QUEST NO. 01</span>
+        <div class="hold-on-caption" aria-hidden="true">
+          <span class="hold-on-caption-first">There is more.</span>
+          <span class="hold-on-caption-ribbon">about me.</span>
+        </div>
+        <span class="hold-on-side-note">A digital diary for my side quests</span>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
     <!-- SPARKS & TOPICS (Exploration Notebook & Tag Cloud)                       -->
     <!-- ========================================================================= -->
     <section id="topics" class="topics-section py-16 md:py-24 border-b border-espresso/15 bg-cream relative reveal">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
-        <div class="hold-on-note" data-scroll-shift="-0.04">
-          <span>Hold on, there is more about me.</span>
-          <small>And I am still making it.</small>
-        </div>
-        
         <div class="text-center space-y-3">
           <h2 class="font-display font-bold text-3xl sm:text-4xl text-espresso">
             Smaller Things I Am Currently Obsessed With
