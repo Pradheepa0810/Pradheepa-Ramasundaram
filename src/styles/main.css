@@ -820,6 +820,44 @@ input[type='range'].accent-cobalt {
   animation: holdOnDrift 8s ease-in-out -5s infinite;
 }
 
+.hold-on-snitch-sticker {
+  position: absolute;
+  z-index: 9;
+  top: 3%;
+  right: 3%;
+  width: clamp(4.25rem, 14%, 8rem);
+  height: auto;
+  filter: drop-shadow(0 0.45rem 0.55rem rgba(22, 20, 30, 0.28));
+  transform: rotate(9deg);
+  animation: holdOnDrift 6.5s ease-in-out -1.5s infinite;
+  pointer-events: none;
+}
+
+.hold-on-plane-sticker,
+.hold-on-dog-sticker {
+  position: absolute;
+  z-index: 9;
+  height: auto;
+  filter: drop-shadow(0 0.45rem 0.55rem rgba(22, 20, 30, 0.28));
+  pointer-events: none;
+  animation: holdOnDrift 7.2s ease-in-out -3s infinite;
+}
+
+.hold-on-plane-sticker {
+  top: 3%;
+  left: 3%;
+  width: clamp(5rem, 16%, 8.5rem);
+  transform: rotate(-9deg);
+}
+
+.hold-on-dog-sticker {
+  top: 58%;
+  right: 10%;
+  width: clamp(4rem, 12%, 6.5rem);
+  transform: rotate(7deg);
+  animation-delay: -4.5s;
+}
+
 @keyframes holdOnDrift {
   0%, 100% { translate: 0 0; }
   50% { translate: 0 -0.45rem; }
@@ -828,7 +866,10 @@ input[type='range'].accent-cobalt {
 @media (prefers-reduced-motion: reduce) {
   .hold-on-photo-card,
   .hold-on-photo-tile,
-  .hold-on-sticker {
+  .hold-on-sticker,
+  .hold-on-snitch-sticker,
+  .hold-on-plane-sticker,
+  .hold-on-dog-sticker {
     animation: none;
   }
 }
@@ -889,6 +930,9 @@ input[type='range'].accent-cobalt {
   .hold-on-caption-first,
   .hold-on-caption-ribbon { font-size: clamp(2.35rem, 10vw, 4.2rem); }
   .hold-on-side-note { right: 0.6rem; font-size: 0.55rem; }
+  .hold-on-snitch-sticker { top: 3%; right: 4%; width: clamp(4rem, 18%, 5.5rem); }
+  .hold-on-plane-sticker { top: 3%; left: 4%; width: clamp(4.5rem, 18%, 6rem); }
+  .hold-on-dog-sticker { top: 56%; right: 8%; width: clamp(3rem, 15%, 4.5rem); }
   .hold-on-sticker { padding: 0.35rem 0.5rem; font-size: 0.48rem; }
   .hold-on-sticker-one { top: 22%; right: 5%; }
   .hold-on-sticker-two { top: 73%; left: 4%; }

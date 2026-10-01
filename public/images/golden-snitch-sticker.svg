@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Golden winged ball sticker</title>
+  <desc id="desc">A small golden ball with hand-drawn feathered wings, surrounded by a bold white sticker border.</desc>
+  <g stroke="#fff" stroke-width="23" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M145 97C108 70 65 43 19 27c18 29 33 50 58 66-25 5-46 25-65 62 53-7 101-25 146-53M175 97c37-27 80-54 126-70-18 29-33 50-58 66 25 5 46 25 65 62-53-7-101-25-146-53"/>
+    <circle cx="160" cy="111" r="43"/>
+  </g>
+  <g fill="#e7a932" stroke="#211914" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M145 97C108 70 65 43 19 27c18 29 33 50 58 66-25 5-46 25-65 62 53-7 101-25 146-53Z"/>
+    <path d="M175 97c37-27 80-54 126-70-18 29-33 50-58 66 25 5 46 25 65 62-53-7-101-25-146-53Z"/>
+    <circle cx="160" cy="111" r="43" fill="#efbd4e"/>
+  </g>
+  <g fill="none" stroke="#332015" stroke-width="3.2" stroke-linecap="round" opacity=".92">
+    <path d="M145 96C108 73 70 51 35 39M139 101C101 83 75 71 51 61M134 106C100 95 79 87 65 80M130 112C95 110 73 106 51 100M126 118C94 124 67 135 38 147M133 119C108 132 87 141 65 149"/>
+    <path d="M175 96c37-23 75-45 110-57M181 101c38-18 64-30 88-40M186 106c34-11 55-19 69-26M190 112c35-2 57-6 79-12M194 118c32 6 59 17 88 29M187 119c25 13 46 22 68 30"/>
+    <path d="M130 96c10-11 20-16 30-16s20 5 30 16M121 111c12 8 25 12 39 12s27-4 39-12M140 139c12 7 28 7 40 0"/>
+    <path d="M143 84c-6 11-9 19-9 28 0 15 10 29 26 39M177 84c6 11 9 19 9 28 0 15-10 29-26 39" opacity=".65"/>
+  </g>
+  <circle cx="145" cy="103" r="4" fill="#fff0b7" opacity=".9"/>
+</svg>

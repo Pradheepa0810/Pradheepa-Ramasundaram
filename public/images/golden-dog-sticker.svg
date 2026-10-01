@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Happy golden dog sticker</title>
+  <desc id="desc">A friendly smiling golden dog with floppy ears and a white die-cut sticker border.</desc>
+  <defs>
+    <clipPath id="dog-shape">
+      <path d="M119 26C97 8 69 17 61 43 34 45 22 70 31 98c-14 22-8 48 10 62-4 34 12 67 39 79 13 7 27 10 40 10s27-3 40-10c27-12 43-45 39-79 18-14 24-40 10-62 9-28-3-53-30-55-8-26-36-35-58-17Z"/>
+    </clipPath>
+  </defs>
+  <path d="M119 26C97 8 69 17 61 43 34 45 22 70 31 98c-14 22-8 48 10 62-4 34 12 67 39 79 13 7 27 10 40 10s27-3 40-10c27-12 43-45 39-79 18-14 24-40 10-62 9-28-3-53-30-55-8-26-36-35-58-17Z" fill="#fff" stroke="#fff" stroke-width="22" stroke-linejoin="round"/>
+  <path d="M119 26C97 8 69 17 61 43 34 45 22 70 31 98c-14 22-8 48 10 62-4 34 12 67 39 79 13 7 27 10 40 10s27-3 40-10c27-12 43-45 39-79 18-14 24-40 10-62 9-28-3-53-30-55-8-26-36-35-58-17Z" fill="#d8a357" stroke="#493326" stroke-width="5" stroke-linejoin="round"/>
+  <g clip-path="url(#dog-shape)">
+    <path d="M52 43c-18 8-28 31-17 58 7 18 19 27 35 31l20-51-9-44zM188 43c18 8 28 31 17 58-7 18-19 27-35 31l-20-51 9-44z" fill="#bd7d3f" stroke="#493326" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M77 40c11-15 27-19 43-11-12 14-18 33-20 54l-31 2zM163 40c-11-15-27-19-43-11 12 14 18 33 20 54l31 2z" fill="#f0c27a"/>
+    <path d="M73 105c1-33 20-57 47-58 27 1 46 25 47 58 1 29-10 52-25 66h-44c-15-14-26-37-25-66Z" fill="#edc483"/>
+    <path d="M64 117c7 4 16 4 24-2M152 115c8 4 16 4 24 0" fill="none" stroke="#a76d3c" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <path d="M78 101q12-13 25-1M137 100q13-12 25 1" fill="none" stroke="#493326" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="92" cy="111" rx="5" ry="7" fill="#211b19"/><ellipse cx="148" cy="111" rx="5" ry="7" fill="#211b19"/>
+    <path d="M83 139c2-16 16-25 37-25s35 9 37 25c-1 19-15 31-37 31s-36-12-37-31Z" fill="#f8ead4" stroke="#9b6843" stroke-width="3"/>
+    <path d="M103 130q17-18 34 0c-1 11-7 17-17 17s-16-6-17-17Z" fill="#272328"/>
+    <path d="M120 146v10c-8 8-19 5-22-4M120 156c8 8 19 5 22-4" fill="none" stroke="#493326" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M106 158q14-3 28 0c3 17-4 25-14 25s-17-8-14-25Z" fill="#ed8292" stroke="#493326" stroke-width="2.5"/>
+    <path d="M119 161v12" stroke="#c95872" stroke-width="2"/>
+    <path d="M70 73q9-13 19-18M171 55q10 6 17 18M61 164q8 8 17 10M162 174q10-4 18-12" fill="none" stroke="#f7d89e" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    <path d="M83 198q15 12 37 12t37-12" fill="none" stroke="#bb814d" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+  </g>
+</svg>

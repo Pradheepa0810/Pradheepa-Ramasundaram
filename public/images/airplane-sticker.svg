@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-labelledby="title desc">
+  <title id="title">Airplane sticker</title>
+  <desc id="desc">A blue-and-white passenger airplane with a bold white sticker border.</desc>
+  <g stroke="#fff" stroke-width="27" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 118 138 98 103 37q-4-8 5-10l27-8q8-2 13 5l60 64 91-15q31-5 42 14 8 14-19 22l-116 34-34 54q-5 8-14 6l-20-4q-9-2-7-12l14-39-106 19q-10 2-17-6L8 143q-10-13 6-20z"/>
+  </g>
+  <path d="M24 118 138 98 103 37q-4-8 5-10l27-8q8-2 13 5l60 64 91-15q31-5 42 14 8 14-19 22l-116 34-34 54q-5 8-14 6l-20-4q-9-2-7-12l14-39-106 19q-10 2-17-6L8 143q-10-13 6-20z" fill="#f9fbfb" stroke="#272b32" stroke-width="6" stroke-linejoin="round"/>
+  <path d="m37 119 220-39 41-7q22-4 31 5 5 6-14 12l-126 37-33 4z" fill="#62bdd5" stroke="#272b32" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m148 95 48-9 54 41-49 14zM90 109l44-8 31 32-49 9zM177 144l24-7-23 42-13-3z" fill="#4d9eb9" stroke="#272b32" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m31 125 101-18 18 10-117 23-16-5z" fill="#fff" stroke="#272b32" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#252b32">
+    <rect x="176" y="89" width="6" height="5" rx="1" transform="rotate(-10 176 89)"/>
+    <rect x="190" y="86" width="6" height="5" rx="1" transform="rotate(-10 190 86)"/>
+    <rect x="204" y="83" width="6" height="5" rx="1" transform="rotate(-10 204 83)"/>
+    <rect x="218" y="80" width="6" height="5" rx="1" transform="rotate(-10 218 80)"/>
+    <rect x="232" y="77" width="6" height="5" rx="1" transform="rotate(-10 232 77)"/>
+    <rect x="246" y="74" width="6" height="5" rx="1" transform="rotate(-10 246 74)"/>
+  </g>
+</svg>
