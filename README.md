@@ -10,7 +10,7 @@ The project includes handcrafted placeholder artwork used throughout the page:
 
 | Practice | Preview |
 | --- | --- |
-| Books / reading mood | ![Reading and creative mood](public/images/og-image.png) |
+| Social sharing / hero portrait | ![Hero portrait social preview](public/images/og-image.png) |
 | Baking | ![Artisan baking illustration](public/images/baking-placeholder.svg) |
 | Painting | ![Painting illustration](public/images/art-placeholder.svg) |
 | Tarot | ![Tarot illustration](public/images/tarot-placeholder.svg) |
@@ -22,6 +22,7 @@ The project includes handcrafted placeholder artwork used throughout the page:
 Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images in `public/images/` when ready.
 
 ---
+
 ## 📂 Project Structure
 
 ```text
@@ -107,25 +108,3 @@ npm run build
    Update `https://instagram.com`, `https://pinterest.com`, etc. with your exact usernames/URLs.
 
 The browser favicon is an SVG; PNG variants are provided for browsers and Apple home-screen shortcuts.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

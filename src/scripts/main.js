@@ -12,6 +12,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initDefaultLandingPosition();
   initScrollProgress();
   initScrollReveal();
   initMobileNav();
@@ -29,6 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initAmbientReader();
   initToastNotification();
 });
+
+/**
+ * Start fresh page loads at the hero while preserving browser back/forward position.
+ */
+function initDefaultLandingPosition() {
+  window.addEventListener('pageshow', (event) => {
+    const navigationType = performance.getEntriesByType('navigation')[0]?.type;
+    if (window.location.hash || event.persisted || navigationType === 'back_forward') return;
+
+    document.documentElement.scrollTop = 0;
+  });
+}
 
 /**
  * 1. Top Reading Scroll Progress Bar
