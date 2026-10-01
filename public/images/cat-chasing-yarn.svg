@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 390" role="img" aria-labelledby="title desc">
+  <title id="title">Cat chasing a yarn ball</title>
+  <desc id="desc">A playful orange tabby reaches for a teal ball of yarn with a loose curling strand.</desc>
+  <g stroke="#fff" stroke-width="25" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M88 303c-44-24-58-73-37-119 13-29 38-45 70-45 20-53 71-79 130-67 38 8 68 34 81 70 13 34 4 75-22 105-25 30-67 45-115 44l-107 20Z"/>
+    <path d="M197 164c-3-61 31-108 82-112l41 53 49-32 5 97"/>
+    <path d="M78 205C29 188 28 126 65 91c23-21 58-13 67 9"/>
+    <circle cx="357" cy="242" r="76"/>
+    <path d="M423 290c57 24 94 46 111 69-44 18-92 21-141 8-35-9-62-25-83-44-26-23-49-23-73-9"/>
+  </g>
+  <path d="M88 303c-44-24-58-73-37-119 13-29 38-45 70-45 20-53 71-79 130-67 38 8 68 34 81 70 13 34 4 75-22 105-25 30-67 45-115 44l-107 20Z" fill="#f5a331" stroke="#34251f" stroke-width="8"/>
+  <path d="M197 164c-3-61 31-108 82-112l41 53 49-32 5 97" fill="#f6b94e" stroke="#34251f" stroke-width="8"/>
+  <path d="M78 205C29 188 28 126 65 91c23-21 58-13 67 9" fill="none" stroke="#e77920" stroke-width="24"/>
+  <path d="M78 205C29 188 28 126 65 91c23-21 58-13 67 9" fill="none" stroke="#34251f" stroke-width="7"/>
+  <path d="M104 183c-10 23-10 51 2 73m30-145c14-22 34-38 58-45m-66 93c14-20 21-44 20-68m36 118c17-19 24-41 22-65m28-87c18 15 28 36 31 61" fill="none" stroke="#e77920" stroke-width="13" stroke-linecap="round"/>
+  <path d="M223 166c8-20 30-27 47-14m-1 17c14-19 38-19 51-3" fill="none" stroke="#34251f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M245 170q11-11 22 0m31-2q11-11 22 0" fill="none" stroke="#fff2d8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M272 195l14 5-13 9Z" fill="#a94d3d" stroke="#34251f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m284 208-20 15m20-15 20 15m-20-15v14m-25-10-43-7m44 16-48 8m72-7 43-15m-41 23 47 5" fill="none" stroke="#34251f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M187 278q18 19 41 18m-127 12-3 22m20-25 1 26m81-31 3 25m20-25 4 23" fill="none" stroke="#34251f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M357 166c41 0 76 34 76 76s-35 76-76 76-76-34-76-76 35-76 76-76Z" fill="#258e8c" stroke="#34251f" stroke-width="8"/>
+  <path d="M296 210c30-23 72-35 113-24m-128 50c42-24 94-28 147-11m-143 35c47-20 97-15 139 4m-122 27c36-18 72-16 105-3m-93-91c-14 39-12 79 7 113m22-139c-13 42-9 91 15 131m11-138c-9 43 0 91 27 126m-116-57c34 11 75 11 118-3" fill="none" stroke="#14666a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M423 290c57 24 94 46 111 69-44 18-92 21-141 8-35-9-62-25-83-44-26-23-49-23-73-9" fill="none" stroke="#176e70" stroke-width="10" stroke-linecap="round"/>
+</svg>

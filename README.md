@@ -36,7 +36,7 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │   └── scripts/
 │       └── main.js             # Interactive widgets, 3D flipper, calculator, toast
 ├── public/
-│   ├── favicon.svg              # Browser tab icon
+│   ├── favicon.svg              # Coral sparkle browser tab icon
 │   ├── favicon-32.png           # PNG favicon fallback
 │   ├── apple-touch-icon.png     # iOS home-screen icon
 │   ├── audio/                  # Ambient Read With Me MP3 tracks
@@ -50,10 +50,15 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │       ├── yoga-placeholder.svg
 │       ├── tarot-placeholder.svg
 │       ├── tarot-card-reference.svg
+│       ├── tarot-galaxy.svg
 │       ├── baking-placeholder.svg
+│       ├── bread-sticker.svg
+│       ├── sprinkle-cake-sticker.svg
 │       ├── art-placeholder.svg
 │       ├── chess-placeholder.svg
 │       ├── reading-corner.svg
+│       ├── yoga-meadow.svg
+│       ├── dreamcatcher.svg
 │       ├── airplane-sticker.svg
 │       ├── golden-dog-sticker.svg
 │       ├── golden-snitch-sticker.svg
@@ -61,6 +66,8 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │       ├── og-image.svg           # Editable source for social preview
 │       ├── crochet-placeholder.svg
 │       ├── embroidery-placeholder.svg
+│       ├── fiber-studio-meadow.svg
+│       ├── cat-chasing-yarn.svg
 │       └── yoga-placeholder.svg
 └── dist/
    └── styles.css              # Compiled production stylesheet
@@ -99,17 +106,26 @@ npm run build
 3. **Social Links**:
    Update `https://instagram.com`, `https://pinterest.com`, etc. with your exact usernames/URLs.
 
----
+The browser favicon is an SVG; PNG variants are provided for browsers and Apple home-screen shortcuts.
 
-## 🚀 Deployment to GitHub Pages
 
-1. Push this repository to GitHub.
-2. In your GitHub repository:
-   - Go to **Settings** &rarr; **Pages**.
-   - Under **Build and deployment** &rarr; **Source**, select **Deploy from a branch**.
-   - Choose the `main` branch and `/ (root)` folder.
-   - Click **Save**.
-3. Your site will be live at `https://<your-username>.github.io/<repo-name>/` in 1–2 minutes!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

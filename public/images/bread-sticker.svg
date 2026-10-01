@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 170" role="img" aria-labelledby="title desc">
+  <title id="title">Sourdough loaf sticker</title>
+  <desc id="desc">A rustic golden sourdough boule with a floury split crust and a white die-cut outline.</desc>
+  <path d="M31 117C21 97 34 58 63 42c28-16 83-24 120-3 27 15 35 50 22 76-13 27-48 38-91 37-39-1-70-12-83-35Z" fill="#fff" stroke="#fff" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M31 117C21 97 34 58 63 42c28-16 83-24 120-3 27 15 35 50 22 76-13 27-48 38-91 37-39-1-70-12-83-35Z" fill="#c87835" stroke="#35251d" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M58 100c8-29 25-49 53-59 22-8 48-7 68 2-22 8-37 20-47 39-10 18-24 30-45 37-11 4-21-3-29-19Z" fill="#efc982" stroke="#35251d" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M71 91c15-18 30-29 50-35m-37 48c16-17 32-26 50-31m-33 43c13-12 24-18 37-22" fill="none" stroke="#fff1cd" stroke-width="5" stroke-linecap="round"/>
+  <path d="M42 119c23 18 60 25 99 20m-90-91c-13 10-20 22-24 34m154 20c-8 16-19 27-34 34" fill="none" stroke="#e7a15b" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  <g fill="#fff4dc" opacity=".85"><circle cx="53" cy="77" r="2.5"/><circle cx="78" cy="53" r="2"/><circle cx="114" cy="42" r="2.4"/><circle cx="171" cy="52" r="2"/><circle cx="187" cy="83" r="2.3"/><circle cx="155" cy="130" r="2"/></g>
+</svg>

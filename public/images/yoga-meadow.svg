@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f1e7"/>
+      <stop offset=".62" stop-color="#f6f3dc"/>
+      <stop offset="1" stop-color="#d9e6be"/>
+    </linearGradient>
+    <linearGradient id="far-hill" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#b6cf9c"/>
+      <stop offset="1" stop-color="#91b77c"/>
+    </linearGradient>
+    <linearGradient id="meadow" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#91b66e"/>
+      <stop offset="1" stop-color="#557e4a"/>
+    </linearGradient>
+    <linearGradient id="foreground" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#6f9c54"/>
+      <stop offset="1" stop-color="#3f6941"/>
+    </linearGradient>
+    <pattern id="grass-marks" width="90" height="72" patternUnits="userSpaceOnUse">
+      <path d="M12 72q-2-20-10-31m10 31q1-19 12-31m19 31q-1-16-8-25m8 25q2-16 12-24m22 24q0-19-7-30m7 30q4-20 15-30" fill="none" stroke="#eef2cf" stroke-width="2" opacity=".36"/>
+      <circle cx="30" cy="28" r="2" fill="#fff8d8" opacity=".42"/>
+      <circle cx="72" cy="14" r="1.5" fill="#fff8d8" opacity=".38"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1290" cy="168" r="72" fill="#f6d982" opacity=".72"/>
+  <circle cx="1290" cy="168" r="96" fill="#f6d982" opacity=".12"/>
+  <path d="M0 480Q180 385 360 455T730 430Q940 345 1110 430T1450 410Q1530 390 1600 420V900H0Z" fill="#c7d9a7" opacity=".8"/>
+  <path d="M0 545Q220 420 450 512T865 478Q1090 405 1290 485T1600 470V900H0Z" fill="url(#far-hill)"/>
+  <path d="M0 620Q180 500 410 588T830 557Q1070 484 1285 565T1600 535V900H0Z" fill="#8eae69" opacity=".78"/>
+  <path d="M0 675Q250 555 500 645T980 615Q1220 545 1430 625T1600 600V900H0Z" fill="url(#meadow)"/>
+  <path d="M0 730Q240 645 480 710T930 700Q1190 625 1410 700T1600 680V900H0Z" fill="url(#foreground)"/>
+  <path d="M0 675Q250 555 500 645T980 615Q1220 545 1430 625T1600 600V900H0Z" fill="url(#grass-marks)" opacity=".72"/>
+  <path d="M0 730Q240 645 480 710T930 700Q1190 625 1410 700T1600 680V900H0Z" fill="url(#grass-marks)" opacity=".56"/>
+  <g fill="none" stroke-linecap="round" stroke-width="4" opacity=".72">
+    <path d="M168 900q8-105-3-175m3 112q-24-38-48-47m51 19q22-42 48-54" stroke="#385e3d"/>
+    <path d="M1400 900q-6-119 14-190m-12 127q-28-34-55-39m66 1q22-39 48-49" stroke="#385e3d"/>
+    <path d="M310 900q-3-75 8-132m-8 91q-19-27-37-31m41-7q16-27 34-34" stroke="#416b42"/>
+    <path d="M1215 900q-7-82 2-132m-2 95q-20-25-40-29m44-5q17-27 36-33" stroke="#416b42"/>
+  </g>
+  <g fill="#fff3c8" opacity=".9">
+    <g transform="translate(118 680)"><circle r="7"/><circle cx="0" cy="-10" r="5"/><circle cx="9" cy="-4" r="5"/><circle cx="6" cy="7" r="5"/><circle cx="-6" cy="7" r="5"/><circle cx="-9" cy="-4" r="5"/><circle r="3" fill="#e6af55"/></g>
+    <g transform="translate(1452 652) scale(.8)"><circle r="7"/><circle cx="0" cy="-10" r="5"/><circle cx="9" cy="-4" r="5"/><circle cx="6" cy="7" r="5"/><circle cx="-6" cy="7" r="5"/><circle cx="-9" cy="-4" r="5"/><circle r="3" fill="#e6af55"/></g>
+    <g transform="translate(353 758) scale(.68)"><circle r="7"/><circle cx="0" cy="-10" r="5"/><circle cx="9" cy="-4" r="5"/><circle cx="6" cy="7" r="5"/><circle cx="-6" cy="7" r="5"/><circle cx="-9" cy="-4" r="5"/><circle r="3" fill="#e6af55"/></g>
+    <g transform="translate(1282 740) scale(.72)"><circle r="7"/><circle cx="0" cy="-10" r="5"/><circle cx="9" cy="-4" r="5"/><circle cx="6" cy="7" r="5"/><circle cx="-6" cy="7" r="5"/><circle cx="-9" cy="-4" r="5"/><circle r="3" fill="#e6af55"/></g>
+  </g>
+  <g fill="#e7a0a0" opacity=".88">
+    <circle cx="244" cy="610" r="5"/><circle cx="270" cy="600" r="4"/><circle cx="292" cy="612" r="5"/>
+    <circle cx="1350" cy="590" r="5"/><circle cx="1375" cy="578" r="4"/><circle cx="1395" cy="591" r="5"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 190" role="img" aria-labelledby="title desc">
+  <title id="title">Sprinkle cake sticker</title>
+  <desc id="desc">A slice of vanilla layer cake with white frosting and colorful sprinkles, surrounded by a white die-cut outline.</desc>
+  <path d="M22 48 92 25l77 25v84l-77 30-70-31Z" fill="#fff" stroke="#fff" stroke-width="22" stroke-linejoin="round"/>
+  <path d="m22 48 70-24 77 26-77 27Z" fill="#fff1d6" stroke="#35251d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m22 48 70 29v87l-70-31Z" fill="#e7ad63" stroke="#35251d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m92 77 77-27v84l-77 30Z" fill="#f8e7c9" stroke="#35251d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m22 48 70 29 77-27-2 15-75 29-70-29Z" fill="#fffaf0" stroke="#35251d" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m25 79 65 27 3 15-67-29Zm2 40 66 28v13l-65-29Z" fill="#fff4df" stroke="#35251d" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M35 43 47 38m9 17 11-5m13 16 12-5m22-33 13 5m11 9 12-4m-45 77 13-5m9 10 12-5m-32 27 13-5m21-80 12-4m-10 26 12-4m-13 29 12-4" stroke="#e85d75" stroke-width="5" stroke-linecap="round"/>
+  <path d="M48 34l9 3m14 3 8 4m22-16 7-2m25 15 8 3m-81 86 9 4m14 6 9 4m26-42 8 3m24-18 8-3" stroke="#1e4ed8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M42 55 52 52m42 11 10-4m38-19 10 3m-94 58 10 4m57 19 10-4m-31 37 9-4" stroke="#496e4c" stroke-width="5" stroke-linecap="round"/>
+</svg>

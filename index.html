@@ -246,10 +246,10 @@
             <div class="relative w-full max-w-sm tilt-card hero-portrait-collage" data-hover-label="Meet the maker">
               
               <!-- Decorative background backing card -->
-              <div class="absolute inset-0 bg-coral rounded-3xl border-3 border-espresso shadow-retro-xl transform rotate-3"></div>
+              <div class="hero-portrait-backing absolute inset-0 bg-coral rounded-3xl border-3 border-espresso shadow-retro-xl transform rotate-3"></div>
               
               <!-- Foreground portrait card (Single Signature Bold Shadow Element) -->
-              <div class="relative bg-paper rounded-3xl border-3 border-espresso p-4 overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div class="hero-portrait-card relative bg-paper rounded-3xl border-3 border-espresso p-4 overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                 <figure class="relative rounded-2xl overflow-hidden border-2 border-espresso bg-tangerine-light aspect-[4/5] flex items-center justify-center">
                   <!-- TODO: replace with your own hero/portrait photo -->
                   <img src="./public/images/hero-portrait-placeholder.jpg" alt="Portrait of Pradheepa Ramasundaram" class="w-full h-full object-cover">
@@ -270,6 +270,8 @@
                   </span>
                 </div>
               </div>
+
+              <img class="hero-dreamcatcher-sticker" src="./public/images/dreamcatcher.svg?v=2" alt="" aria-hidden="true" loading="lazy">
 
             </div>
           </div>
@@ -410,8 +412,8 @@
     <!-- ========================================================================= -->
     <section id="tarot" class="tarot-section py-20 md:py-28 border-b border-indigo-950 bg-[#0B1120] text-cream relative overflow-hidden reveal">
       
-      <!-- Celestial Spotlight Radial Glow -->
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/40 via-[#0B1120] to-[#0B1120] pointer-events-none"></div>
+      <!-- Soft vignette over the galaxy so Tarot copy and cards remain legible -->
+      <div class="tarot-vignette" aria-hidden="true"></div>
       <div class="absolute top-12 right-12 text-sunshine/40 text-4xl select-none pointer-events-none animate-float">✦</div>
       <div class="absolute bottom-10 left-10 text-indigo-400/30 text-3xl select-none pointer-events-none animate-float-delayed">★</div>
 
@@ -541,10 +543,12 @@
 
           <!-- Right Image Card -->
           <div class="lg:col-span-5 flex justify-center reveal delay-200">
-            <div class="w-full max-w-md bg-paper border border-tangerine/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all asymmetric-gallery-card" data-hover-label="Open the oven door">
+            <div class="baking-sticker-card relative w-full max-w-md bg-paper border border-tangerine/30 rounded-3xl p-4 shadow-sm tilt-card hover-lift transition-all asymmetric-gallery-card" data-hover-label="Open the oven door">
               <figure class="photo-natural-frame relative rounded-2xl overflow-hidden border border-tangerine/20 bg-cream">
                 <img src="./public/images/baking-placeholder.jpg" alt="Pradheepa decorating a homemade cake" class="w-full h-auto object-contain">
               </figure>
+              <img class="baking-food-sticker baking-bread-sticker" src="./public/images/bread-sticker.svg" alt="" aria-hidden="true" loading="lazy">
+              <img class="baking-food-sticker baking-cake-sticker" src="./public/images/sprinkle-cake-sticker.svg" alt="" aria-hidden="true" loading="lazy">
               <div class="pt-3 px-1 flex items-center justify-between text-xs font-medium text-espresso/70">
                 <span>Weekend bakes</span>
                 <span class="text-tangerine-dark font-semibold">Boules &amp; Focaccia</span>
@@ -672,7 +676,7 @@
     <!-- FIBER ARTS: CROCHET & EMBROIDERY (Distinct Stitch Border Divider)         -->
     <!-- ========================================================================= -->
     <section id="crafts" class="crafts-section py-16 md:py-24 border-b border-espresso/15 bg-paper relative reveal">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="crafts-content max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div class="text-center max-w-2xl mx-auto space-y-3">
           <div class="flex items-center justify-center gap-2">
@@ -686,20 +690,29 @@
           <p class="text-espresso/70 text-sm sm:text-base">
             Slow, deliberate stitches that turn thread into cozy textures and detailed botanical tapestries.
           </p>
+        </div>
 
-          <!-- Interactive Color Story Generator for Fiber Crafts -->
-          <div class="mt-6 p-4 bg-cream border border-espresso/20 rounded-2xl shadow-sm text-left w-full max-w-lg mx-auto">
-            <div class="flex items-center justify-between mb-2">
-              <div>
-                <span class="text-[11px] font-semibold text-espresso/60 block">Yarn &amp; Thread Color Story</span>
-                <span id="yarn-theme-name" class="font-display font-bold text-sm text-espresso">Wildflower Meadows</span>
+        <!-- Cat on the left, original-size palette in the middle, two yarn colors on the right -->
+        <div class="fiber-color-story-layout">
+          <figure class="fiber-cat-yarn-preview">
+            <img src="./public/images/cat-chasing-yarn.svg" alt="Illustration of an orange cat playing with a teal ball of yarn" loading="lazy">
+          </figure>
+          <div class="fiber-color-story-card max-w-lg p-4 bg-cream border border-espresso/20 rounded-2xl shadow-sm text-left w-full">
+              <div class="flex items-center justify-between mb-2">
+                <div>
+                  <span class="text-[11px] font-semibold text-espresso/60 block">Yarn &amp; Thread Color Story</span>
+                  <span id="yarn-theme-name" class="font-display font-bold text-sm text-espresso">Wildflower Meadows</span>
+                </div>
+                <button id="shuffle-yarn-btn" type="button" class="bg-sunshine text-espresso px-3 py-1 rounded-lg text-xs font-semibold hover:bg-sunshine/80 transition-all">
+                  🎲 Shuffle Palette
+                </button>
               </div>
-              <button id="shuffle-yarn-btn" type="button" class="bg-sunshine text-espresso px-3 py-1 rounded-lg text-xs font-semibold hover:bg-sunshine/80 transition-all">
-                🎲 Shuffle Palette
-              </button>
-            </div>
-            <div id="yarn-swatches" class="flex gap-2"></div>
-            <span class="text-[10px] text-espresso/50 italic block mt-1.5 text-right">Click any swatch to copy HEX code</span>
+              <div id="yarn-swatches" class="flex gap-2"></div>
+              <span class="text-[10px] text-espresso/50 italic block mt-1.5 text-right">Click any swatch to copy HEX code</span>
+          </div>
+          <div class="fiber-extra-yarn" aria-hidden="true">
+            <span class="fiber-extra-yarn-ball fiber-yarn-hot-pink"></span>
+            <span class="fiber-extra-yarn-ball fiber-yarn-neon-green"></span>
           </div>
         </div>
 
