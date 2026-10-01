@@ -10,7 +10,7 @@ The project includes handcrafted placeholder artwork used throughout the page:
 
 | Practice | Preview |
 | --- | --- |
-| Social sharing / hero portrait | ![Hero portrait social preview](public/images/og-image.png) |
+| Social sharing / hero portrait | ![Hero portrait social preview](public/images/og-image.jpg) |
 | Baking | ![Artisan baking illustration](public/images/baking-placeholder.svg) |
 | Painting | ![Painting illustration](public/images/art-placeholder.svg) |
 | Tarot | ![Tarot illustration](public/images/tarot-placeholder.svg) |
@@ -63,7 +63,8 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │       ├── airplane-sticker.svg
 │       ├── golden-dog-sticker.svg
 │       ├── golden-snitch-sticker.svg
-│       ├── og-image.png           # 1200×630 social preview image
+│       ├── og-image.jpg           # 1200×630 optimized social preview image
+│       ├── og-image.png           # Lossless social preview image
 │       ├── og-image.svg           # Editable source for social preview
 │       ├── crochet-placeholder.svg
 │       ├── embroidery-placeholder.svg
