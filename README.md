@@ -4,23 +4,6 @@ An eclectic, colorful, single-page personal website celebrating creative and spi
 
 The site also includes an art portfolio and workshop offering through [The Kala Odyssey](https://pradheepar.wixsite.com/thekalaodyssey), a Goodreads profile, and a filterable Sparks section for smaller interests such as vibecoding, board games, mocktail making, origami, junk journaling, and shape stamping.
 
-## 🎨 Site Images
-
-The project includes handcrafted placeholder artwork used throughout the page:
-
-| Practice | Preview |
-| --- | --- |
-| Social sharing / hero portrait | ![Hero portrait social preview](public/images/og-image.jpg) |
-| Baking | ![Artisan baking illustration](public/images/baking-placeholder.svg) |
-| Painting | ![Painting illustration](public/images/art-placeholder.svg) |
-| Tarot | ![Tarot illustration](public/images/tarot-placeholder.svg) |
-| Chess | ![Chess illustration](public/images/chess-placeholder.svg) |
-| Crochet | ![Crochet illustration](public/images/crochet-placeholder.svg) |
-| Embroidery | ![Embroidery illustration](public/images/embroidery-placeholder.svg) |
-| Yoga | ![Yoga illustration](public/images/yoga-placeholder.svg) |
-
-Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images in `public/images/` when ready.
-
 ---
 
 ## 📂 Project Structure
@@ -47,7 +30,9 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │   │   ├── cat-purr.mp3
 │   │   └── page-turns.mp3
 │   └── images/                 # Illustrations and personal image placeholders
-│       ├── hero-portrait-placeholder.svg
+│       ├── hero-portrait-480.jpg
+│       ├── hero-portrait-960.jpg
+│       ├── hero-portrait-optimized.jpg
 │       ├── yoga-placeholder.svg
 │       ├── tarot-placeholder.svg
 │       ├── tarot-card-reference.svg
@@ -63,9 +48,7 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 │       ├── airplane-sticker.svg
 │       ├── golden-dog-sticker.svg
 │       ├── golden-snitch-sticker.svg
-│       ├── og-image.jpg           # 1200×630 optimized social preview image
-│       ├── og-image.png           # Lossless social preview image
-│       ├── og-image.svg           # Editable source for social preview
+│       ├── og-image.jpg           # 1200×630 social preview image used by metadata
 │       ├── crochet-placeholder.svg
 │       ├── embroidery-placeholder.svg
 │       ├── fiber-studio-meadow.svg
@@ -78,34 +61,9 @@ Replace these SVG placeholders with personal `.jpg`, `.png`, or `.webp` images i
 Ambient reading sounds are stored in `public/audio/` as `.mp3` files: fireplace, rain, clock tick, cat purr, and page turns.
 ---
 
-## 🛠️ Local Development & Build
-
-### 1. Install Dependencies
-```bash
-npm install
-```
-
-### 2. Start the local preview server
-```bash
-npm run dev
-```
-Then open `http://localhost:5173/`. Do not double-click `index.html`; serving the project over HTTP is required for reliable audio, fetch, and asset loading.
-
-### 3. Build for Production
-To create the minified production stylesheet:
-```bash
-npm run build
-```
-
----
-
 ## 📸 Customizing Photos & Text
 
-1. **Replace Placeholders**:
+**Replace Placeholders**:
    Search for `<!-- TODO: replace with your own photo -->` in `index.html`. Swap out the placeholder paths in `src=""` with your own `.jpg`, `.png`, or `.webp` photos located in `public/images/`.
-2. **Replace Stories & Anecdotes**:
-   Search for `<!-- TODO: replace with your real story -->` in `index.html` to swap in your personal memories.
-3. **Social Links**:
-   Update `https://instagram.com`, `https://pinterest.com`, etc. with your exact usernames/URLs.
 
 The browser favicon is an SVG; PNG variants are provided for browsers and Apple home-screen shortcuts.

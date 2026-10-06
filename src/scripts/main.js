@@ -146,20 +146,31 @@ function initMobileNav() {
 function initActiveNavHighlight() {
   const sections = document.querySelectorAll('section[id]');
   const desktopLinks = document.querySelectorAll('.desktop-nav-link');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-  if (sections.length === 0 || desktopLinks.length === 0) return;
+  if (sections.length === 0 || (desktopLinks.length === 0 && mobileLinks.length === 0)) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
         desktopLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${id}`) {
+          const isCurrent = link.getAttribute('href') === `#${id}`;
+          if (isCurrent) {
             link.classList.add('bg-espresso', 'text-cream');
             link.classList.remove('text-espresso', 'hover:bg-black/5');
+            link.setAttribute('aria-current', 'location');
           } else {
             link.classList.remove('bg-espresso', 'text-cream');
             link.classList.add('text-espresso', 'hover:bg-black/5');
+            link.removeAttribute('aria-current');
+          }
+        });
+        mobileLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
           }
         });
       }
@@ -224,7 +235,9 @@ function initTarotCardWidget() {
       drawCard();
     }
   });
-  window.setInterval(drawCard, 10000);
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.setInterval(drawCard, 10000);
+  }
 }
 
 /**
@@ -468,8 +481,8 @@ function initCard3DTilt() {
  * 12. Contextual Cursor Label for Image-led Cards
  */
 function initCursorFollower() {
-  if (window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
+  const canFollowPointer = !window.matchMedia('(pointer: coarse)').matches
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const targets = document.querySelectorAll('[data-hover-label]');
   if (targets.length === 0) return;
 
@@ -479,19 +492,26 @@ function initCursorFollower() {
   document.body.appendChild(label);
 
   targets.forEach(target => {
-    target.addEventListener('mouseenter', () => {
+    const showLabel = () => {
       label.textContent = target.getAttribute('data-hover-label');
+      label.style.left = '1rem';
+      label.style.top = '5rem';
       label.classList.add('is-visible');
-    });
+    };
+    const hideLabel = () => label.classList.remove('is-visible');
 
-    target.addEventListener('mousemove', event => {
-      label.style.left = `${event.clientX + 18}px`;
-      label.style.top = `${event.clientY + 18}px`;
-    });
+    target.addEventListener('focusin', showLabel);
 
-    target.addEventListener('mouseleave', () => {
-      label.classList.remove('is-visible');
-    });
+    if (canFollowPointer) {
+      target.addEventListener('mouseenter', showLabel);
+      target.addEventListener('mousemove', event => {
+        label.style.left = `${event.clientX + 18}px`;
+        label.style.top = `${event.clientY + 18}px`;
+      });
+      target.addEventListener('mouseleave', hideLabel);
+    }
+
+    target.addEventListener('focusout', hideLabel);
   });
 }
 

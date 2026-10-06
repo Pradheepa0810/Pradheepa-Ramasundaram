@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
-
 :root {
   /* Vibrant & Playful Palette */
   --color-cream: #FAF7F0;
@@ -969,7 +967,7 @@ input[type='range'].accent-cobalt {
   top: 67%;
   left: 7%;
   background: var(--color-coral);
-  color: var(--color-cream);
+  color: var(--color-espresso);
   transform: rotate(-7deg);
   animation: holdOnDrift 8s ease-in-out -5s infinite;
 }
@@ -1102,6 +1100,15 @@ input[type='range'].accent-cobalt {
 .cursor-follow-label.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+[data-hover-label]:focus-visible {
+  outline: 3px solid var(--color-espresso);
+  outline-offset: 5px;
+}
+
+#mobile-nav-drawer .mobile-nav-link[aria-current="location"] {
+  box-shadow: inset 0 0 0 2px var(--color-espresso);
 }
 
 @media (max-width: 767px) {
