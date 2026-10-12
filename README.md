@@ -11,6 +11,7 @@ The site also includes an art portfolio and workshop offering through [The Kala 
 ```text
 /
 ├── index.html                  # Main single-page portfolio
+├── little-things.html          # Standalone shelf for creative side projects
 ├── package.json                # Tailwind CSS build scripts & dependencies
 ├── tailwind.config.js          # Design tokens (colors, typography, shadows, borders)
 ├── README.md                   # Setup, customization & deployment guide

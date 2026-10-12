@@ -147,32 +147,43 @@ function initActiveNavHighlight() {
   const sections = document.querySelectorAll('section[id]');
   const desktopLinks = document.querySelectorAll('.desktop-nav-link');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  const progressBar = document.getElementById('scroll-progress');
 
-  if (sections.length === 0 || (desktopLinks.length === 0 && mobileLinks.length === 0)) return;
+  if (sections.length === 0 || (desktopLinks.length === 0 && mobileLinks.length === 0 && !progressBar)) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-        desktopLinks.forEach(link => {
-          const isCurrent = link.getAttribute('href') === `#${id}`;
-          if (isCurrent) {
+        const updateLink = (link, isDesktop) => {
+          const targetId = link.dataset.sectionTarget || link.getAttribute('href')?.slice(1);
+          const isCurrent = targetId === id;
+          if (isDesktop && isCurrent) {
             link.classList.add('bg-espresso', 'text-cream');
             link.classList.remove('text-espresso', 'hover:bg-black/5');
             link.setAttribute('aria-current', 'location');
-          } else {
+          } else if (isDesktop) {
             link.classList.remove('bg-espresso', 'text-cream');
             link.classList.add('text-espresso', 'hover:bg-black/5');
-            link.removeAttribute('aria-current');
           }
-        });
-        mobileLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${id}`) {
+
+          if (isCurrent) {
             link.setAttribute('aria-current', 'location');
           } else {
             link.removeAttribute('aria-current');
           }
-        });
+        };
+        desktopLinks.forEach(link => updateLink(link, true));
+        mobileLinks.forEach(link => updateLink(link, false));
+
+        if (progressBar) {
+          const progressColors = {
+            yoga: 'var(--color-olive)',
+            tarot: 'var(--color-sunshine)',
+            baking: 'var(--color-tangerine)'
+          };
+          progressBar.style.backgroundColor = progressColors[id] || 'var(--color-coral)';
+        }
       }
     });
   }, { threshold: 0.25 });
@@ -214,15 +225,27 @@ function initSmoothScroll() {
 function initTarotCardWidget() {
   const tarotCardInner = document.getElementById('tarot-card-inner');
   const tarotDeckStage = tarotCardInner ? tarotCardInner.closest('.tarot-deck-stage') : null;
+  const shuffleStatus = document.getElementById('tarot-shuffle-status');
 
   if (!tarotCardInner) return;
 
+  let isShuffling = false;
+  let reverseShuffle = false;
+
   function drawCard() {
+    if (isShuffling) return;
+    isShuffling = true;
+    reverseShuffle = !reverseShuffle;
+    if (shuffleStatus) shuffleStatus.textContent = 'Shuffling…';
     if (tarotDeckStage) tarotDeckStage.classList.add('tarot-deck-shuffling');
     tarotCardInner.classList.add('tarot-card-drawing');
+    tarotCardInner.classList.toggle('tarot-card-drawing-alt', reverseShuffle);
     setTimeout(() => {
       tarotCardInner.classList.remove('tarot-card-drawing');
+      tarotCardInner.classList.remove('tarot-card-drawing-alt');
       tarotCardInner.classList.add('tarot-card-shuffled');
+      if (shuffleStatus) shuffleStatus.textContent = '';
+      isShuffling = false;
       setTimeout(() => tarotCardInner.classList.remove('tarot-card-shuffled'), 700);
     }, 1100);
     setTimeout(() => tarotDeckStage?.classList.remove('tarot-deck-shuffling'), 2050);
@@ -253,6 +276,10 @@ function initBreathingWidget() {
 
   let isRunning = false;
   let timerInterval = null;
+  const yogaSection = toggleBtn.closest('#yoga');
+  let yogaIsVisible = yogaSection
+    ? yogaSection.getBoundingClientRect().top < window.innerHeight && yogaSection.getBoundingClientRect().bottom > 0
+    : true;
   let phase = 0; // 0: Inhale (4s), 1: Hold (4s), 2: Exhale (4s), 3: Hold (4s)
   let count = 4;
 
@@ -262,6 +289,17 @@ function initBreathingWidget() {
     { name: "Exhale softly...", scale: 0.8, bg: "bg-sunshine", color: "text-espresso" },
     { name: "Rest...", scale: 0.8, bg: "bg-olive-light", color: "text-olive-dark" }
   ];
+
+  function updateTimerState() {
+    if (isRunning && yogaIsVisible && timerInterval === null) {
+      breatheLabel.textContent = phases[phase].name;
+      timerInterval = window.setInterval(tick, 1000);
+    } else if ((!isRunning || !yogaIsVisible) && timerInterval !== null) {
+      window.clearInterval(timerInterval);
+      timerInterval = null;
+      if (isRunning) breatheLabel.textContent = 'Paused until you return';
+    }
+  }
 
   function tick() {
     count--;
@@ -288,13 +326,14 @@ function initBreathingWidget() {
     breatheCircle.style.transform = `scale(${phases[0].scale})`;
     if (breatheTimer) breatheTimer.textContent = `${count}s`;
 
-    timerInterval = setInterval(tick, 1000);
+    updateTimerState();
     showToast("Mindful breathing session started 🧘");
   }
 
   function stop() {
     isRunning = false;
-    clearInterval(timerInterval);
+    if (timerInterval !== null) window.clearInterval(timerInterval);
+    timerInterval = null;
     toggleBtn.innerHTML = `<span>▶ Start Box Breathing</span>`;
     toggleBtn.classList.replace('bg-espresso', 'bg-olive');
     toggleBtn.classList.replace('text-sunshine', 'text-cream');
@@ -307,6 +346,14 @@ function initBreathingWidget() {
     if (isRunning) stop();
     else start();
   });
+
+  if (yogaSection && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      yogaIsVisible = entries.some(entry => entry.isIntersecting);
+      updateTimerState();
+    }, { threshold: 0.1 });
+    observer.observe(yogaSection);
+  }
 }
 
 /**
@@ -408,7 +455,15 @@ function initYarnPaletteGenerator() {
     });
   }
 
-  shuffleBtn.addEventListener('click', renderPalette);
+  shuffleBtn.addEventListener('click', () => {
+    renderPalette();
+    paletteContainer.classList.remove('palette-shuffle-pulse');
+    void paletteContainer.offsetWidth;
+    paletteContainer.classList.add('palette-shuffle-pulse');
+  });
+  paletteContainer.addEventListener('animationend', () => {
+    paletteContainer.classList.remove('palette-shuffle-pulse');
+  });
   renderPalette(); // initial render
 }
 
@@ -418,17 +473,49 @@ function initYarnPaletteGenerator() {
 function initTagFilter() {
   const filterBtns = document.querySelectorAll('.spark-filter-btn');
   const sparkPills = document.querySelectorAll('.spark-pill');
+  const notebook = document.querySelector('.sparks-notebook');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let pageAnimation = null;
+  let pageTurn = null;
 
   if (filterBtns.length === 0 || sparkPills.length === 0) return;
 
+  filterBtns.forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.filter === 'all')));
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      if (btn.getAttribute('aria-pressed') === 'true') return;
       const category = btn.getAttribute('data-filter');
+      pageAnimation?.cancel();
+      pageTurn?.remove();
+      if (notebook) notebook.style.minHeight = '';
+
+      // A visual-only copy of the outgoing right page turns over the new page.
+      if (notebook && !reducedMotion.matches && typeof notebook.animate === 'function') {
+        const outgoingPage = notebook.cloneNode(true);
+        outgoingPage.removeAttribute('aria-label');
+        outgoingPage.setAttribute('aria-hidden', 'true');
+        outgoingPage.inert = true;
+        outgoingPage.querySelectorAll('[id]').forEach(element => element.removeAttribute('id'));
+        notebook.style.minHeight = `${notebook.offsetHeight}px`;
+        pageTurn = document.createElement('div');
+        pageTurn.className = 'spark-page-turn';
+        pageTurn.setAttribute('aria-hidden', 'true');
+        pageTurn.inert = true;
+        const front = document.createElement('div');
+        front.className = 'spark-page-front';
+        front.append(outgoingPage);
+        const back = document.createElement('div');
+        back.className = 'spark-page-back';
+        pageTurn.append(front, back);
+        notebook.append(pageTurn);
+      }
 
       // Update button active state
       filterBtns.forEach(b => {
         b.classList.remove('bg-espresso', 'text-cream');
         b.classList.add('bg-paper', 'text-espresso');
+        b.setAttribute('aria-pressed', String(b === btn));
       });
       btn.classList.add('bg-espresso', 'text-cream');
       btn.classList.remove('bg-paper', 'text-espresso');
@@ -437,7 +524,7 @@ function initTagFilter() {
       sparkPills.forEach(pill => {
         const pillCat = pill.getAttribute('data-category');
         if (category === 'all' || pillCat === category) {
-          pill.style.display = 'inline-flex';
+          pill.style.display = '';
           pill.classList.remove('opacity-0', 'scale-90');
           pill.classList.add('opacity-100', 'scale-100');
         } else {
@@ -446,6 +533,23 @@ function initTagFilter() {
           pill.classList.remove('opacity-100', 'scale-100');
         }
       });
+
+      if (notebook && pageTurn && !reducedMotion.matches) {
+        const turningPage = pageTurn;
+        const animation = turningPage.animate([
+          { transform: 'perspective(1400px) rotateY(0deg)' },
+          { transform: 'perspective(1400px) rotateY(-180deg)' }
+        ], { duration: 650, easing: 'cubic-bezier(0.4, 0, 0.2, 1)', fill: 'forwards' });
+        pageAnimation = animation;
+        animation.finished.catch(() => {}).finally(() => {
+          turningPage.remove();
+          if (pageAnimation === animation) {
+            notebook.style.minHeight = '';
+            pageTurn = null;
+            pageAnimation = null;
+          }
+        });
+      }
     });
   });
 }

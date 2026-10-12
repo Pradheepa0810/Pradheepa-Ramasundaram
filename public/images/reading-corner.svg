@@ -1,18 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%" fill="none">
   <defs>
+    <clipPath id="roof-rain-clip"><path d="M0 0h430l-112 170H0z"/></clipPath>
+    <clipPath id="window-rain-clip"><rect x="514" y="48" width="168" height="190"/></clipPath>
     <linearGradient id="cushion" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4d9a8"/><stop offset=".55" stop-color="#d9a477"/><stop offset="1" stop-color="#a9674f"/></linearGradient>
     <linearGradient id="pot" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e29a62"/><stop offset="1" stop-color="#a94f36"/></linearGradient>
     <linearGradient id="book" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff0c9"/><stop offset=".45" stop-color="#e4b873"/><stop offset="1" stop-color="#9e5d3d"/></linearGradient>
     <radialGradient id="sun" cx="0" cy="0" r="1"><stop stop-color="#fff1b2" stop-opacity=".7"/><stop offset="1" stop-color="#fff1b2" stop-opacity="0"/></radialGradient>
     <filter id="shadow"><feDropShadow dx="4" dy="5" stdDeviation="0" flood-color="#1E1A17"/></filter>
   </defs>
+  <style>
+    .nook-rain { animation: nookRain 1.8s linear infinite; }
+    .nook-rain-late { animation-delay: -0.9s; }
+    .nook-steam { animation: nookSteam 3.8s ease-out infinite; }
+    .nook-steam-late { animation-delay: -1.8s; }
+    .nook-light { animation: nookLight 5s ease-in-out infinite; }
+    @keyframes nookRain { from { transform: translate(12px, -56px); } to { transform: translate(-12px, 68px); } }
+    @keyframes nookSteam { 0% { opacity: 0; transform: translateY(10px); } 30% { opacity: 0.85; } 100% { opacity: 0; transform: translate(6px, -26px); } }
+    @keyframes nookLight { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+    @media (prefers-reduced-motion: reduce) { .nook-rain, .nook-steam, .nook-light { animation: none; } .nook-steam { opacity: 0.55; } }
+  </style>
   <rect width="700" height="500" rx="28" fill="#FAF3E4"/>
 
   <!-- greenhouse roof and sunlight -->
   <path d="M0 0h430l-112 170H0z" fill="#aec5bd" stroke="#1E1A17" stroke-width="4"/>
   <path d="M0 0h430M107 0L38 170M214 0l-69 170M321 0l-70 170M0 55h394M0 110h358" stroke="#26333a" stroke-width="7"/>
-  <circle cx="42" cy="38" r="150" fill="url(#sun)"/>
+  <circle class="nook-light" cx="42" cy="38" r="150" fill="url(#sun)"/>
   <path d="M0 0c70 10 90 35 138 0M180 0c55 34 82 30 130 0M330 0c45 22 65 18 100 0" stroke="#41614d" stroke-width="18" opacity=".45"/>
+  <g clip-path="url(#roof-rain-clip)" stroke="#f4fcff" stroke-width="2.2" opacity=".75">
+    <path class="nook-rain" d="M36 20l-8 30 M96 72l-8 30 M168 8l-8 30 M250 100l-8 30 M326 30l-8 30 M395 88l-8 30"/>
+    <path class="nook-rain nook-rain-late" d="M58 132l-8 30 M122 30l-8 30 M202 92l-8 30 M278 35l-8 30 M356 132l-8 30"/>
+  </g>
 
   <!-- perspective wood floor -->
   <path d="M0 290h700v210H0z" fill="#d98a4a" stroke="#1E1A17" stroke-width="4"/>
@@ -42,6 +59,10 @@
   <g>
     <rect x="514" y="48" width="168" height="220" fill="#abc8c0" stroke="#1E1A17" stroke-width="5"/>
     <path d="M570 48v220M626 48v220M514 92h168M514 136h168M514 180h168M514 224h168" stroke="#26333a" stroke-width="5"/>
+    <g clip-path="url(#window-rain-clip)" stroke="#f1fbff" stroke-width="2.4" opacity=".8">
+      <path class="nook-rain" d="M535 65l-6 25 M587 112l-6 25 M648 61l-6 25 M667 195l-6 25 M547 215l-6 25"/>
+      <path class="nook-rain nook-rain-late" d="M557 123l-6 25 M608 54l-6 25 M638 186l-6 25 M670 138l-6 25"/>
+    </g>
     <path d="M545 246q-38-50-5-86M546 246q34-45 8-83M596 244q-24-54 1-97M596 244q31-52 11-87M644 244q-10-50 21-87" stroke="#496e4c" stroke-width="6"/>
     <path d="M530 244h40v25h-40zM578 244h39v25h-39zM628 244h40v25h-40z" fill="url(#pot)" stroke="#1E1A17" stroke-width="3"/>
     <circle cx="552" cy="218" r="15" fill="#496e4c" stroke="#1E1A17" stroke-width="3"/><circle cx="650" cy="207" r="14" fill="#e0574a" stroke="#1E1A17" stroke-width="3"/>
@@ -70,5 +91,16 @@
   <path d="M205 417q145-52 300 0v42q-145 35-300 0z" fill="none" stroke="#f2e6d0" stroke-width="8"/>
   <g stroke="#6e5035" stroke-width="3" fill="#c2452f"><path d="M258 440q25-18 50 0m-25-22v48"/><path d="M380 448q22-18 44 0m-22-24v48"/><path d="M480 432q18-14 36 0m-18-20v40"/></g>
   <g stroke="#1E1A17" stroke-width="3"><path d="M275 460h65v27h-65z" fill="url(#book)"/><path d="M288 448h58v24h-58z" fill="#2e5fa3"/><path d="M305 438h52v20h-52z" fill="#e0574a"/></g>
+
+  <!-- A warm cup by the window; steam is attached to this cup, not the photo -->
+  <ellipse cx="605" cy="339" rx="37" ry="10" fill="#e4bd87" stroke="#6e5035" stroke-width="3"/>
+  <path d="M605 342v89M583 431h45" stroke="#6e5035" stroke-width="6" stroke-linecap="round"/>
+  <path d="M590 313h26v17q-13 15-26 0z" fill="#faf1df" stroke="#6e5035" stroke-width="3"/>
+  <path d="M617 317q17-2 14 10q-3 8-14 0" stroke="#6e5035" stroke-width="3"/>
+  <ellipse cx="603" cy="313" rx="13" ry="4" fill="#704c36"/>
+  <g stroke="#fff9e9" stroke-width="3.5" stroke-linecap="round">
+    <path class="nook-steam" d="M600 301c-12-10 8-16 0-28s4-17 0-24"/>
+    <path class="nook-steam nook-steam-late" d="M611 301c12-12-8-17 0-29s-3-17 1-23"/>
+  </g>
 
 </svg>
