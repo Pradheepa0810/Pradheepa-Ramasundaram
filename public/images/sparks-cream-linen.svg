@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <defs>
+    <filter id="folds" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".007 .012" numOctaves="2" seed="21"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".12"/></feComponentTransfer>
+    </filter>
+    <pattern id="linen" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 1h5M1 0v5" stroke="#619e91" stroke-opacity=".07"/><path d="M0 3h5M3 0v5" stroke="#f0fff8" stroke-opacity=".45"/></pattern>
+  </defs>
+  <rect width="900" height="700" fill="#ccece0"/>
+  <rect width="900" height="700" filter="url(#folds)"/>
+  <rect width="900" height="700" fill="url(#linen)"/>
+</svg>

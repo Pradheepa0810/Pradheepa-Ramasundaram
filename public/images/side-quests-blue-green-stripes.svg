@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="1365" viewBox="0 0 768 1365" preserveAspectRatio="none">
+  <defs>
+    <pattern id="stripes" width="132" height="1365" patternUnits="userSpaceOnUse">
+      <rect width="132" height="1365" fill="#faf6e9"/>
+      <path d="M23-10C15 145 35 280 25 440S35 710 25 875 38 1160 24 1375H78C93 1150 70 1020 80 860S69 590 79 435 70 140 78-10Z" fill="#b4d1df"/>
+      <path d="M113-10C106 170 123 290 114 460S121 730 111 905 121 1190 114 1375" stroke="#94c6a0" stroke-width="7" fill="none"/>
+    </pattern>
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".45" numOctaves="3" seed="17"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="768" height="1365" fill="url(#stripes)"/>
+  <rect width="768" height="1365" filter="url(#paper)"/>
+</svg>

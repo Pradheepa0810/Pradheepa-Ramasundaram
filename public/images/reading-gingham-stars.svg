@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1000" viewBox="0 0 560 1000">
+  <defs>
+    <pattern id="checks" width="192" height="192" patternUnits="userSpaceOnUse">
+      <rect width="192" height="192" fill="#faf7e9"/>
+      <path d="M0 0h96v192H0Z" fill="#9fc7df" opacity=".42"/>
+      <path d="M0 0h192v96H0Z" fill="#9fc7df" opacity=".42"/>
+    </pattern>
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="3" seed="12"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".08"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <path id="spark" d="M0-25C3-25 3-9 7-6S24-3 24 0 10 3 7 7 3 25 0 25-3 10-7 7-24 3-24 0-10-3-7-7-3-25 0-25Z"/>
+    <path id="asterisk" d="M0-25 2-5 17-16 5-2 22 1 5 4 14 20 2 7-2 26-4 7-18 17-7 3-24 0-7-3-16-19-3-7Z"/>
+  </defs>
+  <g filter="url(#paper)">
+    <rect width="560" height="1000" fill="url(#checks)"/>
+    <g fill="#efcd54" opacity=".9">
+      <use href="#spark" transform="translate(43 70) rotate(4)"/>
+      <use href="#asterisk" transform="translate(150 57) rotate(9) scale(1.1)"/>
+      <use href="#spark" transform="translate(347 111) rotate(-5) scale(1.15)"/>
+      <use href="#spark" transform="translate(479 57) rotate(5)"/>
+      <use href="#asterisk" transform="translate(524 131) scale(.95)"/>
+      <use href="#asterisk" transform="translate(77 219) rotate(7) scale(1.1)"/>
+      <use href="#spark" transform="translate(233 190) scale(.85)"/>
+      <use href="#asterisk" transform="translate(422 185) rotate(7) scale(.85)"/>
+      <use href="#spark" transform="translate(362 291) scale(1.05)"/>
+      <use href="#spark" transform="translate(548 285) scale(.9)"/>
+      <use href="#asterisk" transform="translate(174 324) rotate(-7)"/>
+      <use href="#spark" transform="translate(35 363) scale(.7)"/>
+      <use href="#spark" transform="translate(468 375) rotate(-3)"/>
+      <use href="#spark" transform="translate(278 421) scale(1.05)"/>
+      <use href="#asterisk" transform="translate(87 458) scale(.85)"/>
+      <use href="#asterisk" transform="translate(394 503) rotate(5) scale(1.1)"/>
+      <use href="#asterisk" transform="translate(544 494) rotate(9)"/>
+      <use href="#spark" transform="translate(185 545) scale(.95)"/>
+      <use href="#spark" transform="translate(41 598) scale(1.05)"/>
+      <use href="#asterisk" transform="translate(300 625) scale(.85)"/>
+      <use href="#spark" transform="translate(482 627) rotate(4)"/>
+      <use href="#asterisk" transform="translate(126 696) rotate(-5)"/>
+      <use href="#spark" transform="translate(378 731) scale(1.1)"/>
+      <use href="#spark" transform="translate(226 775) scale(.95)"/>
+      <use href="#spark" transform="translate(82 850) scale(1.1)"/>
+      <use href="#asterisk" transform="translate(470 825) rotate(8)"/>
+      <use href="#spark" transform="translate(316 857) scale(.9)"/>
+      <use href="#spark" transform="translate(178 918) scale(1.05)"/>
+      <use href="#asterisk" transform="translate(411 957) rotate(-8) scale(1.1)"/>
+      <use href="#spark" transform="translate(18 970) scale(.9)"/>
+      <use href="#spark" transform="translate(547 916) scale(.9)"/>
+    </g>
+  </g>
+</svg>

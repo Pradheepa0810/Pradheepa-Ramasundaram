@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="1365" viewBox="0 0 768 1365">
+  <defs>
+    <pattern id="checks" width="300" height="300" patternUnits="userSpaceOnUse">
+      <rect width="300" height="300" fill="#f3a7b8"/>
+      <path d="M0 0h150v150H0Zm150 150h150v150H150Z" fill="#b20829"/>
+    </pattern>
+    <filter id="warp" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".002 .003" numOctaves="1" seed="8" result="waves"/>
+      <feDisplacementMap in="SourceGraphic" in2="waves" scale="125" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect x="-150" y="-150" width="1068" height="1665" fill="url(#checks)" filter="url(#warp)"/>
+</svg>

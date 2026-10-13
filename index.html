@@ -55,7 +55,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400&family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
 
   <!-- Compiled Tailwind CSS & Custom Design Tokens -->
-  <link rel="stylesheet" href="./dist/styles.css?v=40">
+  <link rel="stylesheet" href="./dist/styles.css?v=60">
 </head>
 <body class="bg-cream text-espresso min-h-screen selection:bg-sunshine selection:text-espresso antialiased relative">
 
@@ -184,11 +184,11 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           <!-- Left Content: Hero Copy & Linktree Pills -->
-          <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+          <div class="hero-copy lg:col-span-7 flex flex-col items-start space-y-6">
             
-            <span class="little-things-kicker reveal delay-100">A shelf for side quests</span>
+            <span class="little-things-kicker reveal delay-100">A love letter to side quests</span>
 
-            <h1 class="hero-diary-title reveal delay-200">Little things<br><em>I built.</em></h1>
+            <h1 class="hero-diary-title reveal delay-200">Collecting hobbies<br><em>and little joys.</em></h1>
 
             <p class="text-base sm:text-lg text-espresso/75 font-normal leading-relaxed max-w-xl reveal delay-300">
               The corner of the internet where I keep my paintbrushes and palette, my yoga mat, my tarot deck, my sourdough starter, and my sewing basket.
@@ -490,7 +490,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           <!-- Story and tool are arranged like a baker's worktable -->
-          <div class="baking-copy lg:col-span-7 space-y-6 reveal delay-100">
+          <div class="baking-copy lg:col-span-6 space-y-6 reveal delay-100">
             <div class="flex items-center gap-2">
               <span class="text-xs font-semibold text-tangerine-dark bg-tangerine-light px-3 py-1 rounded-full border border-tangerine/30">
                 Flour, Butter, Repeat.
@@ -560,8 +560,8 @@
           </div>
 
           <!-- Right Image Card -->
-          <div class="lg:col-span-5 flex justify-center reveal delay-200">
-            <div class="baking-sticker-card baking-photo-inset relative w-full max-w-sm tilt-card transition-all" data-hover-label="A weekend bake" tabindex="0">
+          <div class="lg:col-span-6 flex justify-center reveal delay-200">
+            <div class="baking-sticker-card baking-photo-inset relative w-full max-w-lg tilt-card transition-all" data-hover-label="A weekend bake" tabindex="0">
               <figure class="photo-natural-frame relative">
                 <img src="./public/images/baking-placeholder.jpg" alt="Pradheepa decorating a homemade cake" width="748" height="998" loading="lazy" class="w-full h-auto object-contain">
                 <figcaption>Flour on the counter, always.</figcaption>
@@ -910,6 +910,12 @@
 
         <!-- Book tabs change pages without changing the notes' reading order -->
         <div class="spark-desk">
+          <svg class="spark-binder-clip" viewBox="0 0 180 130" aria-hidden="true" focusable="false">
+            <path d="M72 9h36l-3 59h40a12 12 0 0 1 12 12v31H23V80a12 12 0 0 1 12-12h40Z" fill="#304f80" stroke="#203e69" stroke-width="3"/>
+            <path d="M79 15h21l-3 59h46a8 8 0 0 1 8 8v22H29V82a8 8 0 0 1 8-8h46Z" fill="none" stroke="#8faac9" stroke-width="2"/>
+            <path d="M83 37h14M82 46h15M71 88h38" stroke="#172e50" stroke-width="4" stroke-linecap="round"/>
+            <path d="M85 95h10" stroke="#e7dfc4" stroke-width="2" stroke-linecap="round"/>
+          </svg>
           <div class="spark-filter-strip" role="group" aria-label="Filter sparks by interest">
             <button type="button" data-filter="all" class="spark-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-espresso text-cream transition-all">
               All Sparks

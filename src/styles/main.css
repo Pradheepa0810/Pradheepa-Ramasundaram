@@ -69,9 +69,10 @@
 
 .books-section {
   padding-bottom: calc(clamp(6rem, 15vw, 14rem) + 3rem);
-  background-color: #f2eadb;
-  background-image: radial-gradient(circle at 12% 20%, rgba(138, 106, 69, 0.16) 0 2px, transparent 3px), radial-gradient(circle at 82% 72%, rgba(232, 93, 117, 0.14) 0 3px, transparent 4px), linear-gradient(90deg, rgba(138, 106, 69, 0.08) 1px, transparent 0), linear-gradient(rgba(138, 106, 69, 0.08) 1px, transparent 0);
-  background-size: 52px 52px, 76px 76px, 28px 28px, 28px 28px;
+  background-color: #faf7e9;
+  background-image: url('../public/images/reading-gingham-stars.svg');
+  background-position: center top;
+  background-size: 560px 1000px;
 }
 
 #books .lg\:col-span-7 {
@@ -937,7 +938,7 @@ input[type='range'].accent-cobalt {
 }
 
 .chess-section {
-  --chess-tile-size: clamp(5rem, 10vw, 8rem);
+  --chess-tile-size: clamp(10rem, 20vw, 16rem);
   background-color: #c79b68;
   background-image: repeating-conic-gradient(#151515 0% 25%, #c79b68 25% 50%);
   background-size: var(--chess-tile-size) var(--chess-tile-size);
@@ -1090,7 +1091,7 @@ input[type='range'].accent-cobalt {
 }
 
 #topics.topics-section {
-  background: #f8eddf;
+  background: #fff8d6 url('../public/images/sparks-sunflower-gingham.svg') center top / 750px 1000px repeat;
   overflow: hidden;
   padding-bottom: 0;
 }
@@ -1174,8 +1175,21 @@ input[type='range'].accent-cobalt {
   isolation: isolate;
   padding: 0.8rem 9rem 1rem 0.8rem;
   border-radius: 0.65rem 1rem 1rem 0.65rem;
-  background: #718578;
-  box-shadow: inset 0 0 0 1px rgba(41, 62, 48, 0.25), 0 18px 40px rgba(68, 61, 49, 0.18);
+  margin-top: 4rem;
+  background: #a9bdd0;
+  box-shadow: inset 0 0 0 1px rgba(47, 72, 104, 0.2), 0 18px 40px rgba(46, 64, 78, 0.18);
+}
+#topics .spark-desk { margin-top: 4.5rem; }
+.spark-binder-clip {
+  position: absolute;
+  z-index: 5;
+  top: -3.7rem;
+  left: calc((100% - 9rem) / 2);
+  width: clamp(7rem, 16vw, 10rem);
+  height: auto;
+  transform: translateX(-50%) rotate(-5deg);
+  filter: drop-shadow(2px 5px 3px rgba(27, 43, 65, 0.25));
+  pointer-events: none;
 }
 .sparks-notebook {
   position: relative;
@@ -1185,11 +1199,10 @@ input[type='range'].accent-cobalt {
   column-gap: clamp(0.8rem, 2vw, 1.4rem);
   row-gap: clamp(1.1rem, 2.5vw, 1.8rem);
   padding: clamp(3rem, 6vw, 4.5rem) clamp(1.15rem, 4vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid #d8cab8;
-  border-radius: 0.9rem 0.9rem 0.6rem 0.6rem;
-  background: linear-gradient(90deg, transparent calc(50% - 2px), rgba(125, 105, 87, 0.12) 50%, transparent calc(50% + 4px)),
-    repeating-linear-gradient(transparent 0 2.8rem, rgba(144, 160, 169, 0.12) calc(2.8rem + 1px) calc(2.8rem + 2px)),
-    linear-gradient(90deg, #fffdf7 0 49.5%, #f9f5ec 50%, #fffdf8 50.5% 100%);
+  min-height: 21rem;
+  border: 2px dashed #c8bea3;
+  border-radius: 0.15rem 0.3rem 0.2rem 0.15rem;
+  background: linear-gradient(90deg, transparent 48%, rgba(125, 105, 87, 0.08) 50%, transparent 52%), url('../public/images/sparks-cream-linen.svg') center / cover;
   box-shadow: 2px 4px 0 #e9ddcb, 8px 17px 28px rgba(91, 58, 38, 0.26);
 }
 .spark-page-turn {
@@ -1217,7 +1230,7 @@ input[type='range'].accent-cobalt {
   box-shadow: none;
 }
 .spark-page-back {
-  background: repeating-linear-gradient(transparent 0 2.8rem, rgba(144, 160, 169, 0.12) calc(2.8rem + 1px) calc(2.8rem + 2px)), #fffdf7;
+  background: #ccece0 url('../public/images/sparks-cream-linen.svg') center / cover;
   box-shadow: inset -12px 0 18px rgba(80, 65, 45, 0.1);
   transform: rotateY(180deg);
 }
@@ -1324,6 +1337,7 @@ input[type='range'].accent-cobalt {
 }
 @media (max-width: 640px) {
   .spark-desk { padding: 0.75rem; }
+  .spark-binder-clip { left: 50%; top: -4rem; width: 7rem; }
   .spark-filter-strip {
     position: relative;
     top: auto;
@@ -1341,7 +1355,7 @@ input[type='range'].accent-cobalt {
     grid-template-columns: 1fr;
     padding: 3rem 1.1rem 1.5rem;
     margin-right: 0;
-    background: repeating-linear-gradient(transparent 0 2.8rem, rgba(144, 160, 169, 0.12) calc(2.8rem + 1px) calc(2.8rem + 2px)), #fffdf7;
+    background: #ccece0 url('../public/images/sparks-cream-linen.svg') center / cover;
   }
   .sparks-notebook .spark-featured { grid-column: auto; }
   .sparks-notebook .spark-pill, .sparks-notebook .spark-pill:nth-child(n) { transform: none; }
@@ -2225,12 +2239,46 @@ input[type='range'].accent-cobalt {
 .little-things-home { display: inline-flex; align-items: center; gap: 0.7rem; }
 .little-things-home:first-letter { color: var(--color-coral-dark); }
 .little-things-back { font-size: 0.82rem; }
-.little-things-main { max-width: 76rem; margin: auto; padding: clamp(3rem, 7vw, 7rem) 1.5rem 5rem; }
+.little-things-main { max-width: 76rem; margin: auto; padding: 0 1.5rem; }
+.little-things-hero, .little-things-projects {
+  width: 100cqw;
+  margin-left: calc(50% - 50cqw);
+}
+.little-things-hero {
+  position: relative;
+  z-index: 1;
+  padding: clamp(3rem, 7vw, 7rem) 1.5rem calc(clamp(3rem, 7vw, 7rem) + 100px);
+  background: #f3a7b8 url('../public/images/side-quests-wavy-checks.svg') center / cover no-repeat;
+  mask-image: linear-gradient(#000, #000), url('../public/images/side-quests-wave-mask.svg');
+  mask-size: 100% calc(100% - 99px), 100% 100px;
+  mask-position: top, bottom;
+  mask-repeat: no-repeat;
+}
+.little-things-hero-inner, .little-things-projects-inner { max-width: 73rem; margin-inline: auto; }
+.little-things-hero .little-things-intro {
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border-radius: 0.5rem;
+  background: rgba(250, 247, 240, 0.96);
+  box-shadow: 0 8px 24px rgba(91, 10, 33, 0.12);
+}
+.little-things-projects {
+  margin-top: -100px;
+  padding: 100px 1.5rem 5rem;
+  background: #faf6e9 url('../public/images/side-quests-blue-green-stripes.svg') center top / 384px 1365px repeat;
+}
 .little-things-intro { max-width: 44rem; }
 .little-things-kicker { color: #8b4a50; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; }
 .little-things-intro h1, .hero-diary-title { margin: 1rem 0; font: 600 clamp(3.5rem, 9vw, 7.5rem)/0.95 'Fraunces', Georgia, serif; letter-spacing: -0.06em; }
 .little-things-intro h1 em, .hero-diary-title em { color: var(--color-coral-dark); font-weight: 400; }
+.hero-copy { min-width: 0; container-type: inline-size; }
+.hero-copy .hero-diary-title {
+  max-width: 100%;
+  font-size: clamp(1.875rem, 10.5cqi, 4.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
 .little-things-intro p { max-width: 33rem; font-size: 1.05rem; line-height: 1.7; }
+.little-things-page { container-type: inline-size; }
 .little-things-shelf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: clamp(1.5rem, 5vw, 5rem); margin: 5rem 0 2rem; }
 .little-things-shelf article { position: relative; min-width: 0; }
 .shelf-ticket {
@@ -2277,6 +2325,13 @@ input[type='range'].accent-cobalt {
 .shelf-bookplate img { display: block; width: 100%; height: 100%; max-height: 16rem; object-fit: cover; object-position: 42% center; }
 .shelf-bookplate .shelf-number { color: #72393e; }
 .shelf-bookplate a { color: #733341; }
+.shelf-project-art { display: block; width: 100%; height: auto; align-self: center; }
+.shelf-overworld { background: #263e31; border-color: #a4bd86; box-shadow: 8px 10px 0 #b1b99b; transform: rotate(-1deg); }
+.shelf-overworld::after { border-color: #a4bd86; }
+.shelf-overworld .shelf-small-label { color: #d9e7b7; }
+.shelf-overworld a { color: #e5ecc6; }
+.shelf-wizarding { background: #eee2cc; border-color: #85718f; box-shadow: -5px 10px 0 #b5a4b6; transform: rotate(1deg); }
+.shelf-wizarding .shelf-small-label, .shelf-wizarding .shelf-number, .shelf-wizarding a { color: #594360; }
 .little-things-outro { margin: 5rem 0 0; font: italic 1.3rem 'Fraunces', Georgia, serif; text-align: center; }
 .little-things-footer { padding: 2rem 1.5rem; background: var(--color-espresso); color: var(--color-cream); text-align: center; font-size: 0.85rem; }
 .little-things-footer a { color: #f6d779; }
@@ -2292,6 +2347,7 @@ input[type='range'].accent-cobalt {
   .shelf-small-label { left: 1rem; }
   .shelf-ticket > img { width: min(100%, 10rem); }
   .shelf-bookplate img { width: min(100%, 14rem); height: 12rem; }
+  .shelf-project-art { width: min(100%, 10rem); }
   .shelf-ticket h2, .shelf-bookplate h2 { font-size: 1.9rem; overflow-wrap: anywhere; }
 }
 
